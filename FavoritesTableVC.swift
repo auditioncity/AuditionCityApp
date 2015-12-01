@@ -1,14 +1,14 @@
 //
-//  UserTableVC.swift
+//  FavoritesTableVC.swift
 //  AuditionCity
 //
-//  Created by Paul Vagner on 11/23/15.
+//  Created by Paul Vagner on 11/26/15.
 //  Copyright © 2015 Paul Vagner. All rights reserved.
 //
 
 import UIKit
 
-class UserTableVC: UITableViewController {
+class FavoritesTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +19,7 @@ class UserTableVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        tableView.reloadData()
-        
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,41 +27,14 @@ class UserTableVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 0
     }
-    
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserCell
-//
-//        let user = users[indexPath.row]
-//    
-//       if let username = user["login"] as? String {
-//            
-//            cell.userNameLabel.text = username
-//        }
-//        
-//        if let faceShotURL = user[RailsRequest] as? String{
-//            
-//            cell.faceShot.hidden = false
-//            
-//            if let url = NSURL(string: faceShotURL) {
-//                if let data = NSData(contentsOfURL: url) {
-//                    if let image = UIImage(data:data) {
-//                        cell.faceShot.image = image
-//                        
-//                    }
-//                }
-//            }
-//        } else {
-//            
-//            cell.faceShot.hidden = true
-//        }
-        
-        return cell
+        return 0
     }
 
     /*

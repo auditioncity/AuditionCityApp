@@ -25,11 +25,38 @@ class UserDetailsViewController: UIViewController {
     
     @IBOutlet weak var resumeView: UIScrollView!
     
-    @IBAction func contactButton(sender: Buttons) {
+    @IBOutlet weak var expandResume: ToggleButton!
+    
+    @IBOutlet weak var resumePanelTop: NSLayoutConstraint!
+    
+    @IBAction func expandResumeTapped(sender: ToggleButton) {
+    
+        resumePanelTop.constant = resumePanelTop.constant == 0 ? -248 : 0
+        view.setNeedsUpdateConstraints()
+        
+        let degrees: CGFloat = resumePanelTop.constant != 0 ? 0 : 180
+        
+        //animates the dropdown window.
+        UIView.animateWithDuration(0.5) { () -> Void in
+            
+            self.view.layoutIfNeeded()
+            //Animates the dropdown window /Toggle button.
+            let degreesToRadians: (CGFloat) -> CGFloat = {
+                return $0 / 180.0 * CGFloat(M_PI)
+            }
+            
+            let t = CGAffineTransformMakeRotation(degreesToRadians(degrees));
+            self.expandResume.transform = t
+            
+        }
+
+    }
+    
+    @IBAction func contactButtonPressed(sender: Buttons) {
     
     }
     
-    @IBAction func starmeButton(sender: Buttons) {
+    @IBAction func starmeButtonPressed(sender: Buttons) {
     
     }
     

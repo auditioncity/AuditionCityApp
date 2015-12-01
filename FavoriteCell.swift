@@ -1,20 +1,20 @@
 //
-//  UserCell.swift
+//  FavoriteCell.swift
 //  AuditionCity
 //
-//  Created by Paul Vagner on 11/22/15.
+//  Created by Paul Vagner on 11/26/15.
 //  Copyright © 2015 Paul Vagner. All rights reserved.
 //
 
 import UIKit
 
-class UserCell: UITableViewCell {
+class FavoriteCell: UITableViewCell {
 
     @IBOutlet weak var faceShot: UIImageView!
     
     
     @IBOutlet weak var userNameLabel: UILabel!
-   
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

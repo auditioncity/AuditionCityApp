@@ -1,12 +1,6 @@
-//
 //  RailsRequest.swift
-//  RR
-//
 //  Created by Paul Vagner on 11/5/15.
 //  Copyright © 2015 Paul Vagner. All rights reserved.
-//
-//
-//
 // THIS WILL FUNCTION WITH ALL REQUESTS
 
 import UIKit
@@ -81,79 +75,43 @@ class RailsRequest: NSObject {
      Makes a generic request to the API, configured by the info parameter.
      
      - parameter info:       Used to configure the API request.
-     - parameter completion: A completion black that may be calld with an optional object.
-        The object could be an Array or Dictionary, YOU MUST handle the type within the completion black.
+     - parameter completion: A completion block that may be calld with an optional object.
+        The object could be an Array or Dictionary, YOU MUST handle the type within the completion block.
      */
     func requiredWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
-        
         let fullURLString = APIbaseURL + info.endpoint
-        
         guard let url = NSURL(string: fullURLString) else { return } //add run completion with fail
-        
         let request = NSMutableURLRequest(URL: url)
-        
         request.HTTPMethod = info.method.rawValue
-        
-        
-        
         //add token if we have one
-    
         if let token = token {
-            
-            request.setValue(token, forHTTPHeaderField: "Authorization")
-            
+        request.setValue(token, forHTTPHeaderField: "Authorization")
             if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
-                
                 if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
-                    
                     request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
-                    
-                   
                     let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
-                    
                     request.HTTPBody = postData
-                    
                 }
-                
             }
-
             request.setValue("application/json", forHTTPHeaderField: "Content_Type")
-            
             //here we grab the access token & user id
-        
-            
-        
         }
-        
         // add parameters to body
-
         //creates a task from request
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
-
             //work with the data returned
             if let data = data {
-                
                 //have data
-
                 if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
-                    
                     completion(returnedInfo: returnedInfo)
-                    
                 }
-
             } else {
-                
                 //no data: check if error is not nil
-                
             }
-            
         }
-
         //runs the task (aka: makes the request call)
         task.resume()
     }
-    
-    
 }
 /**
  * A type used to collect information to build an API call.
