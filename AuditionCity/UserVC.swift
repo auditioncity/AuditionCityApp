@@ -1,17 +1,15 @@
 //
-//  MainViewController.swift
+//  UserVC.swift
 //  AuditionCity
 //
-//  Created by Paul Vagner on 11/22/15.
+//  Created by Paul Vagner on 11/26/15.
 //  Copyright © 2015 Paul Vagner. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class UserVC: UIViewController {
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

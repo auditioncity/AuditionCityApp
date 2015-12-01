@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442145C11C07A1B00040DE7B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C01C07A1B00040DE7B /* FavoriteCell.swift */; };
+		442145C31C07A4310040DE7B /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C21C07A4310040DE7B /* FavoritesTableVC.swift */; };
+		442145C51C07A7490040DE7B /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C41C07A7490040DE7B /* UserVC.swift */; };
+		442145C71C07A75C0040DE7B /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C61C07A75C0040DE7B /* FavoritesVC.swift */; };
+		442145CB1C08DD520040DE7B /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145CA1C08DD520040DE7B /* ToggleButton.swift */; };
+		442145D11C0B75430040DE7B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145D01C0B75430040DE7B /* SearchVC.swift */; };
+		442146141C0C972C0040DE7B /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442146131C0C972C0040DE7B /* CheckBox.swift */; };
+		442146161C0C97EA0040DE7B /* CheckBoxLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442146151C0C97EA0040DE7B /* CheckBoxLayer.swift */; };
 		4466F01C1C024D8D00264959 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F01B1C024D8D00264959 /* UserCell.swift */; };
-		4466F01E1C024F4300264959 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F01D1C024F4300264959 /* MainViewController.swift */; };
-		4466F0211C024FAD00264959 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0201C024FAD00264959 /* FavoritesViewController.swift */; };
 		4466F0241C0250A100264959 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0231C0250A100264959 /* UserDetailsViewController.swift */; };
 		4466F0271C039ED000264959 /* UserTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0261C039ED000264959 /* UserTableVC.swift */; };
 		4466F0291C03A41C00264959 /* faceShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0281C03A41C00264959 /* faceShotImageView.swift */; };
@@ -23,12 +29,23 @@
 		448A0F071BFFB80F00B55A45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0F041BFFB80F00B55A45 /* LoginViewController.swift */; };
 		448A0F091BFFB80F00B55A45 /* logDataSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0F061BFFB80F00B55A45 /* logDataSingleton.swift */; };
 		448A0F0D1BFFDA8D00B55A45 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */; };
+		44B3FCF31C0CA4F000B28C4C /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF01C0CA4F000B28C4C /* RangeSlider.swift */; };
+		44B3FCF41C0CA4F000B28C4C /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF11C0CA4F000B28C4C /* RangeSliderThumbLayer.swift */; };
+		44B3FCF51C0CA4F000B28C4C /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF21C0CA4F000B28C4C /* RangeSliderTrackLayer.swift */; };
+		44B3FCF71C0CA81200B28C4C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */; };
+		44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442145C01C07A1B00040DE7B /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		442145C21C07A4310040DE7B /* FavoritesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
+		442145C41C07A7490040DE7B /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
+		442145C61C07A75C0040DE7B /* FavoritesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		442145CA1C08DD520040DE7B /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		442145D01C0B75430040DE7B /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		442146131C0C972C0040DE7B /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		442146151C0C97EA0040DE7B /* CheckBoxLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxLayer.swift; sourceTree = "<group>"; };
 		4466F01B1C024D8D00264959 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = ../UserCell.swift; sourceTree = "<group>"; };
-		4466F01D1C024F4300264959 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		4466F0201C024FAD00264959 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4466F0231C0250A100264959 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		4466F0261C039ED000264959 /* UserTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableVC.swift; sourceTree = "<group>"; };
 		4466F0281C03A41C00264959 /* faceShotImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceShotImageView.swift; sourceTree = "<group>"; };
@@ -44,6 +61,11 @@
 		448A0F041BFFB80F00B55A45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		448A0F061BFFB80F00B55A45 /* logDataSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logDataSingleton.swift; sourceTree = "<group>"; };
 		448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = ../Buttons.swift; sourceTree = "<group>"; };
+		44B3FCF01C0CA4F000B28C4C /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		44B3FCF11C0CA4F000B28C4C /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
+		44B3FCF21C0CA4F000B28C4C /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
+		44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		442145D21C0B754D0040DE7B /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				442145D01C0B75430040DE7B /* SearchVC.swift */,
+				44B3FCF81C0CA82C00B28C4C /* RangeSlider */,
+				44B3FCFC1C0CA8D400B28C4C /* SearchFilter */,
+				44B3FCF91C0CA86700B28C4C /* CheckBox */,
+			);
+			name = SearchVC;
+			sourceTree = "<group>";
+		};
 		4466F01F1C024F8400264959 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
 				4466F0261C039ED000264959 /* UserTableVC.swift */,
+				442145C41C07A7490040DE7B /* UserVC.swift */,
 				4466F01B1C024D8D00264959 /* UserCell.swift */,
-				4466F01D1C024F4300264959 /* MainViewController.swift */,
 				4466F0281C03A41C00264959 /* faceShotImageView.swift */,
 			);
 			name = MainVC;
@@ -71,7 +104,9 @@
 		4466F0221C024FDF00264959 /* FavoritesVC */ = {
 			isa = PBXGroup;
 			children = (
-				4466F0201C024FAD00264959 /* FavoritesViewController.swift */,
+				442145C01C07A1B00040DE7B /* FavoriteCell.swift */,
+				442145C21C07A4310040DE7B /* FavoritesTableVC.swift */,
+				442145C61C07A75C0040DE7B /* FavoritesVC.swift */,
 			);
 			name = FavoritesVC;
 			path = ..;
@@ -80,6 +115,7 @@
 		4466F0251C02512200264959 /* UserDetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				442145CA1C08DD520040DE7B /* ToggleButton.swift */,
 				4466F0231C0250A100264959 /* UserDetailsViewController.swift */,
 			);
 			name = UserDetailVC;
@@ -107,10 +143,11 @@
 			children = (
 				448A0EF11BFFB70700B55A45 /* Main.storyboard */,
 				4466F02A1C04984400264959 /* RailsRequest.swift */,
+				448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */,
 				4466F01F1C024F8400264959 /* MainVC */,
+				442145D21C0B754D0040DE7B /* SearchVC */,
 				4466F0221C024FDF00264959 /* FavoritesVC */,
 				4466F0251C02512200264959 /* UserDetailVC */,
-				448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */,
 				448A0F0A1BFFB81800B55A45 /* Login WorkFlow */,
 				448A0F021BFFB7E200B55A45 /* Login.storyboard */,
 				448A0EF41BFFB70700B55A45 /* AuditionCity.xcdatamodeld */,
@@ -137,6 +174,34 @@
 				448A0EFC1BFFB70700B55A45 /* Info.plist */,
 			);
 			name = System;
+			sourceTree = "<group>";
+		};
+		44B3FCF81C0CA82C00B28C4C /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				44B3FCF01C0CA4F000B28C4C /* RangeSlider.swift */,
+				44B3FCF11C0CA4F000B28C4C /* RangeSliderThumbLayer.swift */,
+				44B3FCF21C0CA4F000B28C4C /* RangeSliderTrackLayer.swift */,
+			);
+			name = RangeSlider;
+			sourceTree = "<group>";
+		};
+		44B3FCF91C0CA86700B28C4C /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				442146131C0C972C0040DE7B /* CheckBox.swift */,
+				442146151C0C97EA0040DE7B /* CheckBoxLayer.swift */,
+			);
+			name = CheckBox;
+			sourceTree = "<group>";
+		};
+		44B3FCFC1C0CA8D400B28C4C /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+				44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */,
+				44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */,
+			);
+			name = SearchFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,16 +278,27 @@
 			files = (
 				4466F01C1C024D8D00264959 /* UserCell.swift in Sources */,
 				448A0F0D1BFFDA8D00B55A45 /* Buttons.swift in Sources */,
+				442146141C0C972C0040DE7B /* CheckBox.swift in Sources */,
 				4466F0291C03A41C00264959 /* faceShotImageView.swift in Sources */,
+				44B3FCF71C0CA81200B28C4C /* PopupViewController.swift in Sources */,
 				448A0F071BFFB80F00B55A45 /* LoginViewController.swift in Sources */,
 				448A0EF01BFFB70700B55A45 /* ViewController.swift in Sources */,
+				442145C71C07A75C0040DE7B /* FavoritesVC.swift in Sources */,
 				4466F0271C039ED000264959 /* UserTableVC.swift in Sources */,
+				44B3FCF41C0CA4F000B28C4C /* RangeSliderThumbLayer.swift in Sources */,
 				448A0F091BFFB80F00B55A45 /* logDataSingleton.swift in Sources */,
+				442145C51C07A7490040DE7B /* UserVC.swift in Sources */,
+				442145C31C07A4310040DE7B /* FavoritesTableVC.swift in Sources */,
+				44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */,
 				448A0EEE1BFFB70700B55A45 /* AppDelegate.swift in Sources */,
-				4466F01E1C024F4300264959 /* MainViewController.swift in Sources */,
+				442145CB1C08DD520040DE7B /* ToggleButton.swift in Sources */,
+				442145C11C07A1B00040DE7B /* FavoriteCell.swift in Sources */,
 				4466F0241C0250A100264959 /* UserDetailsViewController.swift in Sources */,
-				4466F0211C024FAD00264959 /* FavoritesViewController.swift in Sources */,
 				448A0EF61BFFB70700B55A45 /* AuditionCity.xcdatamodeld in Sources */,
+				44B3FCF31C0CA4F000B28C4C /* RangeSlider.swift in Sources */,
+				442145D11C0B75430040DE7B /* SearchVC.swift in Sources */,
+				442146161C0C97EA0040DE7B /* CheckBoxLayer.swift in Sources */,
+				44B3FCF51C0CA4F000B28C4C /* RangeSliderTrackLayer.swift in Sources */,
 				4466F02B1C04984400264959 /* RailsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

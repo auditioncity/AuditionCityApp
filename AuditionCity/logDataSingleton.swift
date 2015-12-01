@@ -13,7 +13,7 @@ private let singleton = LogData()
 
 class LogData: NSObject {
     
-    class func logSession() -> LogData { return singleton}
+    class func logSession() -> LogData { return singleton }
     
     
 }

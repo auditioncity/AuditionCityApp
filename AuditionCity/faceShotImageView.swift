@@ -10,6 +10,8 @@ import UIKit
 
 class faceShotImageView: UIImageView {
 
+    let faceShot = NSObject()
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
