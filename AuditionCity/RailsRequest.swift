@@ -17,7 +17,7 @@ class RailsRequest: NSObject {
      */
     class func session() -> RailsRequest { return _rr }
     
- /// The token captured after login/register used to make authenticated API calls.
+ /// The token captured after login used to make authenticated API calls.
     
     var token: String? {
         

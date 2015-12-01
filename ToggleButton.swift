@@ -35,11 +35,11 @@ class ToggleButton: UIButton {
         let midY = CGRectGetMidY(rect)
         
         //sets the first point in the circle inset of the square button
-        CGContextMoveToPoint(context, circleInset + 10, midY - 4)
+        CGContextMoveToPoint(context, circleInset + 10, midY + 4)
         //sets the middle point of the arrow within the circle in the square button
-        CGContextAddLineToPoint(context, midX, midY + 5)
+        CGContextAddLineToPoint(context, midX, midY - 5)
         
-        CGContextAddLineToPoint(context, rect.width - circleInset - 10, midY - 4)
+        CGContextAddLineToPoint(context, rect.width - circleInset - 10, midY + 4)
         
         CGContextStrokePath(context)
     }

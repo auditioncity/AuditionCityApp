@@ -34,7 +34,7 @@ class UserDetailsViewController: UIViewController {
         resumePanelTop.constant = resumePanelTop.constant == 0 ? -248 : 0
         view.setNeedsUpdateConstraints()
         
-        let degrees: CGFloat = resumePanelTop.constant != 0 ? 0 : 180
+        let degrees: CGFloat = resumePanelTop.constant != 0 ? 180 : 0
         
         //animates the dropdown window.
         UIView.animateWithDuration(0.5) { () -> Void in
