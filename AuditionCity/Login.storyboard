@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-da-do8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-da-do8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <animations/>
                             </imageView>
@@ -88,7 +88,4 @@
             <point key="canvasLocation" x="1390.5" y="180.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="10.jpg" width="852" height="480"/>
-    </resources>
 </document>

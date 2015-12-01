@@ -22,25 +22,10 @@ class ViewController: UIViewController {
         let width = view.bounds.width - 2.0 * margin
         rangeSlider.frame = CGRect(x: margin, y: margin + topLayoutGuide.length,
             width: width, height: 31.0)
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
     
     func rangeSliderValueChanged(rangeSlider: RangeSlider) {
         print("Range slider value changed: (\(rangeSlider.lowerValue) \(rangeSlider.upperValue))")
     }
 
-=======
-    }
-=======
-    }
->>>>>>> origin/master
-    
-    func rangeSliderValueChanged(rangeSlider: RangeSlider) {
-        print("Range slider value changed: (\(rangeSlider.lowerValue) \(rangeSlider.upperValue))")
-    }
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 }

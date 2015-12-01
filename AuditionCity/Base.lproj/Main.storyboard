@@ -641,13 +641,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-Gg-XEZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="KWS-o7-HMF"/>
-                                </constraints>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clh-7r-O5w" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="135" y="498" width="50" height="50"/>
                                 <animations/>
@@ -670,6 +663,13 @@
                                     <segue destination="9vP-2e-WwH" kind="unwind" unwindAction="okButtonTapped:" id="vzL-1w-jgp"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-Gg-XEZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="KWS-o7-HMF"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -794,6 +794,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="contactButtonPressed:" destination="0Se-FB-q6r" eventType="touchUpInside" id="0ly-DP-2sC"/>
+                                    <segue destination="Dad-Co-KlM" kind="show" id="5uV-w7-JLN"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enf-zC-HUS">
@@ -873,32 +874,65 @@
             </objects>
             <point key="canvasLocation" x="1299" y="1926"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="sNh-2F-qf8">
+        <!--ContactVC-->
+        <scene sceneID="OgH-QR-uCW">
             <objects>
-                <viewController storyboardIdentifier="ResumeVC" id="cPA-qW-efp" sceneMemberID="viewController">
+                <viewController id="Dad-Co-KlM" customClass="ContactVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BM8-u9-T8D"/>
-                        <viewControllerLayoutGuide type="bottom" id="MGB-fv-mmI"/>
+                        <viewControllerLayoutGuide type="top" id="i7L-AF-Y6v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Znk-9m-PIK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yVb-xv-faA">
+                    <view key="view" contentMode="scaleToFill" id="V9V-LV-Mna">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcw-aO-VII">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA6-Qo-dmL" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="120" y="181" width="80" height="80"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.86267420859999999" blue="0.33118342200000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="📝"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="eMailButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="Qoe-lh-2HP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtT-dx-Zyu" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="120" y="306" width="80" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="📞"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="Bc5-X4-sF5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="callButton" destination="BtT-dx-Zyu" id="j22-hO-8We"/>
+                        <outlet property="eMailButton" destination="RA6-Qo-dmL" id="QS7-nH-RhH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="obo-af-3Yk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-JH-qNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="1926"/>
+            <point key="canvasLocation" x="1673" y="1926"/>
         </scene>
         <!--FavoritesVC-->
         <scene sceneID="yOi-2G-Zb7">

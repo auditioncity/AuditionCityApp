@@ -28,7 +28,7 @@ class RailsRequest: NSObject {
         //will need out own server info
    
     /// The base URL used when making API call.
-    private let APIbaseURL = "https://guarded-ridge-7410.herokuapp.com"
+    private let APIbaseURL = "https://pacific-garden-6218.herokuapp.com/"
     
     /**
      This method will try to login a user with credentials below.
