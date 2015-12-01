@@ -69,9 +69,9 @@ import UIKit
         }
     }
     
-    public override func didMoveToSuperview() {
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         setNeedsDisplay()
-        print(isChecked)
     }
 
     override public class func layerClass() -> AnyClass {

@@ -9,7 +9,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Boom-->
+        <!--User TableVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="UserTableVC" id="BYZ-38-t0r" customClass="UserTableVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Boom" id="x5W-Cq-FEI">
+                    <navigationItem key="navigationItem" id="x5W-Cq-FEI">
                         <barButtonItem key="leftBarButtonItem" title="⭐️" style="plain" id="P68-gb-LXJ">
                             <connections>
                                 <segue destination="LPq-Eq-j5a" kind="presentation" id="zs9-By-hCL"/>
@@ -161,7 +161,7 @@
                                     <constraint firstAttribute="height" constant="30" id="BDR-cS-hdq"/>
                                     <constraint firstAttribute="width" constant="60" id="efS-aw-iDq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
@@ -231,6 +231,30 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-ID-gf6" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="20" y="104" width="60" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QKD-zh-7Zu"/>
+                                    <constraint firstAttribute="height" constant="30" id="qsD-SC-knZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Gender"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="Gender" popoverAnchorView="pBX-ID-gf6" id="QFA-e5-DGD">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-nb-68J">
                                 <rect key="frame" x="18" y="164" width="52" height="30"/>
                                 <animations/>
@@ -261,7 +285,7 @@
                                     <constraint firstAttribute="height" constant="30" id="qFX-Se-EvQ"/>
                                     <constraint firstAttribute="width" constant="60" id="vRi-dx-9wm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -426,14 +450,11 @@
                                                             <constraint firstAttribute="height" constant="20" id="tPV-wx-bHA"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
-                                                                <real key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeFactor">
-                                                                <real key="value" value="0.050000000000000003"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
+                                                                <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -552,25 +573,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxB-b1-8aR" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="95" y="104" width="60" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="8sb-SP-JmY"/>
-                                    <constraint firstAttribute="height" constant="30" id="IEK-gS-XUp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Eye Color"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-Eo-Qun" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="169" y="104" width="60" height="30"/>
                                 <animations/>
@@ -589,17 +591,22 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="HairColor" popoverAnchorView="G3w-Eo-Qun" id="z5V-yv-QxP">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-ID-gf6" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="20" y="104" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxB-b1-8aR" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="95" y="104" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="QKD-zh-7Zu"/>
-                                    <constraint firstAttribute="height" constant="30" id="qsD-SC-knZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="8sb-SP-JmY"/>
+                                    <constraint firstAttribute="height" constant="30" id="IEK-gS-XUp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Gender"/>
+                                <state key="normal" title="Eye Color"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -609,7 +616,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="Gender" popoverAnchorView="pBX-ID-gf6" id="QFA-e5-DGD">
+                                    <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="EyeColor" popoverAnchorView="nxB-b1-8aR" id="WGY-th-ejO">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -1090,6 +1097,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AEC-nI-QoO"/>
+        <segue reference="WGY-th-ejO"/>
     </inferredMetricsTieBreakers>
 </document>

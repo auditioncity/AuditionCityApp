@@ -98,6 +98,7 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
             case "HairColor" : choices = ["Blonde", "Brown", "Hazel", "Grey", "Black", "Other"]
             
         default : choices = []
+        
         }
         
         
@@ -112,8 +113,6 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
             }
             
         }
-        
-        
         
     }
     

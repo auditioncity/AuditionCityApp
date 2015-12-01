@@ -8,20 +8,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
-//    @IBAction func cancelButton(sender: UIButton) {
-//        
-//        
-//        self.navigationController?.popViewControllerAnimated(true)
-//        
-//        print("N")
-//        
-//    }
-    
-    
     @IBOutlet weak var usernameField: UITextField!
-    
-    @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
     
@@ -45,7 +32,7 @@ class LoginViewController: UIViewController {
                 
                 self.navigationController?.viewControllers = [LoginVC!]
                 
-                
+                print(loggedIn)
                 
             } else {
                 
