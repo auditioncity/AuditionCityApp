@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+   
     let rangeSlider = RangeSlider(frame: CGRectZero)
     
     override func viewDidLoad() {

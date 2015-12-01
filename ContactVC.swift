@@ -14,6 +14,8 @@ class ContactVC: UIViewController {
     
     @IBOutlet weak var callButton: Buttons!
     
+    @IBOutlet weak var cancelButton: Buttons!
+    
     @IBAction func eMailButtonTapped(sender: Buttons) {
     
     
@@ -24,6 +26,9 @@ class ContactVC: UIViewController {
     
     }
     
+    @IBAction func cancelButtonTapped(sender: Buttons) {
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

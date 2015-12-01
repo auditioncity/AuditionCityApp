@@ -36,11 +36,11 @@ class RailsRequest: NSObject {
      - parameter username: The name used when registering.
      - parameter password: The password used when registering.
      */
-    func loginWithUsername(username: String, andPassword password: String) {
+    func loginWithUsername(username: String, andPassword password: String, completion: (Bool) -> ()) {
         /// creates a changeable variable of "info" and sets it to "RailsRequest"
         var info = RequestInfo()
 
-        info.endpoint = "/users/login"
+        info.endpoint = "/user/login"
         
         info.method = .POST
         
@@ -58,6 +58,7 @@ class RailsRequest: NSObject {
             if let key = user["access_token"] as? String {
 
                 self.token = key
+                completion(true)
             
                 }
             }

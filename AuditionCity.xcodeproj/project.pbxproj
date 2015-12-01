@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		442145C11C07A1B00040DE7B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C01C07A1B00040DE7B /* FavoriteCell.swift */; };
 		442145C31C07A4310040DE7B /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C21C07A4310040DE7B /* FavoritesTableVC.swift */; };
-		442145C51C07A7490040DE7B /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C41C07A7490040DE7B /* UserVC.swift */; };
 		442145C71C07A75C0040DE7B /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C61C07A75C0040DE7B /* FavoritesVC.swift */; };
 		442145CB1C08DD520040DE7B /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145CA1C08DD520040DE7B /* ToggleButton.swift */; };
 		442145D11C0B75430040DE7B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145D01C0B75430040DE7B /* SearchVC.swift */; };
@@ -35,12 +34,12 @@
 		44B3FCF71C0CA81200B28C4C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */; };
 		44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */; };
 		44B3FD041C0DE3F100B28C4C /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FD031C0DE3F100B28C4C /* ContactVC.swift */; };
+		44B3FD091C0DFC6700B28C4C /* UserTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FD081C0DFC6700B28C4C /* UserTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		442145C01C07A1B00040DE7B /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		442145C21C07A4310040DE7B /* FavoritesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
-		442145C41C07A7490040DE7B /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		442145C61C07A75C0040DE7B /* FavoritesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		442145CA1C08DD520040DE7B /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		442145D01C0B75430040DE7B /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		44B3FD031C0DE3F100B28C4C /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		44B3FD081C0DFC6700B28C4C /* UserTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				4466F0261C039ED000264959 /* UserTableVC.swift */,
-				442145C41C07A7490040DE7B /* UserVC.swift */,
 				4466F01B1C024D8D00264959 /* UserCell.swift */,
 				4466F0281C03A41C00264959 /* faceShotImageView.swift */,
+				44B3FD081C0DFC6700B28C4C /* UserTableView.swift */,
 			);
 			name = MainVC;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 				4466F0271C039ED000264959 /* UserTableVC.swift in Sources */,
 				44B3FD041C0DE3F100B28C4C /* ContactVC.swift in Sources */,
 				44B3FCF41C0CA4F000B28C4C /* RangeSliderThumbLayer.swift in Sources */,
+				44B3FD091C0DFC6700B28C4C /* UserTableView.swift in Sources */,
 				448A0F091BFFB80F00B55A45 /* logDataSingleton.swift in Sources */,
-				442145C51C07A7490040DE7B /* UserVC.swift in Sources */,
 				442145C31C07A4310040DE7B /* FavoritesTableVC.swift in Sources */,
 				44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */,
 				448A0EEE1BFFB70700B55A45 /* AppDelegate.swift in Sources */,
