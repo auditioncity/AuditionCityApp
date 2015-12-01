@@ -34,6 +34,7 @@
 		44B3FCF51C0CA4F000B28C4C /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF21C0CA4F000B28C4C /* RangeSliderTrackLayer.swift */; };
 		44B3FCF71C0CA81200B28C4C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */; };
 		44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		44B3FCF21C0CA4F000B28C4C /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,9 @@
 				448A0EED1BFFB70700B55A45 /* AppDelegate.swift */,
 				448A0EEF1BFFB70700B55A45 /* ViewController.swift */,
 				448A0EF71BFFB70700B55A45 /* Assets.xcassets */,
+				44B3FCFD1C0D44D700B28C4C /* AuditionCityIcon.png */,
+				44B3FCFE1C0D44D700B28C4C /* AuditionCityIcon@2x.png */,
+				44B3FCFF1C0D44D700B28C4C /* AuditionCityIcon@3x.png */,
 				448A0EFC1BFFB70700B55A45 /* Info.plist */,
 			);
 			name = System;
@@ -264,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				448A0F031BFFB7E200B55A45 /* Login.storyboard in Resources */,
+				44B3FD011C0D44D700B28C4C /* AuditionCityIcon@2x.png in Resources */,
+				44B3FD021C0D44D700B28C4C /* AuditionCityIcon@3x.png in Resources */,
 				448A0EF81BFFB70700B55A45 /* Assets.xcassets in Resources */,
+				44B3FD001C0D44D700B28C4C /* AuditionCityIcon.png in Resources */,
 				448A0EF31BFFB70700B55A45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

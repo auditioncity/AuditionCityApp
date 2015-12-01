@@ -25,5 +25,4 @@ import UIKit
     
     @IBInspectable var borderColor: CGColor = UIColor.blackColor().CGColor
     
-
-}
+    }
