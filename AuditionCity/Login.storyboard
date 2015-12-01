@@ -18,41 +18,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-da-do8">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3iy-GQ-mvI">
-                                <rect key="frame" x="101" y="472" width="172" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3iy-GQ-mvI">
+                                <rect key="frame" x="20" y="457" width="335" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.27797719594594594" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qgz-Nw-EMo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-ti-MAV">
+                                <rect key="frame" x="20" y="407" width="335" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.30315667229729731" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5m9-78-6Bz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-KQ-bcX">
-                                <rect key="frame" x="111" y="520" width="152" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-KQ-bcX">
+                                <rect key="frame" x="111" y="515" width="153" height="47"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="wod-90-amq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.80987580130000003" green="0.032813808999999999" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressedLogin:" destination="85i-8Y-MY2" eventType="touchUpInside" id="cWA-w9-vw6"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-ti-MAV">
-                                <rect key="frame" x="101" y="419" width="172" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.30315667229729731" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3iy-GQ-mvI" firstAttribute="top" secondItem="TFQ-ti-MAV" secondAttribute="bottom" constant="20" id="16O-1v-KlR"/>
+                            <constraint firstItem="tlv-KQ-bcX" firstAttribute="top" secondItem="3iy-GQ-mvI" secondAttribute="bottom" constant="28" id="4nS-RK-kPF"/>
+                            <constraint firstItem="tlv-KQ-bcX" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" constant="111" id="A3s-PB-VdQ"/>
+                            <constraint firstItem="TFQ-ti-MAV" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" constant="20" id="E6W-pq-vSI"/>
+                            <constraint firstAttribute="trailing" secondItem="TFQ-ti-MAV" secondAttribute="trailing" constant="20" id="E6X-lP-wUi"/>
                             <constraint firstItem="Dmy-nr-tV3" firstAttribute="top" secondItem="5Ls-da-do8" secondAttribute="bottom" id="XAJ-0i-1ua"/>
+                            <constraint firstAttribute="trailing" secondItem="tlv-KQ-bcX" secondAttribute="trailing" constant="111" id="ZPH-RE-RAV"/>
+                            <constraint firstAttribute="trailing" secondItem="3iy-GQ-mvI" secondAttribute="trailing" constant="20" id="f38-W3-6Fy"/>
+                            <constraint firstItem="3iy-GQ-mvI" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" constant="20" id="l7S-OU-HA3"/>
+                            <constraint firstItem="Dmy-nr-tV3" firstAttribute="top" secondItem="tlv-KQ-bcX" secondAttribute="bottom" constant="105" id="rCH-6D-kPg"/>
                             <constraint firstAttribute="trailing" secondItem="5Ls-da-do8" secondAttribute="trailing" id="tPE-hJ-Jhg"/>
-                            <constraint firstItem="5Ls-da-do8" firstAttribute="top" secondItem="dKU-Wc-Jyi" secondAttribute="bottom" id="taN-t0-q7c"/>
+                            <constraint firstItem="5Ls-da-do8" firstAttribute="top" secondItem="dKU-Wc-Jyi" secondAttribute="bottom" constant="-20" id="taN-t0-q7c"/>
                             <constraint firstItem="5Ls-da-do8" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" id="xSC-JD-oAS"/>
                         </constraints>
                     </view>
@@ -65,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7q-4l-Hxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823.5" y="180.5"/>
+            <point key="canvasLocation" x="1891.5" y="180.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kI3-Kz-AAz">

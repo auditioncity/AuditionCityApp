@@ -85,8 +85,21 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         
+        var choices = [String]()
         
-        let choices = segue.identifier == "Gender" ? ["Male","Female", "Other"] : ["White - NonHispanic", "African American", "Hispanic/Latino", "American Indian", "Other" ]
+        switch segue.identifier! {
+            
+            case "Gender" : choices = ["Male","Female", "Other"]
+            
+            case "Race" : choices = ["White - NonHispanic", "African American", "Hispanic/Latino", "American Indian", "Other" ]
+            
+            case "EyeColor" : choices = ["Blue", "Brown", "Green", "Black", "Purple"]
+            
+            case "HairColor" : choices = ["Blonde", "Brown", "Hazel", "Grey", "Black", "Other"]
+            
+        default : choices = []
+        }
+        
         
         if let popupView = segue.destinationViewController as? PopupViewController {
             

@@ -9,14 +9,14 @@ import UIKit
 class LoginViewController: UIViewController {
     
     
-    @IBAction func cancelButton(sender: UIButton) {
-        
-        
-        self.navigationController?.popViewControllerAnimated(true)
-        
-        print("N")
-        
-    }
+//    @IBAction func cancelButton(sender: UIButton) {
+//        
+//        
+//        self.navigationController?.popViewControllerAnimated(true)
+//        
+//        print("N")
+//        
+//    }
     
     
     @IBOutlet weak var usernameField: UITextField!
@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
                 let LoginVC = mainSB.instantiateViewControllerWithIdentifier("UserTableVC") as?
                 UserTableVC
                 
-                self.navigationController?.presentViewController(LoginVC!, animated: true, completion: nil)
+                self.navigationController?.viewControllers = [LoginVC!]
                 
                 
                 
@@ -62,12 +62,18 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
         
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        if RailsRequest.session().token != nil {
+            
+                    let mainSB = UIStoryboard(name: "Main", bundle: nil)
+            
+                    let LoginVC = mainSB.instantiateViewControllerWithIdentifier("UserTableVC") as?
+                    UserTableVC
+            
+                    self.navigationController?.viewControllers = [LoginVC!]
+            
+        }
         
-        let LoginVC = mainSB.instantiateViewControllerWithIdentifier("UserTableVC") as?
-        UserTableVC
-        
-        self.navigationController?.presentViewController(LoginVC!, animated: true, completion: nil)
+
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
             UIKeyboardWillShowNotification, object: nil);

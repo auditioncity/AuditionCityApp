@@ -3,11 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--User TableVC-->
+        <!--Boom-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="UserTableVC" id="BYZ-38-t0r" customClass="UserTableVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-eU-XyG">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -72,8 +74,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="x5W-Cq-FEI">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="Boom" id="x5W-Cq-FEI">
                         <barButtonItem key="leftBarButtonItem" title="⭐️" style="plain" id="P68-gb-LXJ">
                             <connections>
                                 <segue destination="LPq-Eq-j5a" kind="presentation" id="zs9-By-hCL"/>
@@ -88,6 +89,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="hfd-ag-d6M" id="TGw-ru-8Md"/>
+                        <outlet property="tableView" destination="YQ4-eU-XyG" id="XWd-dl-0kI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,7 +153,7 @@
                                     <action selector="ageRangePicked:" destination="ZYp-Gy-Mht" eventType="valueChanged" id="U5d-eN-2vr"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-Oc-2YX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-Oc-2YX">
                                 <rect key="frame" x="70" y="164" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,13 +209,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-Bl-d6f" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="170" y="104" width="100" height="30"/>
+                                <rect key="frame" x="240" y="104" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="acZ-qJ-Zri"/>
-                                    <constraint firstAttribute="height" constant="30" id="dRD-hZ-fM1"/>
+                                    <constraint firstAttribute="width" constant="60" id="nVC-bP-gla"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Race"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -229,30 +231,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-ID-gf6" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="50" y="104" width="100" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AoG-Ah-arc"/>
-                                    <constraint firstAttribute="width" constant="100" id="JPm-nq-9dA"/>
-                                </constraints>
-                                <state key="normal" title="Gender"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="Gender" popoverAnchorView="pBX-ID-gf6" id="QFA-e5-DGD">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-nb-68J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-nb-68J">
                                 <rect key="frame" x="18" y="164" width="52" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -263,7 +242,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-CO-vNh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-CO-vNh">
                                 <rect key="frame" x="150" y="164" width="40" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -286,17 +265,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-7O-Mme">
-                                <rect key="frame" x="16" y="289" width="288" height="168"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-7O-Mme">
+                                <rect key="frame" x="16" y="289" width="288" height="171"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-Cc-sCp">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="168"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-Cc-sCp">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="171"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-75-dtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="78" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-75-dtT">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="43"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -326,8 +305,8 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-tz-eM3">
-                                                <rect key="frame" x="0.0" y="42" width="64" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-tz-eM3">
+                                                <rect key="frame" x="0.0" y="43" width="64" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYd-BC-xBk" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="11" width="20" height="20"/>
@@ -360,11 +339,11 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3R5-P3-CU4">
-                                                <rect key="frame" x="0.0" y="84" width="75" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3R5-P3-CU4">
+                                                <rect key="frame" x="0.0" y="86" width="75" height="43"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -394,8 +373,8 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9Z-u4-N4Q">
-                                                <rect key="frame" x="0.0" y="126" width="79" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9Z-u4-N4Q">
+                                                <rect key="frame" x="0.0" y="129" width="79" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moe-Eo-QxS" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="11" width="20" height="20"/>
@@ -431,14 +410,14 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ls8-t8-oOH">
-                                        <rect key="frame" x="154" y="0.0" width="134" height="168"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ls8-t8-oOH">
+                                        <rect key="frame" x="154" y="0.0" width="134" height="171"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55z-0e-EEY">
-                                                <rect key="frame" x="0.0" y="0.0" width="82" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55z-0e-EEY">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="43"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -468,8 +447,8 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-DB-A0W">
-                                                <rect key="frame" x="0.0" y="42" width="75" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-DB-A0W">
+                                                <rect key="frame" x="0.0" y="43" width="75" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-zJ-7Vr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="11" width="20" height="20"/>
@@ -502,11 +481,11 @@
                                                 </subviews>
                                                 <animations/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-3Q-Hrr">
-                                                <rect key="frame" x="0.0" y="84" width="66" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-3Q-Hrr">
+                                                <rect key="frame" x="0.0" y="86" width="66" height="43"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -537,10 +516,10 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-zX-Nw7">
-                                                <rect key="frame" x="0.0" y="126" width="134" height="42"/>
+                                                <rect key="frame" x="0.0" y="129" width="134" height="43"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-mj-EKK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="42"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="43"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -573,44 +552,108 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxB-b1-8aR" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="95" y="104" width="60" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8sb-SP-JmY"/>
+                                    <constraint firstAttribute="height" constant="30" id="IEK-gS-XUp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Eye Color"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-Eo-Qun" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="169" y="104" width="60" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fC7-Wm-Aax"/>
+                                    <constraint firstAttribute="width" constant="60" id="mlB-k8-6C4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Hair Color"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-ID-gf6" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="20" y="104" width="60" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QKD-zh-7Zu"/>
+                                    <constraint firstAttribute="height" constant="30" id="qsD-SC-knZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Gender"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="Gender" popoverAnchorView="pBX-ID-gf6" id="QFA-e5-DGD">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="trailing" secondItem="LTm-i9-u5X" secondAttribute="trailingMargin" id="0QE-ow-qQQ"/>
                             <constraint firstItem="w3E-Al-vyI" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="50" id="0Z3-eL-ARS"/>
+                            <constraint firstItem="get-Bl-d6f" firstAttribute="baseline" secondItem="G3w-Eo-Qun" secondAttribute="firstBaseline" id="2yW-z9-9eq"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="74r-GP-7Ff"/>
+                            <constraint firstItem="pBX-ID-gf6" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="8Xk-3R-8a1"/>
                             <constraint firstItem="9Vz-J9-kQT" firstAttribute="leading" secondItem="SLh-CO-vNh" secondAttribute="trailing" id="9Kz-B9-C95"/>
                             <constraint firstItem="fyi-IT-L1Q" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="Ae5-MA-uY5"/>
+                            <constraint firstItem="nxB-b1-8aR" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="B2v-FM-Jsj"/>
                             <constraint firstAttribute="trailing" secondItem="hNl-HO-HZT" secondAttribute="trailing" constant="50" id="Bca-66-C0V"/>
-                            <constraint firstItem="6QM-Oc-2YX" firstAttribute="top" secondItem="pBX-ID-gf6" secondAttribute="bottom" constant="30" id="EHo-7e-vh4"/>
-                            <constraint firstItem="1S9-nb-68J" firstAttribute="top" secondItem="pBX-ID-gf6" secondAttribute="bottom" constant="30" id="G1h-mI-5M5"/>
+                            <constraint firstItem="get-Bl-d6f" firstAttribute="top" secondItem="G3w-Eo-Qun" secondAttribute="top" id="CCO-DV-n6W"/>
                             <constraint firstItem="1S9-nb-68J" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="18" id="HY9-cJ-1zB"/>
-                            <constraint firstItem="pBX-ID-gf6" firstAttribute="top" secondItem="2vr-0G-TKS" secondAttribute="bottom" constant="40" id="O94-qj-mTC"/>
                             <constraint firstItem="b8L-7O-Mme" firstAttribute="top" secondItem="fyi-IT-L1Q" secondAttribute="bottom" constant="5" id="OFY-L8-Bck"/>
+                            <constraint firstItem="get-Bl-d6f" firstAttribute="trailing" secondItem="jga-1e-f8U" secondAttribute="trailing" id="Qtk-rI-0iT"/>
                             <constraint firstItem="fyi-IT-L1Q" firstAttribute="top" secondItem="pAH-wb-reQ" secondAttribute="bottom" constant="10" id="RME-6Z-R5e"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="leading" secondItem="1S9-nb-68J" secondAttribute="trailing" id="U77-wv-go7"/>
+                            <constraint firstItem="9Vz-J9-kQT" firstAttribute="top" secondItem="get-Bl-d6f" secondAttribute="bottom" constant="30" id="Wq5-QW-lVk"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="70" id="XaB-zn-gi3"/>
                             <constraint firstItem="b8L-7O-Mme" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" id="Xri-pb-e2I"/>
                             <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="hNl-HO-HZT" secondAttribute="bottom" constant="10" id="YC6-iz-zVa"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="top" secondItem="2vr-0G-TKS" secondAttribute="bottom" constant="5" id="YUe-ib-GYh"/>
                             <constraint firstItem="hNl-HO-HZT" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="6" id="Yab-cg-z5m"/>
-                            <constraint firstItem="pBX-ID-gf6" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="50" id="a3A-E2-1qV"/>
                             <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="w3E-Al-vyI" secondAttribute="bottom" constant="10" id="asn-0v-9QG"/>
-                            <constraint firstItem="SLh-CO-vNh" firstAttribute="top" secondItem="pBX-ID-gf6" secondAttribute="bottom" constant="30" id="e5J-eE-oRM"/>
-                            <constraint firstItem="get-Bl-d6f" firstAttribute="top" secondItem="2vr-0G-TKS" secondAttribute="bottom" constant="40" id="g4V-KP-Hf0"/>
                             <constraint firstAttribute="trailing" secondItem="pAH-wb-reQ" secondAttribute="trailing" constant="20" id="gEI-fG-bSd"/>
                             <constraint firstAttribute="trailing" secondItem="fyi-IT-L1Q" secondAttribute="trailing" constant="20" id="gSi-4F-Ari"/>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" id="iDL-Ke-HSU"/>
+                            <constraint firstItem="pBX-ID-gf6" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="iM9-TM-2mj"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="lrU-du-sa0"/>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="bottom" constant="5" id="mHf-hj-sOe"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="9Vz-J9-kQT" secondAttribute="bottom" constant="20" id="mxD-yV-4EH"/>
+                            <constraint firstItem="get-Bl-d6f" firstAttribute="leading" secondItem="G3w-Eo-Qun" secondAttribute="trailing" constant="11" id="oq2-XP-ahS"/>
                             <constraint firstAttribute="trailing" secondItem="9Vz-J9-kQT" secondAttribute="trailing" constant="70" id="tRd-3y-4GF"/>
-                            <constraint firstAttribute="trailing" secondItem="get-Bl-d6f" secondAttribute="trailing" constant="50" id="uxx-kz-Kzf"/>
-                            <constraint firstItem="9Vz-J9-kQT" firstAttribute="top" secondItem="get-Bl-d6f" secondAttribute="bottom" constant="30" id="wuD-m8-h2N"/>
+                            <constraint firstItem="nxB-b1-8aR" firstAttribute="leading" secondItem="pBX-ID-gf6" secondAttribute="trailing" constant="15" id="wNJ-Ok-xcc"/>
                             <constraint firstAttribute="trailing" secondItem="jga-1e-f8U" secondAttribute="trailing" constant="20" id="x5t-Oz-b0P"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b8L-7O-Mme" secondAttribute="trailing" id="xyb-6G-CNh"/>
                             <constraint firstItem="SLh-CO-vNh" firstAttribute="leading" secondItem="6QM-Oc-2YX" secondAttribute="trailing" constant="20" id="yo0-Qy-yM1"/>
+                            <constraint firstItem="G3w-Eo-Qun" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="ypj-kS-TSA"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
