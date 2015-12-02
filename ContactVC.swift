@@ -10,6 +10,7 @@ import UIKit
 
 class ContactVC: UIViewController {
 
+       
     @IBOutlet weak var eMailButton: Buttons!
     
     @IBOutlet weak var callButton: Buttons!

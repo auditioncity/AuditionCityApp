@@ -6,6 +6,16 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var ageFrom: UILabel!
     @IBOutlet weak var ageTo: UILabel!
     @IBOutlet weak var ageRange: RangeSlider!
+    
+    @IBOutlet weak var equityCB: CheckBox!
+    @IBOutlet weak var sagCB: CheckBox!
+    @IBOutlet weak var ssdcCB: CheckBox!
+    @IBOutlet weak var agmaCB: CheckBox!
+    @IBOutlet weak var eftraCB: CheckBox!
+    @IBOutlet weak var iatseCB: CheckBox!
+    @IBOutlet weak var dgaCB: CheckBox!
+    
+    
     @IBAction func ageRangePicked(sender: RangeSlider) {
         
         print(sender)
@@ -71,9 +81,9 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         
         switch segue.identifier! {
             
-            case "Gender" : choices = ["Male","Female", "Other"]
+            case "Gender" : choices = ["Male","Female"]
             
-            case "Race" : choices = ["White - NonHispanic", "African American", "Hispanic/Latino", "American Indian", "Other" ]
+            case "Race" : choices = ["Black or African American", "Hispanic/Latino", "Asian/Pacific Islander", "White or Caucasian", "American Indian/Alaskan Native", "Other"]
             
             case "EyeColor" : choices = ["Blue", "Brown", "Green", "Black", "Purple"]
             
@@ -102,5 +112,5 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     {
         return UIModalPresentationStyle.None
     }
-    
+   
 }

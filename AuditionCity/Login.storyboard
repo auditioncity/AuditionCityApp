@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-da-do8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audition-city-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-da-do8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3iy-GQ-mvI">
@@ -28,7 +28,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qgz-Nw-EMo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-ti-MAV">
@@ -38,7 +38,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5m9-78-6Bz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-KQ-bcX">
@@ -47,9 +47,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="153" id="wod-90-amq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.80987580130000003" green="0.032813808999999999" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressedLogin:" destination="85i-8Y-MY2" eventType="touchUpInside" id="cWA-w9-vw6"/>
@@ -57,14 +59,14 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3iy-GQ-mvI" firstAttribute="top" secondItem="TFQ-ti-MAV" secondAttribute="bottom" constant="20" id="16O-1v-KlR"/>
                             <constraint firstItem="tlv-KQ-bcX" firstAttribute="top" secondItem="3iy-GQ-mvI" secondAttribute="bottom" constant="28" id="4nS-RK-kPF"/>
                             <constraint firstItem="tlv-KQ-bcX" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" constant="111" id="A3s-PB-VdQ"/>
                             <constraint firstItem="TFQ-ti-MAV" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" constant="20" id="E6W-pq-vSI"/>
                             <constraint firstAttribute="trailing" secondItem="TFQ-ti-MAV" secondAttribute="trailing" constant="20" id="E6X-lP-wUi"/>
-                            <constraint firstItem="Dmy-nr-tV3" firstAttribute="top" secondItem="5Ls-da-do8" secondAttribute="bottom" id="XAJ-0i-1ua"/>
+                            <constraint firstItem="Dmy-nr-tV3" firstAttribute="top" secondItem="5Ls-da-do8" secondAttribute="bottom" constant="300" id="XAJ-0i-1ua"/>
                             <constraint firstAttribute="trailing" secondItem="tlv-KQ-bcX" secondAttribute="trailing" constant="111" id="ZPH-RE-RAV"/>
                             <constraint firstAttribute="trailing" secondItem="3iy-GQ-mvI" secondAttribute="trailing" constant="20" id="f38-W3-6Fy"/>
                             <constraint firstItem="3iy-GQ-mvI" firstAttribute="leading" secondItem="SJr-7a-7Ff" secondAttribute="leading" constant="20" id="l7S-OU-HA3"/>
@@ -106,4 +108,7 @@
             <point key="canvasLocation" x="1390.5" y="180.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="audition-city-logo.png" width="600" height="600"/>
+    </resources>
 </document>
