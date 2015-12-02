@@ -28,7 +28,7 @@ class RailsRequest: NSObject {
         //will need out own server info
    
     /// The base URL used when making API call.
-    private let APIbaseURL = "https://pacific-garden-6218.herokuapp.com/"
+    private let APIbaseURL = "http://api.audition.city/"
     
     /**
      This method will try to login a user with credentials below.
@@ -40,23 +40,26 @@ class RailsRequest: NSObject {
         /// creates a changeable variable of "info" and sets it to "RailsRequest"
         var info = RequestInfo()
 
-        info.endpoint = "/user/login"
+        info.endpoint = "login"
         
         info.method = .POST
         
         info.parameters = [
         
-            "username" : username,
+            "email" : username,
             "password" : password
             
         ]
 
        requiredWithInfo(info) { (returnedInfo) -> () in
         
+        print(returnedInfo)
+        
         if let user = returnedInfo?["user"] as? [String:AnyObject] {
             
-            if let key = user["access_token"] as? String {
+            if let key = user["auth_token"] as? String {
 
+                print(key)
                 self.token = key
                 completion(true)
             
@@ -80,34 +83,58 @@ class RailsRequest: NSObject {
         The object could be an Array or Dictionary, YOU MUST handle the type within the completion block.
      */
     func requiredWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
+        
         let fullURLString = APIbaseURL + info.endpoint
         guard let url = NSURL(string: fullURLString) else { return } //add run completion with fail
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = info.method.rawValue
         //add token if we have one
+        
         if let token = token {
-        request.setValue(token, forHTTPHeaderField: "Authorization")
-            if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
-                if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
-                    request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
-                    let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
-                    request.HTTPBody = postData
-                }
-            }
-            request.setValue("application/json", forHTTPHeaderField: "Content_Type")
+            
+            request.setValue(token, forHTTPHeaderField: "Authorization")
+           
             //here we grab the access token & user id
         }
+        
+        if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
+            
+            if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+                request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
+                let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                request.HTTPBody = postData
+            }
+            
+        }
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         // add parameters to body
         //creates a task from request
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
             //work with the data returned
             if let data = data {
                 //have data
-                if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
-                    completion(returnedInfo: returnedInfo)
-                }
+                print(data)
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                        
+                        completion(returnedInfo: returnedInfo)
+                        
+                    } else {
+                        
+                        completion(returnedInfo: nil)
+                        
+                    }
+                    
+                })
+
+                
             } else {
                 //no data: check if error is not nil
+                print(error)
             }
         }
         //runs the task (aka: makes the request call)
