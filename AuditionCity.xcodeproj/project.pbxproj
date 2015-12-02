@@ -19,8 +19,8 @@
 		4466F0271C039ED000264959 /* UserTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0261C039ED000264959 /* UserTableVC.swift */; };
 		4466F0291C03A41C00264959 /* faceShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0281C03A41C00264959 /* faceShotImageView.swift */; };
 		4466F02B1C04984400264959 /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F02A1C04984400264959 /* RailsRequest.swift */; };
-		446F859B1C0E873800F0965F /* AuditionCity Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 446F859A1C0E873800F0965F /* AuditionCity Image.png */; };
 		446F859D1C0E8A0D00F0965F /* audition-city-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 446F859C1C0E8A0D00F0965F /* audition-city-logo.png */; };
+		446F85A01C0E8E0300F0965F /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */; };
 		448A0EEE1BFFB70700B55A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0EED1BFFB70700B55A45 /* AppDelegate.swift */; };
 		448A0EF01BFFB70700B55A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0EEF1BFFB70700B55A45 /* ViewController.swift */; };
 		448A0EF31BFFB70700B55A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448A0EF11BFFB70700B55A45 /* Main.storyboard */; };
@@ -52,8 +52,8 @@
 		4466F0261C039ED000264959 /* UserTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableVC.swift; sourceTree = "<group>"; };
 		4466F0281C03A41C00264959 /* faceShotImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceShotImageView.swift; sourceTree = "<group>"; };
 		4466F02A1C04984400264959 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
-		446F859A1C0E873800F0965F /* AuditionCity Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AuditionCity Image.png"; sourceTree = "<group>"; };
 		446F859C1C0E8A0D00F0965F /* audition-city-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audition-city-logo.png"; sourceTree = "<group>"; };
+		446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
 		448A0EEA1BFFB70700B55A45 /* AuditionCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuditionCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448A0EED1BFFB70700B55A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		448A0EEF1BFFB70700B55A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		448A0EF51BFFB70700B55A45 /* AuditionCity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AuditionCity.xcdatamodel; sourceTree = "<group>"; };
 		448A0EF71BFFB70700B55A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448A0EFC1BFFB70700B55A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		448A0F021BFFB7E200B55A45 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		448A0F021BFFB7E200B55A45 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = AuditionCity/Login.storyboard; sourceTree = "<group>"; };
 		448A0F041BFFB80F00B55A45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		448A0F061BFFB80F00B55A45 /* logDataSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logDataSingleton.swift; sourceTree = "<group>"; };
 		448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buttons.swift; path = ../Buttons.swift; sourceTree = "<group>"; };
@@ -89,9 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				442145D01C0B75430040DE7B /* SearchVC.swift */,
-				44B3FCF81C0CA82C00B28C4C /* RangeSlider */,
 				44B3FCFC1C0CA8D400B28C4C /* SearchFilter */,
-				44B3FCF91C0CA86700B28C4C /* CheckBox */,
 			);
 			name = SearchVC;
 			sourceTree = "<group>";
@@ -128,9 +126,23 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		446F859E1C0E8DA000F0965F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				44B3FCF91C0CA86700B28C4C /* CheckBox */,
+				44B3FCF81C0CA82C00B28C4C /* RangeSlider */,
+				4466F02A1C04984400264959 /* RailsRequest.swift */,
+				448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		448A0EE11BFFB70700B55A45 = {
 			isa = PBXGroup;
 			children = (
+				446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */,
+				448A0EF11BFFB70700B55A45 /* Main.storyboard */,
+				448A0F021BFFB7E200B55A45 /* Login.storyboard */,
 				448A0EEC1BFFB70700B55A45 /* AuditionCity */,
 				448A0EEB1BFFB70700B55A45 /* Products */,
 			);
@@ -147,16 +159,13 @@
 		448A0EEC1BFFB70700B55A45 /* AuditionCity */ = {
 			isa = PBXGroup;
 			children = (
-				448A0EF11BFFB70700B55A45 /* Main.storyboard */,
-				4466F02A1C04984400264959 /* RailsRequest.swift */,
-				448A0F0C1BFFDA8D00B55A45 /* Buttons.swift */,
+				448A0F0A1BFFB81800B55A45 /* Login WorkFlow */,
 				4466F01F1C024F8400264959 /* MainVC */,
+				4466F0251C02512200264959 /* UserDetailVC */,
 				442145D21C0B754D0040DE7B /* SearchVC */,
 				4466F0221C024FDF00264959 /* FavoritesVC */,
-				4466F0251C02512200264959 /* UserDetailVC */,
 				44B3FD051C0DE3F900B28C4C /* ContactVC */,
-				448A0F0A1BFFB81800B55A45 /* Login WorkFlow */,
-				448A0F021BFFB7E200B55A45 /* Login.storyboard */,
+				446F859E1C0E8DA000F0965F /* SupportingFiles */,
 				448A0EF41BFFB70700B55A45 /* AuditionCity.xcdatamodeld */,
 				448A0F0B1BFFB83700B55A45 /* System */,
 			);
@@ -179,7 +188,6 @@
 				448A0EEF1BFFB70700B55A45 /* ViewController.swift */,
 				448A0EF71BFFB70700B55A45 /* Assets.xcassets */,
 				446F859C1C0E8A0D00F0965F /* audition-city-logo.png */,
-				446F859A1C0E873800F0965F /* AuditionCity Image.png */,
 				448A0EFC1BFFB70700B55A45 /* Info.plist */,
 			);
 			name = System;
@@ -282,9 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				448A0F031BFFB7E200B55A45 /* Login.storyboard in Resources */,
+				446F85A01C0E8E0300F0965F /* LaunchStoryboard.storyboard in Resources */,
 				448A0EF81BFFB70700B55A45 /* Assets.xcassets in Resources */,
 				446F859D1C0E8A0D00F0965F /* audition-city-logo.png in Resources */,
-				446F859B1C0E873800F0965F /* AuditionCity Image.png in Resources */,
 				448A0EF31BFFB70700B55A45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +341,7 @@
 				448A0EF21BFFB70700B55A45 /* Base */,
 			);
 			name = Main.storyboard;
+			path = AuditionCity;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
