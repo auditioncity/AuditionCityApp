@@ -12,11 +12,8 @@ class ContactVC: UIViewController {
 
        
     @IBOutlet weak var eMailButton: Buttons!
-    
     @IBOutlet weak var callButton: Buttons!
-    
     @IBOutlet weak var cancelButton: Buttons!
-    
     @IBAction func eMailButtonTapped(sender: Buttons) {
     
     

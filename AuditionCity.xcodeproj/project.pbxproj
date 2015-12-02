@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */,
-				448A0EF11BFFB70700B55A45 /* Main.storyboard */,
 				448A0F021BFFB7E200B55A45 /* Login.storyboard */,
+				448A0EF11BFFB70700B55A45 /* Main.storyboard */,
 				448A0EEC1BFFB70700B55A45 /* AuditionCity */,
 				448A0EEB1BFFB70700B55A45 /* Products */,
 			);

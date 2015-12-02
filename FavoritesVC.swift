@@ -10,6 +10,14 @@ import UIKit
 
 class FavoritesVC: UIViewController {
 
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
+    @IBAction func cancelButtonTapped(sender: UIBarButtonItem) {
+    
+    dismissViewControllerAnimated(true, completion: nil)
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

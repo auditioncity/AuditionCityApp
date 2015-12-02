@@ -12,7 +12,7 @@
         <!--User TableVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="UserTableVC" id="BYZ-38-t0r" customClass="UserTableVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserTableVC" title="User TableVC" id="BYZ-38-t0r" customClass="UserTableVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-eU-XyG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="u3r-9l-snh" customClass="UserCell" customModule="AuditionCity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="100"/>
@@ -78,7 +78,7 @@
                     <navigationItem key="navigationItem" id="x5W-Cq-FEI">
                         <barButtonItem key="leftBarButtonItem" title="⭐️" style="plain" id="P68-gb-LXJ">
                             <connections>
-                                <segue destination="LPq-Eq-j5a" kind="presentation" id="zs9-By-hCL"/>
+                                <segue destination="4nN-RH-u9J" kind="presentation" id="zs9-By-hCL"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="TxG-nX-Q4Y">
@@ -109,7 +109,7 @@
         <!--SearchVC-->
         <scene sceneID="MzW-kt-r5V">
             <objects>
-                <viewController storyboardIdentifier="SearchVC" id="ZYp-Gy-Mht" customClass="SearchVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" title="SearchVC" id="ZYp-Gy-Mht" customClass="SearchVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2vr-0G-TKS"/>
                         <viewControllerLayoutGuide type="bottom" id="3nJ-wK-Oqb"/>
@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Talent Agency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-IT-L1Q">
-                                <rect key="frame" x="20" y="254.5" width="280" height="30"/>
+                                <rect key="frame" x="20" y="255" width="280" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -129,7 +129,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-wb-reQ" customClass="RangeSlider" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="20" y="214.5" width="280" height="30"/>
+                                <rect key="frame" x="20" y="215" width="280" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Pi2-LA-MEG"/>
@@ -155,7 +155,7 @@
                                     <action selector="ageRangePicked:" destination="ZYp-Gy-Mht" eventType="valueChanged" id="U5d-eN-2vr"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-Oc-2YX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-Oc-2YX">
                                 <rect key="frame" x="70" y="164" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -170,7 +170,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-Al-vyI" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="50" y="518" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bqF-6n-PYb"/>
                                     <constraint firstAttribute="width" constant="60" id="zD1-GG-ERG"/>
@@ -191,35 +191,10 @@
                                     <action selector="cancelButtonTapped:" destination="ZYp-Gy-Mht" eventType="touchUpInside" id="Fgb-tv-7cI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-HO-HZT" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="210" y="518" width="60" height="40"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Q53-vo-tw5"/>
-                                    <constraint firstAttribute="width" constant="60" id="vN8-4j-TI7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="okButtonTapped:" destination="ZYp-Gy-Mht" eventType="touchUpInside" id="czv-lO-EGI"/>
-                                    <segue destination="tTN-QL-0Sg" kind="unwind" unwindAction="okButtonTapped:" id="ND5-id-p3S"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-Bl-d6f" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="240" y="104" width="60" height="31"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="nVC-bP-gla"/>
                                 </constraints>
@@ -244,7 +219,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-ID-gf6" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="20" y="104" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="QKD-zh-7Zu"/>
                                     <constraint firstAttribute="height" constant="30" id="qsD-SC-knZ"/>
@@ -267,7 +242,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-nb-68J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-nb-68J">
                                 <rect key="frame" x="18" y="164" width="52" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -278,7 +253,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-CO-vNh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-CO-vNh">
                                 <rect key="frame" x="150" y="164" width="40" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -290,7 +265,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vz-J9-kQT">
-                                <rect key="frame" x="190" y="164.5" width="60" height="30"/>
+                                <rect key="frame" x="190" y="165" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -302,16 +277,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-7O-Mme">
-                                <rect key="frame" x="16" y="289" width="288" height="194"/>
+                                <rect key="frame" x="16" y="289" width="288" height="193"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-Cc-sCp">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="194"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="193"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-75-dtT">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -345,10 +320,10 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-tz-eM3">
-                                                <rect key="frame" x="0.0" y="49" width="70" height="49"/>
+                                                <rect key="frame" x="0.0" y="49" width="70" height="48"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYd-BC-xBk" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -372,7 +347,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-Vo-dXc">
-                                                        <rect key="frame" x="30" y="13" width="40" height="24"/>
+                                                        <rect key="frame" x="30" y="12" width="40" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -385,7 +360,7 @@
                                                 <rect key="frame" x="0.0" y="97" width="84" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -419,10 +394,10 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9Z-u4-N4Q">
-                                                <rect key="frame" x="0.0" y="146" width="91" height="49"/>
+                                                <rect key="frame" x="0.0" y="145" width="91" height="48"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moe-Eo-QxS" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -446,7 +421,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AGMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-9a-AH0">
-                                                        <rect key="frame" x="30" y="13" width="61" height="24"/>
+                                                        <rect key="frame" x="30" y="12" width="61" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -459,13 +434,13 @@
                                         <animations/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ls8-t8-oOH">
-                                        <rect key="frame" x="154" y="0.0" width="134" height="194"/>
+                                        <rect key="frame" x="154" y="0.0" width="134" height="193"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55z-0e-EEY">
                                                 <rect key="frame" x="0.0" y="0.0" width="98" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -496,10 +471,10 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-DB-A0W">
-                                                <rect key="frame" x="0.0" y="49" width="89" height="49"/>
+                                                <rect key="frame" x="0.0" y="49" width="89" height="48"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-zJ-7Vr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -523,7 +498,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IATSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-d9-DB4">
-                                                        <rect key="frame" x="30" y="13" width="59" height="24"/>
+                                                        <rect key="frame" x="30" y="12" width="59" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -536,7 +511,7 @@
                                                 <rect key="frame" x="0.0" y="97" width="75" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -570,10 +545,10 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-zX-Nw7">
-                                                <rect key="frame" x="0.0" y="146" width="134" height="49"/>
+                                                <rect key="frame" x="0.0" y="145" width="134" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-mj-EKK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="49"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="48"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -611,7 +586,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-Eo-Qun" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="169" y="104" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fC7-Wm-Aax"/>
                                     <constraint firstAttribute="width" constant="60" id="mlB-k8-6C4"/>
@@ -637,7 +612,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxB-b1-8aR" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="95" y="104" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="8sb-SP-JmY"/>
                                     <constraint firstAttribute="height" constant="30" id="IEK-gS-XUp"/>
@@ -658,6 +633,31 @@
                                     <segue destination="rIa-Cw-jEW" kind="popoverPresentation" identifier="EyeColor" popoverAnchorView="nxB-b1-8aR" id="WGY-th-ejO">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-HO-HZT" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="210" y="518" width="60" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q53-vo-tw5"/>
+                                    <constraint firstAttribute="width" constant="60" id="vN8-4j-TI7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="okButtonTapped:" destination="ZYp-Gy-Mht" eventType="touchUpInside" id="czv-lO-EGI"/>
+                                    <segue destination="tTN-QL-0Sg" kind="unwind" unwindAction="okButtonTapped:" id="ND5-id-p3S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -685,6 +685,7 @@
                             <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="hNl-HO-HZT" secondAttribute="bottom" constant="10" id="YC6-iz-zVa"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="top" secondItem="2vr-0G-TKS" secondAttribute="bottom" constant="5" id="YUe-ib-GYh"/>
                             <constraint firstItem="hNl-HO-HZT" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="6" id="Yab-cg-z5m"/>
+                            <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="6QM-Oc-2YX" secondAttribute="bottom" constant="21" id="Yj5-tb-2Vs"/>
                             <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="w3E-Al-vyI" secondAttribute="bottom" constant="10" id="asn-0v-9QG"/>
                             <constraint firstAttribute="trailing" secondItem="pAH-wb-reQ" secondAttribute="trailing" constant="20" id="gEI-fG-bSd"/>
                             <constraint firstAttribute="trailing" secondItem="fyi-IT-L1Q" secondAttribute="trailing" constant="20" id="gSi-4F-Ari"/>
@@ -694,6 +695,8 @@
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="bottom" constant="5" id="mHf-hj-sOe"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="9Vz-J9-kQT" secondAttribute="bottom" constant="20" id="mxD-yV-4EH"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="leading" secondItem="G3w-Eo-Qun" secondAttribute="trailing" constant="11" id="oq2-XP-ahS"/>
+                            <constraint firstItem="6QM-Oc-2YX" firstAttribute="top" secondItem="SLh-CO-vNh" secondAttribute="top" id="q8s-vq-Zt8"/>
+                            <constraint firstItem="6QM-Oc-2YX" firstAttribute="top" secondItem="1S9-nb-68J" secondAttribute="top" id="s6n-or-fQX"/>
                             <constraint firstAttribute="trailing" secondItem="9Vz-J9-kQT" secondAttribute="trailing" constant="70" id="tRd-3y-4GF"/>
                             <constraint firstItem="nxB-b1-8aR" firstAttribute="leading" secondItem="pBX-ID-gf6" secondAttribute="trailing" constant="15" id="wNJ-Ok-xcc"/>
                             <constraint firstAttribute="trailing" secondItem="jga-1e-f8U" secondAttribute="trailing" constant="20" id="x5t-Oz-b0P"/>
@@ -728,7 +731,7 @@
         <!--Popup View Controller-->
         <scene sceneID="ULy-Iv-nfg">
             <objects>
-                <viewController storyboardIdentifier="popUpVC" id="rIa-Cw-jEW" customClass="PopupViewController" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popUpVC" title="Popup View Controller" id="rIa-Cw-jEW" customClass="PopupViewController" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q8L-w9-dVn"/>
                         <viewControllerLayoutGuide type="bottom" id="X3V-Jd-6a7"/>
@@ -740,7 +743,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clh-7r-O5w" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="130" y="508" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="aYI-f4-5OM"/>
                                     <constraint firstAttribute="height" constant="40" id="wcm-4U-SUj"/>
@@ -792,10 +795,10 @@
             </objects>
             <point key="canvasLocation" x="2162" y="425"/>
         </scene>
-        <!--User Details View Controller-->
+        <!--User Detail View Controller-->
         <scene sceneID="Agg-bQ-YXZ">
             <objects>
-                <viewController storyboardIdentifier="UserDetailVC" id="0Se-FB-q6r" customClass="UserDetailsViewController" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetailVC" title="User Detail View Controller" id="0Se-FB-q6r" customClass="UserDetailsViewController" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U5s-Bi-XKf"/>
                         <viewControllerLayoutGuide type="bottom" id="NKN-Kj-nSq"/>
@@ -825,21 +828,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-Sn-flz">
                                         <rect key="frame" x="128" y="0.0" width="192" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMj-oV-9iX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMj-oV-9iX">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="64"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
                                                 <rect key="frame" x="0.0" y="64" width="192" height="64"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                         </subviews>
                                         <animations/>
@@ -858,7 +863,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-1o-Ikf" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="210" y="518" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="HNC-o3-q0W"/>
                                     <constraint firstAttribute="height" constant="40" id="YiV-NU-JAW"/>
@@ -879,7 +884,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81T-Lf-a0z" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="50" y="518" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="VrD-6K-pgL"/>
                                     <constraint firstAttribute="height" constant="40" id="qYz-ih-7Qz"/>
@@ -974,13 +979,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yI0-35-fnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TSo-yK-5Li" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1299" y="1163"/>
         </scene>
-        <!--ContactVC-->
+        <!--ContactsVC-->
         <scene sceneID="OgH-QR-uCW">
             <objects>
-                <viewController id="Dad-Co-KlM" customClass="ContactVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ContactsVC" id="Dad-Co-KlM" customClass="ContactVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i7L-AF-Y6v"/>
                         <viewControllerLayoutGuide type="bottom" id="Znk-9m-PIK"/>
@@ -992,7 +998,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA6-Qo-dmL" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="200" y="60" width="80" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dh7-jf-bEE"/>
                                     <constraint firstAttribute="width" constant="80" id="sN1-rS-wkh"/>
@@ -1013,7 +1019,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtT-dx-Zyu" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="40" y="60" width="80" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="aOa-nZ-7xy"/>
                                     <constraint firstAttribute="height" constant="50" id="zQV-lf-amV"/>
@@ -1031,16 +1037,17 @@
                                     <action selector="callButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="Bc5-X4-sF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-wD-kj1" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="116" y="180" width="80" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-wD-kj1" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="120" y="180" width="80" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="EK3-0I-OhY"/>
                                     <constraint firstAttribute="height" constant="50" id="F3b-GV-biQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -1052,7 +1059,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="yqm-H3-0Hl"/>
-                                    <segue destination="Vec-At-PBQ" kind="unwind" unwindAction="okButtonTapped:" id="4Rs-yo-2dC"/>
+                                    <segue destination="TSo-yK-5Li" kind="unwind" unwindAction="okButtonTapped:" id="vkZ-aF-KFq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1062,10 +1069,9 @@
                             <constraint firstItem="a4d-wD-kj1" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="160" id="0zg-oh-V9G"/>
                             <constraint firstAttribute="trailing" secondItem="RA6-Qo-dmL" secondAttribute="trailing" constant="40" id="7ki-kR-nR8"/>
                             <constraint firstItem="BtT-dx-Zyu" firstAttribute="leading" secondItem="V9V-LV-Mna" secondAttribute="leading" constant="40" id="Isb-1D-91F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="a4d-wD-kj1" secondAttribute="trailing" constant="104" id="O44-bq-SQK"/>
+                            <constraint firstItem="a4d-wD-kj1" firstAttribute="centerX" secondItem="V9V-LV-Mna" secondAttribute="centerX" id="Sut-kq-9Rn"/>
                             <constraint firstItem="RA6-Qo-dmL" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="40" id="T7s-Uz-2Ae"/>
                             <constraint firstItem="BtT-dx-Zyu" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="40" id="TgO-Bq-iAB"/>
-                            <constraint firstItem="a4d-wD-kj1" firstAttribute="leading" secondItem="V9V-LV-Mna" secondAttribute="leadingMargin" constant="96" id="Xyf-0s-73J"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -1076,14 +1082,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-JH-qNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Vec-At-PBQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1721" y="1163"/>
         </scene>
         <!--FavoritesVC-->
         <scene sceneID="yOi-2G-Zb7">
             <objects>
-                <viewController id="LPq-Eq-j5a" customClass="FavoritesVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FavoritesVC" id="LPq-Eq-j5a" customClass="FavoritesVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BUC-ng-lxP"/>
                         <viewControllerLayoutGuide type="bottom" id="6gI-aP-v1a"/>
@@ -1095,10 +1100,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-5i-BGJ">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="qYM-DY-GpB" customClass="FavoriteCell" customModule="AuditionCity" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qYM-DY-GpB" id="cdl-hH-w73">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
@@ -1133,6 +1138,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="faceShot" destination="vab-ho-Er2" id="Pm5-0W-9lH"/>
                                             <outlet property="userNameLabel" destination="8f5-Mu-6JB" id="VqG-jX-0fO"/>
@@ -1144,11 +1150,21 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HHc-ZM-WXi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uYb-Nk-52P">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="LPq-Eq-j5a" id="kQm-4p-z3I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="uYb-Nk-52P" id="6dg-N1-u8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcF-XT-aR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2162" y="1163"/>
+            <point key="canvasLocation" x="2460" y="1163"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="00P-eA-gjb">
@@ -1169,6 +1185,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VlU-qV-wge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="891" y="425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aDY-BF-jJv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4nN-RH-u9J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PlZ-LJ-6sw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LPq-Eq-j5a" kind="relationship" relationship="rootViewController" id="u5f-gc-x8S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIV-Ka-fgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="1163"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

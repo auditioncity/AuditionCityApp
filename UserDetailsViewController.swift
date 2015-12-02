@@ -12,23 +12,14 @@ class UserDetailsViewController: UIViewController {
 
     
     @IBOutlet weak var faceShot: UIImageView!
-    
     @IBOutlet weak var fullNameLabel: UILabel!
-    
     @IBOutlet weak var contactButton: Buttons!
-    
     @IBOutlet weak var starmeButton: Buttons!
-    
     @IBOutlet weak var skillSetView: UIScrollView!
-    
     @IBOutlet weak var measurementsLabel: UILabel!
-    
     @IBOutlet weak var resumeView: UIScrollView!
-    
     @IBOutlet weak var expandResume: ToggleButton!
-    
     @IBOutlet weak var resumePanelTop: NSLayoutConstraint!
-    
     @IBAction func expandResumeTapped(sender: ToggleButton) {
     
         resumePanelTop.constant = resumePanelTop.constant == 0 ? -248 : 0
