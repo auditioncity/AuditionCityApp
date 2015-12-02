@@ -13,13 +13,14 @@ import UIKit
     
     public override func drawRect(rect: CGRect) {
         
+        layer.borderWidth = borderWidth
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = true
         
     }
     
     @IBInspectable var cornerRadius: CGFloat = 0
-    
+    @IBInspectable var borderWidth: CGFloat = 0
     
     @IBInspectable public var isChecked: Bool {
         get {

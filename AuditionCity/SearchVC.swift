@@ -3,13 +3,9 @@ import UIKit
 class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
    
     @IBOutlet weak var nameSearchField: UITextField!
-    
     @IBOutlet weak var ageFrom: UILabel!
-    
     @IBOutlet weak var ageTo: UILabel!
-    
     @IBOutlet weak var ageRange: RangeSlider!
-    
     @IBAction func ageRangePicked(sender: RangeSlider) {
         
         print(sender)
@@ -19,18 +15,11 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         
         ageFrom.text = "\(lowerValue)"
         ageTo.text = "\(upperValue)"
-
    }
    
     @IBOutlet weak var talentAgencyTF: UITextField!
-    
-    
     @IBOutlet weak var unionTF: UITextField!
-    
-    
     @IBOutlet weak var okButton: UIButton!
-    
-    
     @IBAction func okButtonTapped(segue: UIStoryboardSegue) {
     
         self.navigationController?.popViewControllerAnimated(true)
@@ -38,17 +27,11 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     }
     
     @IBOutlet weak var cancelButton: UIButton!
-    
     @IBAction func cancelButtonTapped(sender: UIButton) {
    
         dismissViewControllerAnimated(true, completion: nil)
     
     }
-    
-    
-    
-    
-    
     
     let picker = UIImageView(image: UIImage(named: "picker"))
     
@@ -82,8 +65,7 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         var choices = [String]()
         

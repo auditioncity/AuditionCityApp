@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBS-dg-XEd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Se-FB-q6r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -53,6 +53,7 @@
                                                 </imageView>
                                             </subviews>
                                             <animations/>
+                                            <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="VQQ-1R-s8w" firstAttribute="leading" secondItem="w5C-sL-Ypq" secondAttribute="leading" id="Ro8-ct-261"/>
                                                 <constraint firstItem="BsU-7L-yFc" firstAttribute="top" secondItem="w5C-sL-Ypq" secondAttribute="top" id="Wrq-k0-hXE"/>
@@ -118,16 +119,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Talent Agency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-IT-L1Q">
-                                <rect key="frame" x="20" y="254" width="280" height="30"/>
+                                <rect key="frame" x="20" y="254.5" width="280" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YaB-J6-AVA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-wb-reQ" customClass="RangeSlider" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="20" y="214" width="280" height="30"/>
+                                <rect key="frame" x="20" y="214.5" width="280" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Pi2-LA-MEG"/>
@@ -156,7 +158,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-Oc-2YX">
                                 <rect key="frame" x="70" y="164" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BDR-cS-hdq"/>
                                     <constraint firstAttribute="width" constant="60" id="efS-aw-iDq"/>
@@ -166,17 +168,20 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-Al-vyI" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="50" y="498" width="60" height="60"/>
+                                <rect key="frame" x="50" y="518" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="bqF-6n-PYb"/>
+                                    <constraint firstAttribute="height" constant="40" id="bqF-6n-PYb"/>
                                     <constraint firstAttribute="width" constant="60" id="zD1-GG-ERG"/>
                                 </constraints>
-                                <state key="normal" title="Cancel"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -187,20 +192,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-HO-HZT" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="210" y="498" width="60" height="60"/>
+                                <rect key="frame" x="210" y="518" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.00015022809611979862" green="0.78141143474615382" blue="0.23687016169841577" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Q53-vo-tw5"/>
+                                    <constraint firstAttribute="height" constant="40" id="Q53-vo-tw5"/>
                                     <constraint firstAttribute="width" constant="60" id="vN8-4j-TI7"/>
                                 </constraints>
-                                <state key="normal" title="OK"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -209,17 +217,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-Bl-d6f" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="240" y="104" width="60" height="30"/>
+                                <rect key="frame" x="240" y="104" width="60" height="31"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="nVC-bP-gla"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Race"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="11"/>
+                                <state key="normal" title="Race">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -234,19 +244,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-ID-gf6" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="20" y="104" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="QKD-zh-7Zu"/>
                                     <constraint firstAttribute="height" constant="30" id="qsD-SC-knZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Gender"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="11"/>
+                                <state key="normal" title="Gender">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -261,7 +273,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EWS-od-2Di"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -272,15 +284,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rUj-40-cnn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vz-J9-kQT">
-                                <rect key="frame" x="190" y="164" width="60" height="30"/>
+                                <rect key="frame" x="190" y="164.5" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qFX-Se-EvQ"/>
                                     <constraint firstAttribute="width" constant="60" id="vRi-dx-9wm"/>
@@ -290,18 +302,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-7O-Mme">
-                                <rect key="frame" x="16" y="289" width="288" height="171"/>
+                                <rect key="frame" x="16" y="289" width="288" height="194"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-Cc-sCp">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="171"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="194"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-75-dtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="78" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="OzC-Mg-jgk"/>
@@ -317,12 +329,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-Tr-OGL">
-                                                        <rect key="frame" x="30" y="11" width="48" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Equity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-Tr-OGL">
+                                                        <rect key="frame" x="30" y="13" width="63" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -330,12 +345,12 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-tz-eM3">
-                                                <rect key="frame" x="0.0" y="43" width="64" height="43"/>
+                                                <rect key="frame" x="0.0" y="49" width="70" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYd-BC-xBk" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYd-BC-xBk" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="2WK-gb-4h5"/>
@@ -351,12 +366,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-Vo-dXc">
-                                                        <rect key="frame" x="30" y="11" width="34" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-Vo-dXc">
+                                                        <rect key="frame" x="30" y="13" width="40" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -364,12 +382,12 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3R5-P3-CU4">
-                                                <rect key="frame" x="0.0" y="86" width="75" height="43"/>
+                                                <rect key="frame" x="0.0" y="97" width="84" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="ZaF-nB-GlJ"/>
@@ -385,12 +403,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSDC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3i-Xa-G0S">
-                                                        <rect key="frame" x="30" y="11" width="45" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SSDC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3i-Xa-G0S">
+                                                        <rect key="frame" x="30" y="13" width="54" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -398,12 +419,12 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9Z-u4-N4Q">
-                                                <rect key="frame" x="0.0" y="129" width="79" height="43"/>
+                                                <rect key="frame" x="0.0" y="146" width="91" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moe-Eo-QxS" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moe-Eo-QxS" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Hij-kR-wQE"/>
@@ -419,12 +440,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-9a-AH0">
-                                                        <rect key="frame" x="30" y="11" width="49" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AGMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-9a-AH0">
+                                                        <rect key="frame" x="30" y="13" width="61" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -435,15 +459,15 @@
                                         <animations/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ls8-t8-oOH">
-                                        <rect key="frame" x="154" y="0.0" width="134" height="171"/>
+                                        <rect key="frame" x="154" y="0.0" width="134" height="194"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55z-0e-EEY">
-                                                <rect key="frame" x="0.0" y="0.0" width="82" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="pHf-c0-7Rp"/>
@@ -456,12 +480,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFTRA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-ef-oWW">
-                                                        <rect key="frame" x="30" y="11" width="52" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EFTRA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-ef-oWW">
+                                                        <rect key="frame" x="30" y="13" width="68" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -469,12 +496,12 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-DB-A0W">
-                                                <rect key="frame" x="0.0" y="43" width="75" height="43"/>
+                                                <rect key="frame" x="0.0" y="49" width="89" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-zJ-7Vr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-zJ-7Vr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="UkR-al-ev3"/>
@@ -490,12 +517,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IATSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-d9-DB4">
-                                                        <rect key="frame" x="30" y="11" width="45" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IATSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-d9-DB4">
+                                                        <rect key="frame" x="30" y="13" width="59" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -503,12 +533,12 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-3Q-Hrr">
-                                                <rect key="frame" x="0.0" y="86" width="66" height="43"/>
+                                                <rect key="frame" x="0.0" y="97" width="75" height="49"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="12" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="15" width="20" height="20"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="76M-Or-894"/>
@@ -524,12 +554,15 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DGA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIC-R3-IVn">
-                                                        <rect key="frame" x="30" y="11" width="36" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DGA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIC-R3-IVn">
+                                                        <rect key="frame" x="30" y="13" width="45" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -537,10 +570,10 @@
                                                 <animations/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-zX-Nw7">
-                                                <rect key="frame" x="0.0" y="129" width="134" height="43"/>
+                                                <rect key="frame" x="0.0" y="146" width="134" height="49"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-mj-EKK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="43"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="49"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -556,36 +589,40 @@
                                 <animations/>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Other Unions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-40-XoZ">
-                                <rect key="frame" x="16" y="462" width="288" height="30"/>
+                                <rect key="frame" x="16" y="482" width="288" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jua-gl-EpI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jga-1e-f8U">
                                 <rect key="frame" x="20" y="69" width="280" height="30"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1Ql-ay-xhV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-Eo-Qun" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="169" y="104" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fC7-Wm-Aax"/>
                                     <constraint firstAttribute="width" constant="60" id="mlB-k8-6C4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Hair Color"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="11"/>
+                                <state key="normal" title="Hair Color">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -600,19 +637,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxB-b1-8aR" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="95" y="104" width="60" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="8sb-SP-JmY"/>
                                     <constraint firstAttribute="height" constant="30" id="IEK-gS-XUp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Eye Color"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="11"/>
+                                <state key="normal" title="Eye Color">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -623,11 +662,11 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59215686274509804" green="0.058823529411764705" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="trailing" secondItem="LTm-i9-u5X" secondAttribute="trailingMargin" id="0QE-ow-qQQ"/>
                             <constraint firstItem="w3E-Al-vyI" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="50" id="0Z3-eL-ARS"/>
-                            <constraint firstItem="get-Bl-d6f" firstAttribute="baseline" secondItem="G3w-Eo-Qun" secondAttribute="firstBaseline" id="2yW-z9-9eq"/>
+                            <constraint firstItem="get-Bl-d6f" firstAttribute="baseline" secondItem="G3w-Eo-Qun" secondAttribute="firstBaseline" constant="1" id="2yW-z9-9eq"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="74r-GP-7Ff"/>
                             <constraint firstItem="pBX-ID-gf6" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="8Xk-3R-8a1"/>
                             <constraint firstItem="9Vz-J9-kQT" firstAttribute="leading" secondItem="SLh-CO-vNh" secondAttribute="trailing" id="9Kz-B9-C95"/>
@@ -692,17 +731,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clh-7r-O5w" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                                <rect key="frame" x="130" y="508" width="60" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0001502280961" green="0.78141143469999996" blue="0.2368701617" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="aYI-f4-5OM"/>
-                                    <constraint firstAttribute="height" constant="50" id="wcm-4U-SUj"/>
+                                    <constraint firstAttribute="width" constant="60" id="aYI-f4-5OM"/>
+                                    <constraint firstAttribute="height" constant="40" id="wcm-4U-SUj"/>
                                 </constraints>
-                                <state key="normal" title="OK"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -716,13 +758,15 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-Gg-XEZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="KWS-o7-HMF"/>
                                 </constraints>
                             </pickerView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Clh-7r-O5w" firstAttribute="centerX" secondItem="JgL-Gg-XEZ" secondAttribute="centerX" id="Bsk-sQ-08x"/>
                             <constraint firstItem="JgL-Gg-XEZ" firstAttribute="leading" secondItem="Lpn-OX-Xy4" secondAttribute="leading" id="JaU-2U-gfN"/>
@@ -805,7 +849,7 @@
                                 </variation>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-1o-Ikf" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="204" y="508" width="50" height="50"/>
+                                <rect key="frame" x="220" y="508" width="50" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -844,7 +888,9 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="contactButtonPressed:" destination="0Se-FB-q6r" eventType="touchUpInside" id="0ly-DP-2sC"/>
-                                    <segue destination="Dad-Co-KlM" kind="show" id="5uV-w7-JLN"/>
+                                    <segue destination="Dad-Co-KlM" kind="popoverPresentation" popoverAnchorView="81T-Lf-a0z" id="dOd-ti-vAW">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enf-zC-HUS">
@@ -882,6 +928,7 @@
                         <constraints>
                             <constraint firstItem="bC7-MJ-vqK" firstAttribute="top" secondItem="U5s-Bi-XKf" secondAttribute="bottom" id="1Bp-Rr-7LY"/>
                             <constraint firstAttribute="trailing" secondItem="bC7-MJ-vqK" secondAttribute="trailing" id="1Gk-bu-ihi"/>
+                            <constraint firstAttribute="trailing" secondItem="PT6-1o-Ikf" secondAttribute="trailing" constant="50" id="3Qq-Av-kHp"/>
                             <constraint firstAttribute="trailing" secondItem="OVc-I5-nnk" secondAttribute="trailing" id="3ho-br-iP5"/>
                             <constraint firstItem="Enf-zC-HUS" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="6Uk-Sn-9yV"/>
                             <constraint firstItem="81T-Lf-a0z" firstAttribute="top" secondItem="OVc-I5-nnk" secondAttribute="bottom" constant="10" id="Efb-Ud-9fp"/>
@@ -891,7 +938,6 @@
                             <constraint firstAttribute="trailing" secondItem="IJw-v3-Vud" secondAttribute="trailing" constant="10" id="V3L-0e-5BC"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="PT6-1o-Ikf" secondAttribute="bottom" constant="10" id="Wts-Ft-zPV"/>
                             <constraint firstAttribute="trailing" secondItem="Enf-zC-HUS" secondAttribute="trailing" id="YDd-hy-9jx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PT6-1o-Ikf" secondAttribute="trailing" constant="50" id="dL3-bL-erN"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="die-Hi-6HT"/>
                             <constraint firstItem="IJw-v3-Vud" firstAttribute="top" secondItem="Enf-zC-HUS" secondAttribute="bottom" constant="10" id="laa-0t-RCm"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="81T-Lf-a0z" secondAttribute="bottom" constant="10" id="mwV-Ub-a8f"/>

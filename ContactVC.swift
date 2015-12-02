@@ -28,6 +28,7 @@ class ContactVC: UIViewController {
     
     @IBAction func cancelButtonTapped(sender: Buttons) {
     
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {
