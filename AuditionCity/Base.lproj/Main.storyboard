@@ -82,6 +82,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="TxG-nX-Q4Y">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ZYp-Gy-Mht" kind="show" id="32u-5S-CJQ"/>
                             </connections>
@@ -167,30 +168,6 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-Al-vyI" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="50" y="518" width="60" height="40"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="bqF-6n-PYb"/>
-                                    <constraint firstAttribute="width" constant="60" id="zD1-GG-ERG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelButtonTapped:" destination="ZYp-Gy-Mht" eventType="touchUpInside" id="Fgb-tv-7cI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-Bl-d6f" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="240" y="104" width="60" height="31"/>
                                 <animations/>
@@ -285,7 +262,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-75-dtT">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -346,7 +323,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-Vo-dXc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-Vo-dXc">
                                                         <rect key="frame" x="30" y="12" width="40" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
@@ -359,7 +336,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3R5-P3-CU4">
                                                 <rect key="frame" x="0.0" y="97" width="84" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -420,7 +397,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AGMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-9a-AH0">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-9a-AH0">
                                                         <rect key="frame" x="30" y="12" width="61" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
@@ -439,7 +416,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55z-0e-EEY">
                                                 <rect key="frame" x="0.0" y="0.0" width="98" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -497,7 +474,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IATSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-d9-DB4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IATSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-d9-DB4">
                                                         <rect key="frame" x="30" y="12" width="59" height="24"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
@@ -510,7 +487,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-3Q-Hrr">
                                                 <rect key="frame" x="0.0" y="97" width="75" height="49"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="14" width="20" height="20"/>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -636,12 +613,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-HO-HZT" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="210" y="518" width="60" height="40"/>
+                                <rect key="frame" x="130" y="520" width="60" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Q53-vo-tw5"/>
-                                    <constraint firstAttribute="width" constant="60" id="vN8-4j-TI7"/>
+                                    <constraint firstAttribute="height" constant="40" id="FXJ-mw-5Yy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
                                 <state key="normal" title="OK">
@@ -665,15 +641,16 @@
                         <color key="backgroundColor" red="0.59215686274509804" green="0.058823529411764705" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="trailing" secondItem="LTm-i9-u5X" secondAttribute="trailingMargin" id="0QE-ow-qQQ"/>
-                            <constraint firstItem="w3E-Al-vyI" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="50" id="0Z3-eL-ARS"/>
+                            <constraint firstItem="hNl-HO-HZT" firstAttribute="centerX" secondItem="Jdv-40-XoZ" secondAttribute="centerX" id="1Ao-VH-gyX"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="baseline" secondItem="G3w-Eo-Qun" secondAttribute="firstBaseline" constant="1" id="2yW-z9-9eq"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="74r-GP-7Ff"/>
+                            <constraint firstItem="hNl-HO-HZT" firstAttribute="trailing" secondItem="SLh-CO-vNh" secondAttribute="trailing" id="7rW-hg-S0I"/>
                             <constraint firstItem="pBX-ID-gf6" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="8Xk-3R-8a1"/>
                             <constraint firstItem="9Vz-J9-kQT" firstAttribute="leading" secondItem="SLh-CO-vNh" secondAttribute="trailing" id="9Kz-B9-C95"/>
                             <constraint firstItem="fyi-IT-L1Q" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="Ae5-MA-uY5"/>
                             <constraint firstItem="nxB-b1-8aR" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="B2v-FM-Jsj"/>
-                            <constraint firstAttribute="trailing" secondItem="hNl-HO-HZT" secondAttribute="trailing" constant="50" id="Bca-66-C0V"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="top" secondItem="G3w-Eo-Qun" secondAttribute="top" id="CCO-DV-n6W"/>
+                            <constraint firstItem="hNl-HO-HZT" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Gep-Lb-xbp"/>
                             <constraint firstItem="1S9-nb-68J" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="18" id="HY9-cJ-1zB"/>
                             <constraint firstItem="b8L-7O-Mme" firstAttribute="top" secondItem="fyi-IT-L1Q" secondAttribute="bottom" constant="5" id="OFY-L8-Bck"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="trailing" secondItem="jga-1e-f8U" secondAttribute="trailing" id="Qtk-rI-0iT"/>
@@ -682,15 +659,13 @@
                             <constraint firstItem="9Vz-J9-kQT" firstAttribute="top" secondItem="get-Bl-d6f" secondAttribute="bottom" constant="30" id="Wq5-QW-lVk"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="70" id="XaB-zn-gi3"/>
                             <constraint firstItem="b8L-7O-Mme" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" id="Xri-pb-e2I"/>
-                            <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="hNl-HO-HZT" secondAttribute="bottom" constant="10" id="YC6-iz-zVa"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="top" secondItem="2vr-0G-TKS" secondAttribute="bottom" constant="5" id="YUe-ib-GYh"/>
-                            <constraint firstItem="hNl-HO-HZT" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="6" id="Yab-cg-z5m"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="6QM-Oc-2YX" secondAttribute="bottom" constant="21" id="Yj5-tb-2Vs"/>
-                            <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="w3E-Al-vyI" secondAttribute="bottom" constant="10" id="asn-0v-9QG"/>
                             <constraint firstAttribute="trailing" secondItem="pAH-wb-reQ" secondAttribute="trailing" constant="20" id="gEI-fG-bSd"/>
                             <constraint firstAttribute="trailing" secondItem="fyi-IT-L1Q" secondAttribute="trailing" constant="20" id="gSi-4F-Ari"/>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" id="iDL-Ke-HSU"/>
                             <constraint firstItem="pBX-ID-gf6" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="iM9-TM-2mj"/>
+                            <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="hNl-HO-HZT" secondAttribute="bottom" constant="8" symbolic="YES" id="llf-Vc-y62"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="lrU-du-sa0"/>
                             <constraint firstItem="Jdv-40-XoZ" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="bottom" constant="5" id="mHf-hj-sOe"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="9Vz-J9-kQT" secondAttribute="bottom" constant="20" id="mxD-yV-4EH"/>
@@ -711,7 +686,6 @@
                         <outlet property="ageRange" destination="pAH-wb-reQ" id="iVv-0Y-duO"/>
                         <outlet property="ageTo" destination="9Vz-J9-kQT" id="QdO-PA-eBa"/>
                         <outlet property="agmaCB" destination="moe-Eo-QxS" id="sfx-AE-CAj"/>
-                        <outlet property="cancelButton" destination="w3E-Al-vyI" id="VX5-EV-QTL"/>
                         <outlet property="dgaCB" destination="EJ6-R0-LMr" id="253-ty-fGv"/>
                         <outlet property="eftraCB" destination="UqS-ez-KBO" id="0T3-s8-ZpD"/>
                         <outlet property="equityCB" destination="U5G-an-IYb" id="CAg-mj-Nqc"/>
@@ -762,7 +736,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="okButtonTapped:" destination="rIa-Cw-jEW" eventType="touchUpInside" id="tsZ-Yl-tng"/>
-                                    <segue destination="9vP-2e-WwH" kind="unwind" unwindAction="okButtonTapped:" id="vzL-1w-jgp"/>
+                                    <segue destination="9vP-2e-WwH" kind="unwind" unwindAction="okButtonTapped:" id="1fH-Ob-Tzm"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-Gg-XEZ">
@@ -1151,7 +1125,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HHc-ZM-WXi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uYb-Nk-52P">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="uYb-Nk-52P">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="LPq-Eq-j5a" id="kQm-4p-z3I"/>
                             </connections>

@@ -36,12 +36,12 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     }
     
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBAction func cancelButtonTapped(sender: UIButton) {
-   
-        dismissViewControllerAnimated(true, completion: nil)
-    
-    }
+//    @IBOutlet weak var cancelButton: UIButton!
+//    @IBAction func cancelButtonTapped(sender: UIButton) {
+//   
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//    
+//    }
     
     let picker = UIImageView(image: UIImage(named: "picker"))
     
@@ -74,6 +74,10 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+//    var unions: [String:AnyObject] = ["equity" : equityCB.isChecked, "sag" : sagCB.isChecked, "ssdc": ssdcCB.isChecked, "agma": agmaCB.isChecked, "eftra": eftraCB.isChecked, "iatse": iatseCB.isChecked, "dga": dgaCB.isChecked]
+//    
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

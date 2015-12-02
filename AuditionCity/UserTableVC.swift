@@ -46,31 +46,31 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // #warning Incomplete implementation, return the number of rows
         let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserCell
-
-        let user = users[indexPath.row]
-    
-       if let username = user["login"] as? String {
-            
-            cell.userNameLabel.text = username
-        }
-        
-        if let faceShotURL = user[RailsRequest] as? String{
-            
-            cell.faceShot.hidden = false
-            
-            if let url = NSURL(string: faceShotURL) {
-                if let data = NSData(contentsOfURL: url) {
-                    if let image = UIImage(data:data) {
-                        cell.faceShot.image = image
-                        
-                    }
-                }
-            }
-        } else {
-            
-            cell.faceShot.hidden = true
-        }
-        
+//
+//        let user = users[indexPath.row]
+//    
+//       if let username = user["login"] as? String {
+//            
+//            cell.userNameLabel.text = username
+//        }
+//        
+//        if let faceShotURL = user[RailsRequest] as? String{
+//            
+//            cell.faceShot.hidden = false
+//            
+//            if let url = NSURL(string: faceShotURL) {
+//                if let data = NSData(contentsOfURL: url) {
+//                    if let image = UIImage(data:data) {
+//                        cell.faceShot.image = image
+//                        
+//                    }
+//                }
+//            }
+//        } else {
+//            
+//            cell.faceShot.hidden = true
+//        }
+//        
         return cell
     }
 

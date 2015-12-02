@@ -11,6 +11,7 @@ import UIKit
 @IBDesignable public class CheckBox: UIControl {
     // MARK: Properties
     
+    
     public override func drawRect(rect: CGRect) {
         
         layer.borderWidth = borderWidth

@@ -126,12 +126,8 @@ class RailsRequest: NSObject {
                     } else {
                         
                         completion(returnedInfo: nil)
-                        
                     }
-                    
                 })
-
-                
             } else {
                 //no data: check if error is not nil
                 print(error)
