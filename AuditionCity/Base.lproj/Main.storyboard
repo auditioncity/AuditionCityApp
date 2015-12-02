@@ -989,31 +989,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA6-Qo-dmL" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="120" y="181" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA6-Qo-dmL" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="200" y="60" width="80" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dh7-jf-bEE"/>
+                                    <constraint firstAttribute="width" constant="80" id="sN1-rS-wkh"/>
+                                </constraints>
                                 <state key="normal" title="📝"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="40"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="eMailButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="Qoe-lh-2HP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtT-dx-Zyu" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="120" y="306" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtT-dx-Zyu" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="40" y="60" width="80" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aOa-nZ-7xy"/>
+                                    <constraint firstAttribute="height" constant="50" id="zQV-lf-amV"/>
+                                </constraints>
                                 <state key="normal" title="📞"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="40"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -1023,10 +1031,13 @@
                                     <action selector="callButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="Bc5-X4-sF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-wD-kj1" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-wD-kj1" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="116" y="180" width="80" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.7725490196" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F3b-GV-biQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1036,7 +1047,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1046,7 +1057,16 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a4d-wD-kj1" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="160" id="0zg-oh-V9G"/>
+                            <constraint firstAttribute="trailing" secondItem="RA6-Qo-dmL" secondAttribute="trailing" constant="40" id="7ki-kR-nR8"/>
+                            <constraint firstItem="BtT-dx-Zyu" firstAttribute="leading" secondItem="V9V-LV-Mna" secondAttribute="leading" constant="40" id="Isb-1D-91F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a4d-wD-kj1" secondAttribute="trailing" constant="104" id="O44-bq-SQK"/>
+                            <constraint firstItem="RA6-Qo-dmL" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="40" id="T7s-Uz-2Ae"/>
+                            <constraint firstItem="BtT-dx-Zyu" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="40" id="TgO-Bq-iAB"/>
+                            <constraint firstItem="a4d-wD-kj1" firstAttribute="leading" secondItem="V9V-LV-Mna" secondAttribute="leadingMargin" constant="96" id="Xyf-0s-73J"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
