@@ -19,11 +19,11 @@
 		4466F0271C039ED000264959 /* UserTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0261C039ED000264959 /* UserTableVC.swift */; };
 		4466F0291C03A41C00264959 /* faceShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0281C03A41C00264959 /* faceShotImageView.swift */; };
 		4466F02B1C04984400264959 /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F02A1C04984400264959 /* RailsRequest.swift */; };
+		446BA7A21C10C0F700875954 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446BA7A11C10C0F700875954 /* Main.storyboard */; };
 		446F859D1C0E8A0D00F0965F /* audition-city-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 446F859C1C0E8A0D00F0965F /* audition-city-logo.png */; };
 		446F85A01C0E8E0300F0965F /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */; };
 		448A0EEE1BFFB70700B55A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0EED1BFFB70700B55A45 /* AppDelegate.swift */; };
 		448A0EF01BFFB70700B55A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0EEF1BFFB70700B55A45 /* ViewController.swift */; };
-		448A0EF31BFFB70700B55A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448A0EF11BFFB70700B55A45 /* Main.storyboard */; };
 		448A0EF61BFFB70700B55A45 /* AuditionCity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 448A0EF41BFFB70700B55A45 /* AuditionCity.xcdatamodeld */; };
 		448A0EF81BFFB70700B55A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448A0EF71BFFB70700B55A45 /* Assets.xcassets */; };
 		448A0F031BFFB7E200B55A45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448A0F021BFFB7E200B55A45 /* Login.storyboard */; };
@@ -36,7 +36,6 @@
 		44B3FCF71C0CA81200B28C4C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */; };
 		44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */; };
 		44B3FD041C0DE3F100B28C4C /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FD031C0DE3F100B28C4C /* ContactVC.swift */; };
-		44B3FD091C0DFC6700B28C4C /* UserTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3FD081C0DFC6700B28C4C /* UserTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +51,12 @@
 		4466F0261C039ED000264959 /* UserTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableVC.swift; sourceTree = "<group>"; };
 		4466F0281C03A41C00264959 /* faceShotImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceShotImageView.swift; sourceTree = "<group>"; };
 		4466F02A1C04984400264959 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
+		446BA7A11C10C0F700875954 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		446F859C1C0E8A0D00F0965F /* audition-city-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audition-city-logo.png"; sourceTree = "<group>"; };
 		446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
 		448A0EEA1BFFB70700B55A45 /* AuditionCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuditionCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448A0EED1BFFB70700B55A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		448A0EEF1BFFB70700B55A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		448A0EF21BFFB70700B55A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		448A0EF51BFFB70700B55A45 /* AuditionCity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AuditionCity.xcdatamodel; sourceTree = "<group>"; };
 		448A0EF71BFFB70700B55A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448A0EFC1BFFB70700B55A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		44B3FCF61C0CA81200B28C4C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		44B3FCFA1C0CA8C800B28C4C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		44B3FD031C0DE3F100B28C4C /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
-		44B3FD081C0DFC6700B28C4C /* UserTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 				4466F0261C039ED000264959 /* UserTableVC.swift */,
 				4466F01B1C024D8D00264959 /* UserCell.swift */,
 				4466F0281C03A41C00264959 /* faceShotImageView.swift */,
-				44B3FD081C0DFC6700B28C4C /* UserTableView.swift */,
 			);
 			name = MainVC;
 			sourceTree = "<group>";
@@ -140,9 +137,9 @@
 		448A0EE11BFFB70700B55A45 = {
 			isa = PBXGroup;
 			children = (
+				446BA7A11C10C0F700875954 /* Main.storyboard */,
 				446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */,
 				448A0F021BFFB7E200B55A45 /* Login.storyboard */,
-				448A0EF11BFFB70700B55A45 /* Main.storyboard */,
 				448A0EEC1BFFB70700B55A45 /* AuditionCity */,
 				448A0EEB1BFFB70700B55A45 /* Products */,
 			);
@@ -290,10 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				448A0F031BFFB7E200B55A45 /* Login.storyboard in Resources */,
+				446BA7A21C10C0F700875954 /* Main.storyboard in Resources */,
 				446F85A01C0E8E0300F0965F /* LaunchStoryboard.storyboard in Resources */,
 				448A0EF81BFFB70700B55A45 /* Assets.xcassets in Resources */,
 				446F859D1C0E8A0D00F0965F /* audition-city-logo.png in Resources */,
-				448A0EF31BFFB70700B55A45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +312,6 @@
 				4466F0271C039ED000264959 /* UserTableVC.swift in Sources */,
 				44B3FD041C0DE3F100B28C4C /* ContactVC.swift in Sources */,
 				44B3FCF41C0CA4F000B28C4C /* RangeSliderThumbLayer.swift in Sources */,
-				44B3FD091C0DFC6700B28C4C /* UserTableView.swift in Sources */,
 				448A0F091BFFB80F00B55A45 /* logDataSingleton.swift in Sources */,
 				442145C31C07A4310040DE7B /* FavoritesTableVC.swift in Sources */,
 				44B3FCFB1C0CA8C800B28C4C /* UIColor.swift in Sources */,
@@ -333,18 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		448A0EF11BFFB70700B55A45 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				448A0EF21BFFB70700B55A45 /* Base */,
-			);
-			name = Main.storyboard;
-			path = AuditionCity;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		448A0EFD1BFFB70700B55A45 /* Debug */ = {

@@ -75,8 +75,19 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         
     }
     
-//    var unions: [String:AnyObject] = ["equity" : equityCB.isChecked, "sag" : sagCB.isChecked, "ssdc": ssdcCB.isChecked, "agma": agmaCB.isChecked, "eftra": eftraCB.isChecked, "iatse": iatseCB.isChecked, "dga": dgaCB.isChecked]
-//    
+
+    func runSubmit() {
+        
+            var unions: [String:AnyObject] = [
+                "equity" : equityCB.isChecked,
+                "sag" : sagCB.isChecked,
+                "ssdc": ssdcCB.isChecked,
+                "agma": agmaCB.isChecked,
+                "eftra": eftraCB.isChecked,
+                "iatse": iatseCB.isChecked,
+                "dga": dgaCB.isChecked
+        ]
+    }
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -89,9 +100,9 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
             
             case "Race" : choices = ["Black or African American", "Hispanic/Latino", "Asian/Pacific Islander", "White or Caucasian", "American Indian/Alaskan Native", "Other"]
             
-            case "EyeColor" : choices = ["Blue", "Brown", "Green", "Black", "Purple"]
+            case "EyeColor" : choices = ["Blue", "Brown", "Hazel", "Green", "Black", "Grey", "Purple"]
             
-            case "HairColor" : choices = ["Blonde", "Brown", "Hazel", "Grey", "Black", "Other"]
+            case "HairColor" : choices = ["Blonde", "Brown", "Hazel", "Grey", "Black", "Red", "White", "Other", "None"]
             
         default : choices = []
         

@@ -21,7 +21,8 @@ class PopupViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBAction func okButtonTapped(sender: Buttons) {
     
-        self.navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
+    
     }
     
     override func viewDidAppear(animated: Bool) {

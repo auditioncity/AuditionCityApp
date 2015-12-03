@@ -36,9 +36,6 @@ class LoginViewController: UIViewController {
                 
             } else {
                 
-                
-                //
-                
             }
         })
         
