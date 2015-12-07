@@ -2,8 +2,8 @@
 //  RailsRequest.swift
 //  RR
 //
-//  Created by Susanne Burnham on 11/5/15.
-//  Copyright © 2015 Susanne Kasahara. All rights reserved.
+//  Created by Paul Vagner on 11/5/15.
+//  Copyright © 2015 Paul Vagner. All rights reserved.
 //
 
 // making a singleton to access a token
@@ -16,8 +16,6 @@ let _d = NSUserDefaults.standardUserDefaults()
 
 class RailsRequest: NSObject {
     
-    
-    
     class func session() -> RailsRequest { return _rr }
     
     var token: String? {
@@ -28,12 +26,16 @@ class RailsRequest: NSObject {
         
     }
     
+    // save my user info
+    
+    
+    
     //// CHANGE OUT WITH TEAM 5
     /// need methods and parameters for request, endpoint type and parameters
     
     
 
-      private let base = "https://mysterious-fjord-1759.herokuapp.com"
+      private let base = " https://pacific-garden-6218.herokuapp.com/"
     
     func loginWithUsername(username: String, andPassword password: String, completion: (loggedIn: Bool) -> ()) {
         
@@ -53,13 +55,14 @@ class RailsRequest: NSObject {
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
-                if let key = user["access_token"] as? String {
+                if let key = user["auth_token"] as? String {
                     
                     self.token = key
                     
                     print(self.token)
                     
                     completion(loggedIn: true)
+                
                 } else {
                     
                     completion(loggedIn: false)
@@ -77,62 +80,7 @@ class RailsRequest: NSObject {
         
     }
     
-    func registerWithUsername(username: String, andPassword password: String, email: String, completion: (registered: Bool) -> ()) {
-        
-        
-        var info = RequestInfo()
-    
-        info.endpoint = "/signup"
-        info.method = .POST
-        info.parameters = [
-            
-            
-            "username" : username,
-            "email" : email,
-            "password" : password
-            
-        ]
-        
-        requestWithInfo(info) { (returnedInfo) -> () in
-            
-            
-            print(returnedInfo)
-            
-            
-            // here we grab the access token & user id in cards table view controller ,
-            
-            if let user = returnedInfo?["user"] as? [String:AnyObject] {
-                
-                if let key = user["access_token"] as? String {
-                    
-                    self.token = key
-                    
-                    print(self.token)
-                
-                    
-                    completion(registered: true)
-                } else {
-                    
-                    completion(registered: false)
-                    
-                }
-                
-                
-            }else {
-                
-                completion(registered: false)
-                
-            }
-
-            
-            
-        }
-        
-    }
-    
-
-
-    // info:AnyObhect may not be the info need to casr (info: ANyObject cast for
+       // info:AnyObhect may not be the info need to casr (info: ANyObject cast for
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
         var fullURLString = base + info.endpoint

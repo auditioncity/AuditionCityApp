@@ -20,6 +20,7 @@
 		4466F0291C03A41C00264959 /* faceShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F0281C03A41C00264959 /* faceShotImageView.swift */; };
 		4466F02B1C04984400264959 /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466F02A1C04984400264959 /* RailsRequest.swift */; };
 		446BA7A21C10C0F700875954 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446BA7A11C10C0F700875954 /* Main.storyboard */; };
+		446BA7A61C15EED500875954 /* splash2.png in Resources */ = {isa = PBXBuildFile; fileRef = 446BA7A51C15EED500875954 /* splash2.png */; };
 		446F859D1C0E8A0D00F0965F /* audition-city-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 446F859C1C0E8A0D00F0965F /* audition-city-logo.png */; };
 		446F85A01C0E8E0300F0965F /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */; };
 		448A0EEE1BFFB70700B55A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A0EED1BFFB70700B55A45 /* AppDelegate.swift */; };
@@ -52,6 +53,8 @@
 		4466F0281C03A41C00264959 /* faceShotImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceShotImageView.swift; sourceTree = "<group>"; };
 		4466F02A1C04984400264959 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
 		446BA7A11C10C0F700875954 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		446BA7A31C15D6CE00875954 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RailsRequest.swift; path = ../RailsRequest.swift; sourceTree = "<group>"; };
+		446BA7A51C15EED500875954 /* splash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash2.png; sourceTree = "<group>"; };
 		446F859C1C0E8A0D00F0965F /* audition-city-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audition-city-logo.png"; sourceTree = "<group>"; };
 		446F859F1C0E8E0300F0965F /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
 		448A0EEA1BFFB70700B55A45 /* AuditionCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuditionCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,7 @@
 		448A0F0A1BFFB81800B55A45 /* Login WorkFlow */ = {
 			isa = PBXGroup;
 			children = (
+				446BA7A31C15D6CE00875954 /* RailsRequest.swift */,
 				448A0F041BFFB80F00B55A45 /* LoginViewController.swift */,
 				448A0F061BFFB80F00B55A45 /* logDataSingleton.swift */,
 			);
@@ -185,6 +189,7 @@
 				448A0EEF1BFFB70700B55A45 /* ViewController.swift */,
 				448A0EF71BFFB70700B55A45 /* Assets.xcassets */,
 				446F859C1C0E8A0D00F0965F /* audition-city-logo.png */,
+				446BA7A51C15EED500875954 /* splash2.png */,
 				448A0EFC1BFFB70700B55A45 /* Info.plist */,
 			);
 			name = System;
@@ -289,6 +294,7 @@
 				448A0F031BFFB7E200B55A45 /* Login.storyboard in Resources */,
 				446BA7A21C10C0F700875954 /* Main.storyboard in Resources */,
 				446F85A01C0E8E0300F0965F /* LaunchStoryboard.storyboard in Resources */,
+				446BA7A61C15EED500875954 /* splash2.png in Resources */,
 				448A0EF81BFFB70700B55A45 /* Assets.xcassets in Resources */,
 				446F859D1C0E8A0D00F0965F /* audition-city-logo.png in Resources */,
 			);

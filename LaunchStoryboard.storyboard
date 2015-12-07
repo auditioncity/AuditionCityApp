@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audition-city-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TVd-0M-rRQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash2.png" translatesAutoresizingMaskIntoConstraints="NO" id="TVd-0M-rRQ">
                                 <rect key="frame" x="0.0" y="60" width="320" height="320"/>
                                 <animations/>
                                 <constraints>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="audition-city-logo.png" width="600" height="600"/>
+        <image name="splash2.png" width="640" height="1136"/>
     </resources>
 </document>

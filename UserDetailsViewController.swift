@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserDetailsViewController: UIViewController {
+class UserDetailsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     
     @IBOutlet weak var faceShot: UIImageView!
@@ -56,6 +56,14 @@ class UserDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // run rails request to get actor info
+        
+        // pull image url from returnedInfo and create a uiimage with the nsdata from the contentsOfURL
+        
+        // set label to be name from returnedInfo
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,14 +72,28 @@ class UserDetailsViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let popupView = segue.destinationViewController as? ContactVC {
+            
+            if let popup = popupView.popoverPresentationController
+            {
+                
+                popup.delegate = self
+            }
+            
+        }
+        
     }
-    */
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return UIModalPresentationStyle.None
+    }
 
 }
