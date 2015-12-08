@@ -149,14 +149,25 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "Detail" {
+            
+            guard let cell = sender as? UserCell else { return }
+            guard let indexPath = tableView.indexPathForCell(cell) else { return }
+            guard let user = users[indexPath.row]["actor"] as? [String:AnyObject] else { return }
+
+            let detailVC = segue.destinationViewController as? UserDetailsViewController
+            
+            detailVC?.actor = user
+            
+        }
+        
+        
     }
-    */
 
 }

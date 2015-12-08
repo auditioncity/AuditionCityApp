@@ -10,6 +10,7 @@ import UIKit
 
 class UserDetailsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
+    var actor: [String:AnyObject] = [:]
     
     @IBOutlet weak var faceShot: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -37,6 +38,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             }
             
             let t = CGAffineTransformMakeRotation(degreesToRadians(degrees));
+            
             self.expandResume.transform = t
             
         }
@@ -52,16 +54,19 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+        fullNameLabel.text = actor["full_name"] as? String
         
-        // run rails request to get actor info
-        
-        // pull image url from returnedInfo and create a uiimage with the nsdata from the contentsOfURL
-        
-        // set label to be name from returnedInfo
+        if let ageY = actor["age_young"] as? Int, ageO = actor["age_old"] as? Int, let heightFT = actor["height_feet"] as? Int, heightIN = actor["height_inches"] as? Int {
+                
+            measurementsLabel.text = "Age: \(ageY) - \(ageO)" + "\nHeight: \(heightFT)ft, \(heightIN)in"
+            
+        }
+        // layout everything on the detail view based on actor dictionary
         
         
     }
