@@ -41,13 +41,7 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             
             self.tableView.reloadData()
             
-            // set the value users array with data from returnedInfo
-            
-            // reload tableView
-            
         }
-        
-        
     }
     
     var users: [[String:AnyObject]] = []

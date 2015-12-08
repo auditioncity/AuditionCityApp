@@ -118,8 +118,8 @@
 		4466F0251C02512200264959 /* UserDetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				442145CA1C08DD520040DE7B /* ToggleButton.swift */,
 				4466F0231C0250A100264959 /* UserDetailsViewController.swift */,
+				442145CA1C08DD520040DE7B /* ToggleButton.swift */,
 			);
 			name = UserDetailVC;
 			path = ..;

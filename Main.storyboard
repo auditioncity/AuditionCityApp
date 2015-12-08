@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-eU-XyG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-eU-XyG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,6 +75,12 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YQ4-eU-XyG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Gn-vJ-qwU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YQ4-eU-XyG" secondAttribute="bottom" id="Mg7-DH-7QG"/>
+                            <constraint firstItem="YQ4-eU-XyG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mB9-AB-nKe"/>
+                            <constraint firstAttribute="trailing" secondItem="YQ4-eU-XyG" secondAttribute="trailing" id="uyC-p4-aMZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x5W-Cq-FEI">
                         <barButtonItem key="leftBarButtonItem" title="⭐️" style="plain" id="P68-gb-LXJ">
@@ -204,7 +210,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="11"/>
                                 <state key="normal" title="Gender">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -768,10 +774,10 @@
             </objects>
             <point key="canvasLocation" x="2162" y="425"/>
         </scene>
-        <!--User Detail View Controller-->
+        <!--User Details View Controller-->
         <scene sceneID="Agg-bQ-YXZ">
             <objects>
-                <viewController storyboardIdentifier="UserDetailVC" title="User Detail View Controller" id="0Se-FB-q6r" customClass="UserDetailsViewController" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetailVC" id="0Se-FB-q6r" customClass="UserDetailsViewController" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U5s-Bi-XKf"/>
                         <viewControllerLayoutGuide type="bottom" id="NKN-Kj-nSq"/>
@@ -810,7 +816,7 @@
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
                                                 <rect key="frame" x="0.0" y="64" width="192" height="64"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -952,7 +958,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yI0-35-fnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="TSo-yK-5Li" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="891" y="1273"/>
         </scene>
@@ -1010,39 +1015,12 @@
                                     <action selector="callButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="Bc5-X4-sF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-wD-kj1" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="120" y="180" width="80" height="50"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="EK3-0I-OhY"/>
-                                    <constraint firstAttribute="height" constant="50" id="F3b-GV-biQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelButtonTapped:" destination="Dad-Co-KlM" eventType="touchUpInside" id="yqm-H3-0Hl"/>
-                                    <segue destination="TSo-yK-5Li" kind="unwind" unwindAction="okButtonTapped:" id="vkZ-aF-KFq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="a4d-wD-kj1" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="160" id="0zg-oh-V9G"/>
                             <constraint firstAttribute="trailing" secondItem="RA6-Qo-dmL" secondAttribute="trailing" constant="40" id="7ki-kR-nR8"/>
                             <constraint firstItem="BtT-dx-Zyu" firstAttribute="leading" secondItem="V9V-LV-Mna" secondAttribute="leading" constant="40" id="Isb-1D-91F"/>
-                            <constraint firstItem="a4d-wD-kj1" firstAttribute="centerX" secondItem="V9V-LV-Mna" secondAttribute="centerX" id="Sut-kq-9Rn"/>
                             <constraint firstItem="RA6-Qo-dmL" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="40" id="T7s-Uz-2Ae"/>
                             <constraint firstItem="BtT-dx-Zyu" firstAttribute="top" secondItem="i7L-AF-Y6v" secondAttribute="bottom" constant="40" id="TgO-Bq-iAB"/>
                         </constraints>
@@ -1050,7 +1028,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="callButton" destination="BtT-dx-Zyu" id="j22-hO-8We"/>
-                        <outlet property="cancelButton" destination="a4d-wD-kj1" id="AJm-aQ-c6r"/>
                         <outlet property="eMailButton" destination="RA6-Qo-dmL" id="QS7-nH-RhH"/>
                     </connections>
                 </viewController>
@@ -1070,8 +1047,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-5i-BGJ">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-5i-BGJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -1123,6 +1100,12 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6gI-aP-v1a" firstAttribute="top" secondItem="lPA-5i-BGJ" secondAttribute="bottom" id="NQf-N8-PLD"/>
+                            <constraint firstAttribute="trailing" secondItem="lPA-5i-BGJ" secondAttribute="trailing" id="Yr8-de-qLc"/>
+                            <constraint firstItem="lPA-5i-BGJ" firstAttribute="leading" secondItem="lfT-Mz-gnH" secondAttribute="leading" id="fml-NS-2aa"/>
+                            <constraint firstItem="lPA-5i-BGJ" firstAttribute="top" secondItem="BUC-ng-lxP" secondAttribute="bottom" id="msO-Y8-ADO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HHc-ZM-WXi">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="uYb-Nk-52P">
@@ -1182,7 +1165,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wud-Rz-MW8"/>
+        <segue reference="oCb-9X-0GO"/>
         <segue reference="AEC-nI-QoO"/>
     </inferredMetricsTieBreakers>
 </document>

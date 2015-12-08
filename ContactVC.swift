@@ -12,7 +12,7 @@ class ContactVC: UIViewController {
     
     override var preferredContentSize: CGSize {
         get {
-            return CGSize(width: 300, height: 275)
+            return CGSize(width: 300, height: 140)
         }
         set {
             super.preferredContentSize = newValue
@@ -22,7 +22,6 @@ class ContactVC: UIViewController {
        
     @IBOutlet weak var eMailButton: Buttons!
     @IBOutlet weak var callButton: Buttons!
-    @IBOutlet weak var cancelButton: Buttons!
     @IBAction func eMailButtonTapped(sender: Buttons) {
     
     
@@ -33,10 +32,7 @@ class ContactVC: UIViewController {
     
     }
     
-    @IBAction func cancelButtonTapped(sender: Buttons) {
-    
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+
     
        override func viewDidLoad() {
         super.viewDidLoad()
