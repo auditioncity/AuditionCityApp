@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import QuickLook
 
-class UserDetailsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class UserDetailsViewController: UIViewController, UIPopoverPresentationControllerDelegate,  QLPreviewControllerDelegate, QLPreviewControllerDataSource {
 
     var actor: [String:AnyObject] = [:]
     
+    @IBOutlet weak var Bio: UIButton!
     @IBOutlet weak var faceShot: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var contactButton: Buttons!
@@ -19,11 +21,12 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     @IBOutlet weak var skillSetView: UIScrollView!
     @IBOutlet weak var measurementsLabel: UILabel!
     @IBOutlet weak var resumeView: UIScrollView!
+    
     @IBOutlet weak var expandResume: ToggleButton!
     @IBOutlet weak var resumePanelTop: NSLayoutConstraint!
     @IBAction func expandResumeTapped(sender: ToggleButton) {
     
-        resumePanelTop.constant = resumePanelTop.constant == 0 ? -248 : 0
+        resumePanelTop.constant = resumePanelTop.constant == 0 ? -235 : 0
         view.setNeedsUpdateConstraints()
         
         let degrees: CGFloat = resumePanelTop.constant != 0 ? 180 : 0
@@ -61,16 +64,128 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
 
         fullNameLabel.text = actor["full_name"] as? String
         
-        if let ageY = actor["age_young"] as? Int, ageO = actor["age_old"] as? Int, let heightFT = actor["height_feet"] as? Int, heightIN = actor["height_inches"] as? Int {
+        if let ageY = actor["age_young"] as? Int, ageO = actor["age_old"] as? Int, let heightFT = actor["height_feet"] as? Int, heightIN = actor["height_inches"] as? Int, let eyeColor = actor["eye_color"] as? String, let hairColor = actor["hair_color"] as? String {
                 
-            measurementsLabel.text = "Age: \(ageY) - \(ageO)" + "\nHeight: \(heightFT)ft, \(heightIN)in"
+            measurementsLabel.text = "Age: \(ageY) - \(ageO)" + "\nHeight: \(heightFT)ft, \(heightIN)in" + "\nEyes: \(eyeColor)" + "\nHair: \(hairColor)"
+            
+      
+        }
+        
+        if let faceShotURL = actor["headshot_mobile"] as? String {
+            
+            if let url = NSURL(string: faceShotURL) {
+                
+                if let data = NSData(contentsOfURL: url) {
+                    
+                    if let image = UIImage(data:data) {
+                     
+                        faceShot.image = image
+                    }
+                }
+            }
+        
+        } else {
             
         }
-        // layout everything on the detail view based on actor dictionary
         
+        
+        
+        self.addChildViewController(resumePreview)
+        //*view controller containment
+        //set the frame from the parent view
+        
+        let w = self.resumeView.frame.width
+        
+        let h = self.resumeView.frame.height
+        
+        resumePreview.view.frame = CGRectMake(0, 0, w, h)
+        
+        self.resumeView.addSubview(resumePreview.view)
+        
+        resumePreview.didMoveToParentViewController(self)
+        //save a reference to the preview controller in an ivar
+        
+//        self.previewController = resumePreview
+        
+        if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
+            // create your document folder url
+            
+            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
+            // your destination file url
+            
+            let destinationUrl = documentsUrl.URLByAppendingPathComponent(resumeURL.lastPathComponent!)
+            
+            
+            // check if it exists before downloading it
+            
+            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
+                print("The file already exists at path")
+                
+                
+                resumePreview.dataSource = self
+                
+                resumePreview.delegate = self
+                
+                resumePreview.reloadData()
+            
+            } else {
+                //  if the file doesn't exist
+                //  just download the data from your url
+                
+                if let myResumeFromUrl = NSData(contentsOfURL: resumeURL){
+                    // after downloading your data you need to save it to your destination url
+                   
+                    if myResumeFromUrl.writeToURL(destinationUrl, atomically: true) {
+                        
+                        print("file saved")
+                        
+                        resumePreview.dataSource = self
+                        
+                        resumePreview.delegate = self
+                        
+                        resumePreview.reloadData()
+                    
+                    } else {
+                    
+                        print("error saving file")
+                    }
+                }
+            }
+        }
         
     }
 
+    
+    func numberOfPreviewItemsInPreviewController(controller: QLPreviewController) -> Int {
+        
+        return actor["resume"] == nil ? 0 : 1
+        
+    }
+    
+    func previewController(controller: QLPreviewController, previewItemAtIndex index: Int) -> QLPreviewItem {
+        
+        var destinationUrl: NSURL?
+        
+        if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
+            // create your document folder url
+            
+            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
+            // your destination file url
+            
+            destinationUrl = documentsUrl.URLByAppendingPathComponent(resumeURL.lastPathComponent!)
+
+        }
+
+        return destinationUrl!
+        
+    }
+    
+    
+    var resumePreview: QLPreviewController = QLPreviewController()
+    
+ 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -85,6 +200,19 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         // Pass the selected object to the new view controller.
         
         if let popupView = segue.destinationViewController as? ContactVC {
+            
+            if let popup = popupView.popoverPresentationController
+            {
+                
+                popup.delegate = self
+            }
+            
+        }
+        
+        
+        if let popupView = segue.destinationViewController as? BiographyVC {
+            
+            popupView.actor = actor
             
             if let popup = popupView.popoverPresentationController
             {

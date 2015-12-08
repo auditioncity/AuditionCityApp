@@ -36,12 +36,7 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     }
     
-//    @IBOutlet weak var cancelButton: UIButton!
-//    @IBAction func cancelButtonTapped(sender: UIButton) {
-//   
-//            self.dismissViewControllerAnimated(true, completion: nil)
-//    
-//    }
+
     
     let picker = UIImageView(image: UIImage(named: "picker"))
     

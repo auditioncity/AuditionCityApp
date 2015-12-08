@@ -15,6 +15,13 @@ class UserCell: UITableViewCell {
     
     @IBOutlet weak var userNameLabel: UILabel!
    
+    override func prepareForReuse() {
+        
+        userNameLabel.text = ""
+        faceShot.image = nil
+        
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

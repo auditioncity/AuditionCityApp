@@ -41,7 +41,7 @@
                                                         <constraint firstAttribute="height" constant="100" id="Sl5-sw-HwN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsU-7L-yFc" customClass="usernameLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsU-7L-yFc">
                                                     <rect key="frame" x="100" y="0.0" width="220" height="99.5"/>
                                                     <animations/>
                                                     <constraints>
@@ -789,7 +789,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bC7-MJ-vqK">
                                 <rect key="frame" x="0.0" y="64" width="320" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nqo-ZI-B0l">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nqo-ZI-B0l" customClass="faceShotImageView" customModule="AuditionCity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <animations/>
                                         <constraints>
@@ -807,7 +807,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-Sn-flz">
                                         <rect key="frame" x="128" y="0.0" width="192" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMj-oV-9iX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMj-oV-9iX">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="64"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -816,11 +816,11 @@
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
                                                 <rect key="frame" x="0.0" y="64" width="192" height="64"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -884,8 +884,20 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enf-zC-HUS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enf-zC-HUS">
                                 <rect key="frame" x="0.0" y="192" width="320" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjo-5O-XFQ">
+                                        <rect key="frame" x="272" y="52" width="40" height="40"/>
+                                        <animations/>
+                                        <state key="normal" title="📖"/>
+                                        <connections>
+                                            <segue destination="Cl4-Th-3Ql" kind="popoverPresentation" popoverAnchorView="xjo-5O-XFQ" id="HHI-WH-X3v">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.92549019610000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -898,7 +910,7 @@
                                 <color key="backgroundColor" red="0.80987580130000003" green="0.032813808999999999" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJw-v3-Vud" customClass="ToggleButton" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="270" y="302" width="40" height="40"/>
+                                <rect key="frame" x="275" y="297" width="40" height="40"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LcQ-xx-qBP"/>
@@ -926,11 +938,11 @@
                             <constraint firstItem="bC7-MJ-vqK" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="KJ0-6l-yxs"/>
                             <constraint firstAttribute="trailing" secondItem="OVc-I5-nnk" secondAttribute="trailing" id="Mga-Qn-8lc"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="PT1-9o-5NC"/>
-                            <constraint firstAttribute="trailing" secondItem="IJw-v3-Vud" secondAttribute="trailing" constant="10" id="V3L-0e-5BC"/>
+                            <constraint firstAttribute="trailing" secondItem="IJw-v3-Vud" secondAttribute="trailing" constant="5" id="V3L-0e-5BC"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="PT6-1o-Ikf" secondAttribute="bottom" constant="10" id="Wts-Ft-zPV"/>
                             <constraint firstAttribute="trailing" secondItem="Enf-zC-HUS" secondAttribute="trailing" id="YDd-hy-9jx"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="die-Hi-6HT"/>
-                            <constraint firstItem="IJw-v3-Vud" firstAttribute="top" secondItem="Enf-zC-HUS" secondAttribute="bottom" constant="10" id="laa-0t-RCm"/>
+                            <constraint firstItem="IJw-v3-Vud" firstAttribute="top" secondItem="Enf-zC-HUS" secondAttribute="bottom" constant="5" id="laa-0t-RCm"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="81T-Lf-a0z" secondAttribute="bottom" constant="10" id="mwV-Ub-a8f"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="top" secondItem="Enf-zC-HUS" secondAttribute="bottom" id="sMe-yJ-IUg"/>
                             <constraint firstItem="Enf-zC-HUS" firstAttribute="top" secondItem="bC7-MJ-vqK" secondAttribute="bottom" id="v72-Gc-j3X"/>
@@ -946,6 +958,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="Bio" destination="xjo-5O-XFQ" id="mFh-kC-VAl"/>
                         <outlet property="contactButton" destination="81T-Lf-a0z" id="gPw-yc-Hze"/>
                         <outlet property="expandResume" destination="IJw-v3-Vud" id="f9K-gK-zAm"/>
                         <outlet property="faceShot" destination="Nqo-ZI-B0l" id="6jF-AJ-jmk"/>
@@ -1034,6 +1047,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc1-JH-qNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1299" y="1273"/>
+        </scene>
+        <!--BiographyVC-->
+        <scene sceneID="agE-nZ-Jkl">
+            <objects>
+                <viewController title="BiographyVC" id="Cl4-Th-3Ql" customClass="BiographyVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cv0-KX-cDN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rso-OJ-CGj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJC-4u-PUf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-6H-hIC" customClass="BioTextView" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="biographyView" destination="F7M-6H-hIC" id="ktM-rY-dRG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyV-pm-z7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="1966"/>
         </scene>
         <!--FavoritesVC-->
         <scene sceneID="yOi-2G-Zb7">

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440D38991C1772CE0062A497 /* BiographyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D38981C1772CE0062A497 /* BiographyVC.swift */; };
+		440D389B1C177D4A0062A497 /* BioTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D389A1C177D4A0062A497 /* BioTextView.swift */; };
 		442145C11C07A1B00040DE7B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C01C07A1B00040DE7B /* FavoriteCell.swift */; };
 		442145C31C07A4310040DE7B /* FavoritesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C21C07A4310040DE7B /* FavoritesTableVC.swift */; };
 		442145C71C07A75C0040DE7B /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442145C61C07A75C0040DE7B /* FavoritesVC.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440D38981C1772CE0062A497 /* BiographyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyVC.swift; sourceTree = "<group>"; };
+		440D389A1C177D4A0062A497 /* BioTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioTextView.swift; sourceTree = "<group>"; };
 		442145C01C07A1B00040DE7B /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		442145C21C07A4310040DE7B /* FavoritesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableVC.swift; sourceTree = "<group>"; };
 		442145C61C07A75C0040DE7B /* FavoritesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			children = (
 				4466F0231C0250A100264959 /* UserDetailsViewController.swift */,
 				442145CA1C08DD520040DE7B /* ToggleButton.swift */,
+				440D38981C1772CE0062A497 /* BiographyVC.swift */,
+				440D389A1C177D4A0062A497 /* BioTextView.swift */,
 			);
 			name = UserDetailVC;
 			path = ..;
@@ -325,7 +331,9 @@
 				446BA7A71C161A0300875954 /* RailsRequest.swift in Sources */,
 				4466F0241C0250A100264959 /* UserDetailsViewController.swift in Sources */,
 				448A0EF61BFFB70700B55A45 /* AuditionCity.xcdatamodeld in Sources */,
+				440D389B1C177D4A0062A497 /* BioTextView.swift in Sources */,
 				44B3FCF31C0CA4F000B28C4C /* RangeSlider.swift in Sources */,
+				440D38991C1772CE0062A497 /* BiographyVC.swift in Sources */,
 				442145D11C0B75430040DE7B /* SearchVC.swift in Sources */,
 				442146161C0C97EA0040DE7B /* CheckBoxLayer.swift in Sources */,
 				44B3FCF51C0CA4F000B28C4C /* RangeSliderTrackLayer.swift in Sources */,
