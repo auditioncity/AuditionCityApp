@@ -22,15 +22,24 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         // run request to rails to pull all actors
         
+        
+        
         let rr = RailsRequest.session()
         
         var info = RequestInfo()
         
-        info.endpoint = ""
+        info.endpoint = "actors"
+        info.method = .GET
+        
+        print(info)
         
         rr.requiredWithInfo(info) { (returnedInfo) -> () in
             
-//            users = returnedInfo["actors"]
+            print(returnedInfo)
+            
+            self.users = returnedInfo?["actors"] as? [[String:AnyObject]] ?? []
+            
+            self.tableView.reloadData()
             
             // set the value users array with data from returnedInfo
             
@@ -41,7 +50,7 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
     }
     
-    var users: [[String:AnyObject?]] = []
+    var users: [[String:AnyObject]] = []
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -64,22 +73,28 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // #warning Incomplete implementation, return the number of rows
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserCell
 
-        let user = users[indexPath.row]
+        guard let user = users[indexPath.row]["actor"] as? [String:AnyObject] else { return cell }
+        
     
        if let username = user["login"] as? String {
             
             cell.userNameLabel.text = username
         }
         
+        
         if let faceShotURL = user["image"] as? String{
             
             cell.faceShot.hidden = false
             
             if let url = NSURL(string: faceShotURL) {
+                
                 if let data = NSData(contentsOfURL: url) {
+                
                     if let image = UIImage(data:data) {
+                    
                         cell.faceShot.image = image
                         
                     }
@@ -89,6 +104,8 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             
             cell.faceShot.hidden = true
         }
+        
+        cell.userNameLabel.text = user["full_name"] as? String
         
         return cell
     }

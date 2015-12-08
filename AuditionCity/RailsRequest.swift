@@ -85,6 +85,9 @@ class RailsRequest: NSObject {
     func requiredWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
         let fullURLString = APIbaseURL + info.endpoint
+        
+        print(fullURLString)
+        
         guard let url = NSURL(string: fullURLString) else { return } //add run completion with fail
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = info.method.rawValue
@@ -92,17 +95,23 @@ class RailsRequest: NSObject {
         
         if let token = token {
             
-            request.setValue(token, forHTTPHeaderField: "Authorization")
+            print(token)
+            
+            request.setValue(token, forHTTPHeaderField: "Access-Token")
            
             //here we grab the access token & user id
         }
+
+        if info.parameters.count > 0 {
         
-        if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
-            
-            if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
-                request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
-                let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
-                request.HTTPBody = postData
+            if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
+                
+                if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+                    request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
+                    let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                    request.HTTPBody = postData
+                }
+                
             }
             
         }

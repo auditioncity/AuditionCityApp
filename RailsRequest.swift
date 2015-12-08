@@ -34,14 +34,14 @@ class RailsRequest: NSObject {
     /// need methods and parameters for request, endpoint type and parameters
     
     
-
-      private let base = " https://pacific-garden-6218.herokuapp.com/"
+    
+    private let base = "https://pacific-garden-6218.herokuapp.com/"
     
     func loginWithUsername(username: String, andPassword password: String, completion: (loggedIn: Bool) -> ()) {
         
         var info = RequestInfo()
         
-        info.endpoint = "/login"
+        info.endpoint = "login"
         info.method = .POST
         info.parameters = [
             
@@ -62,7 +62,7 @@ class RailsRequest: NSObject {
                     print(self.token)
                     
                     completion(loggedIn: true)
-                
+                    
                 } else {
                     
                     completion(loggedIn: false)
@@ -80,20 +80,22 @@ class RailsRequest: NSObject {
         
     }
     
-       // info:AnyObhect may not be the info need to casr (info: ANyObject cast for
+    // info:AnyObhect may not be the info need to casr (info: ANyObject cast for
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
         var fullURLString = base + info.endpoint
+        
+        print(fullURLString)
         
         for (i,(k,v)) in info.query.enumerate() {
             
             if i == 0 { fullURLString += "?" } else { fullURLString += "&" }
             
             fullURLString += "\(k)=\(v)"
-
+            
         }
-    
-
+        
+        
         guard let url = NSURL(string: fullURLString) else { return } // add run completion with fail
         
         let request = NSMutableURLRequest(URL: url)
