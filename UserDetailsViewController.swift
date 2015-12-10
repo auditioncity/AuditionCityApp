@@ -56,7 +56,42 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     
     }
     
-    
+    @IBAction func downloadResume(sender: UILongPressGestureRecognizer) {
+        
+        
+        if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
+            
+            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
+            // your destination file url
+            
+            let destinationUrl = documentsUrl.URLByAppendingPathComponent(resumeURL.lastPathComponent!)
+            
+            
+            let tempDocRef = CGPDFDocumentCreateWithURL(destinationUrl)
+            
+            let pageCount: size_t = CGPDFDocumentGetNumberOfPages(tempDocRef)
+            
+            let finalPdfContext = CGPDFContextCreateWithURL(destinationUrl, nil, nil)
+            
+            for var pageNum = 1; pageNum <= pageCount; pageNum++ {
+            
+                let tempPageRef: CGPDFPageRef = CGPDFDocumentGetPage(tempDocRef, pageNum + 1)!
+                
+                CGPDFContextBeginPage(finalPdfContext, nil)
+                
+                CGContextDrawPDFPage(finalPdfContext, tempPageRef)
+                
+                let newimage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+                
+                UIImageWriteToSavedPhotosAlbum(newimage, self, nil, nil)
+                
+                CGPDFContextEndPage(finalPdfContext)
+                
+            }
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,8 +123,6 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             
         }
         
-        
-        
         self.addChildViewController(resumePreview)
         //*view controller containment
         //set the frame from the parent view
@@ -105,7 +138,6 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         resumePreview.didMoveToParentViewController(self)
         //save a reference to the preview controller in an ivar
         
-//        self.previewController = resumePreview
         
         if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
             // create your document folder url
