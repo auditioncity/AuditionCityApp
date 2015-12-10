@@ -21,6 +21,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     @IBOutlet weak var skillSetView: UIScrollView!
     @IBOutlet weak var measurementsLabel: UILabel!
     @IBOutlet weak var resumeView: UIScrollView!
+    @IBOutlet weak var resumeDownload: UIButton!
     
     @IBOutlet weak var expandResume: ToggleButton!
     @IBOutlet weak var resumePanelTop: NSLayoutConstraint!
@@ -56,9 +57,8 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     
     }
     
-    @IBAction func downloadResume(sender: UILongPressGestureRecognizer) {
-        
-        
+    @IBAction func downloadResumeTapped(sender: UIButton) {
+    
         if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
             
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
@@ -67,25 +67,40 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             let destinationUrl = documentsUrl.URLByAppendingPathComponent(resumeURL.lastPathComponent!)
             
             
-            let tempDocRef = CGPDFDocumentCreateWithURL(destinationUrl)
+            if let tempDocRef = CGPDFDocumentCreateWithURL(destinationUrl) {
             
-            let pageCount: size_t = CGPDFDocumentGetNumberOfPages(tempDocRef)
-            
-            let finalPdfContext = CGPDFContextCreateWithURL(destinationUrl, nil, nil)
-            
-            for var pageNum = 1; pageNum <= pageCount; pageNum++ {
-            
-                let tempPageRef: CGPDFPageRef = CGPDFDocumentGetPage(tempDocRef, pageNum + 1)!
+                let pageCount: size_t = CGPDFDocumentGetNumberOfPages(tempDocRef)
                 
-                CGPDFContextBeginPage(finalPdfContext, nil)
                 
-                CGContextDrawPDFPage(finalPdfContext, tempPageRef)
                 
-                let newimage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+                print(pageCount)
                 
-                UIImageWriteToSavedPhotosAlbum(newimage, self, nil, nil)
+                UIGraphicsBeginImageContext(CGSize(width: 850, height: 1100))
+                let context = UIGraphicsGetCurrentContext()
                 
-                CGPDFContextEndPage(finalPdfContext)
+//                let finalPdfContext = CGPDFContextCreateWithURL(destinationUrl, nil, nil)
+                
+                for var pageNum = 1; pageNum <= pageCount; pageNum++ {
+                
+                    if let tempPageRef = CGPDFDocumentGetPage(tempDocRef, pageNum) {
+                    
+                        CGPDFContextBeginPage(context, nil)
+                        
+                        CGContextDrawPDFPage(context, tempPageRef)
+                    
+                        if let newimage = UIGraphicsGetImageFromCurrentImageContext() {
+                        
+                            UIImageWriteToSavedPhotosAlbum(newimage, self, nil, nil)
+                            
+                            print("images created")
+                            
+                        }
+                        
+                    }
+                
+                }
+                
+                UIGraphicsEndImageContext()
                 
             }
             
@@ -95,16 +110,34 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var info = ""
 
 
         fullNameLabel.text = actor["full_name"] as? String
         
-        if let ageY = actor["age_young"] as? Int, ageO = actor["age_old"] as? Int, let heightFT = actor["height_feet"] as? Int, heightIN = actor["height_inches"] as? Int, let eyeColor = actor["eye_color"] as? String, let hairColor = actor["hair_color"] as? String {
-                
-            measurementsLabel.text = "Age: \(ageY) - \(ageO)" + "\nHeight: \(heightFT)ft, \(heightIN)in" + "\nEyes: \(eyeColor)" + "\nHair: \(hairColor)"
+        if let ageY = actor["age_young"] as? Int, ageO = actor["age_old"] as? Int {
             
-      
+            info += "Age: \(ageY) - \(ageO)"
         }
+        
+        if let heightFT = actor["height_feet"] as? Int {
+            info += "\nHeight: \(heightFT)ft"
+        }
+        
+        if let heightIN = actor["height_inches"] as? Int {
+            info += " \(heightIN)in"
+        }
+        
+        if let eyeColor = actor["eye_color"] as? String {
+            info += "\nEyes: \(eyeColor)"
+        }
+        
+        if let hairColor = actor["hair_color"] as? String {
+            info += "\nHair: \(hairColor)"
+        }
+        
+        measurementsLabel.text = info
         
         if let faceShotURL = actor["headshot_mobile"] as? String {
             
@@ -150,20 +183,20 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             
             // check if it exists before downloading it
             
-            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
-                print("The file already exists at path")
-                
-                
-                resumePreview.dataSource = self
-                
-                resumePreview.delegate = self
-                
-                resumePreview.reloadData()
+//            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
+////                print("The file already exists at path")
+//                
+//                
+//                resumePreview.dataSource = self
+//                
+//                resumePreview.delegate = self
+//                
+//                resumePreview.reloadData()
+//            
+//            } else {
+//                //  if the file doesn't exist
+//                //  just download the data from your url
             
-            } else {
-                //  if the file doesn't exist
-                //  just download the data from your url
-                
                 if let myResumeFromUrl = NSData(contentsOfURL: resumeURL){
                     // after downloading your data you need to save it to your destination url
                    
@@ -182,7 +215,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
                         print("error saving file")
                     }
                 }
-            }
+//            }
         }
         
     }
@@ -197,7 +230,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     func previewController(controller: QLPreviewController, previewItemAtIndex index: Int) -> QLPreviewItem {
         
         var destinationUrl: NSURL?
-        
+
         if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
             // create your document folder url
             

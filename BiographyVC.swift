@@ -33,9 +33,12 @@ class BiographyVC: UIViewController {
         
         if let bio = actor["bio"] as? String {
             
+            biographyView.sizeToFit()
+            
             biographyView.text = bio
             
         }
+    
     }
 
     override func didReceiveMemoryWarning() {

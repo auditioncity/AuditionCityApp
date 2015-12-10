@@ -765,7 +765,7 @@
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
                                                 <rect key="frame" x="0.0" y="64" width="192" height="64"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -850,10 +850,18 @@
                                 <rect key="frame" x="0.0" y="292" width="320" height="216"/>
                                 <color key="backgroundColor" red="0.80987580130000003" green="0.032813808999999999" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nb8-zp-dKn" appends="YES" id="TEk-wg-GvQ"/>
-                                </connections>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59m-m0-iLc">
+                                <rect key="frame" x="275" y="587" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PhN-tD-MRR"/>
+                                    <constraint firstAttribute="width" constant="40" id="WqL-No-VL3"/>
+                                </constraints>
+                                <state key="normal" title="🗂"/>
+                                <connections>
+                                    <action selector="downloadResumeTapped:" destination="0Se-FB-q6r" eventType="touchUpInside" id="DSf-5q-hyE"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJw-v3-Vud" customClass="ToggleButton" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="275" y="297" width="40" height="40"/>
                                 <constraints>
@@ -877,6 +885,7 @@
                             <constraint firstAttribute="trailing" secondItem="PT6-1o-Ikf" secondAttribute="trailing" constant="50" id="3Qq-Av-kHp"/>
                             <constraint firstAttribute="trailing" secondItem="OVc-I5-nnk" secondAttribute="trailing" id="3ho-br-iP5"/>
                             <constraint firstItem="Enf-zC-HUS" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="6Uk-Sn-9yV"/>
+                            <constraint firstItem="59m-m0-iLc" firstAttribute="top" secondItem="IJw-v3-Vud" secondAttribute="bottom" constant="250" id="9qb-De-XQZ"/>
                             <constraint firstItem="81T-Lf-a0z" firstAttribute="top" secondItem="OVc-I5-nnk" secondAttribute="bottom" constant="10" id="Efb-Ud-9fp"/>
                             <constraint firstItem="bC7-MJ-vqK" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="KJ0-6l-yxs"/>
                             <constraint firstAttribute="trailing" secondItem="OVc-I5-nnk" secondAttribute="trailing" id="Mga-Qn-8lc"/>
@@ -885,6 +894,7 @@
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="PT6-1o-Ikf" secondAttribute="bottom" constant="10" id="Wts-Ft-zPV"/>
                             <constraint firstAttribute="trailing" secondItem="Enf-zC-HUS" secondAttribute="trailing" id="YDd-hy-9jx"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="die-Hi-6HT"/>
+                            <constraint firstAttribute="trailing" secondItem="59m-m0-iLc" secondAttribute="trailing" constant="5" id="jcw-l7-Ia9"/>
                             <constraint firstItem="IJw-v3-Vud" firstAttribute="top" secondItem="Enf-zC-HUS" secondAttribute="bottom" constant="5" id="laa-0t-RCm"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="81T-Lf-a0z" secondAttribute="bottom" constant="10" id="mwV-Ub-a8f"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="top" secondItem="Enf-zC-HUS" secondAttribute="bottom" id="sMe-yJ-IUg"/>
@@ -907,6 +917,7 @@
                         <outlet property="faceShot" destination="Nqo-ZI-B0l" id="6jF-AJ-jmk"/>
                         <outlet property="fullNameLabel" destination="CMj-oV-9iX" id="seD-G9-WEB"/>
                         <outlet property="measurementsLabel" destination="ALj-PB-B9h" id="Bcs-Dy-kJZ"/>
+                        <outlet property="resumeDownload" destination="59m-m0-iLc" id="gO7-F7-9KV"/>
                         <outlet property="resumePanelTop" destination="1Bp-Rr-7LY" id="iCV-kj-ZyC"/>
                         <outlet property="resumeView" destination="OVc-I5-nnk" id="qlL-j8-3iv"/>
                         <outlet property="skillSetView" destination="Enf-zC-HUS" id="rcA-3r-SaQ"/>
@@ -914,18 +925,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yI0-35-fnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nb8-zp-dKn">
-                    <connections>
-                        <action selector="downloadResume:" destination="0Se-FB-q6r" id="WB1-bR-UfV"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="891" y="1273"/>
         </scene>
         <!--ContactsVC-->
         <scene sceneID="OgH-QR-uCW">
             <objects>
-                <viewController title="ContactsVC" id="Dad-Co-KlM" customClass="ContactVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactVC" title="ContactsVC" id="Dad-Co-KlM" customClass="ContactVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i7L-AF-Y6v"/>
                         <viewControllerLayoutGuide type="bottom" id="Znk-9m-PIK"/>
@@ -996,7 +1002,7 @@
         <!--BiographyVC-->
         <scene sceneID="agE-nZ-Jkl">
             <objects>
-                <viewController title="BiographyVC" id="Cl4-Th-3Ql" customClass="BiographyVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BiographyVC" title="BiographyVC" id="Cl4-Th-3Ql" customClass="BiographyVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cv0-KX-cDN"/>
                         <viewControllerLayoutGuide type="bottom" id="Rso-OJ-CGj"/>
@@ -1005,14 +1011,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-6H-hIC" customClass="BioTextView" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-6H-hIC" customClass="BioTextView" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="300" height="548"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F7M-6H-hIC" firstAttribute="top" secondItem="PJC-4u-PUf" secondAttribute="top" constant="10" id="DwI-D8-Mi9"/>
+                            <constraint firstItem="F7M-6H-hIC" firstAttribute="leading" secondItem="PJC-4u-PUf" secondAttribute="leading" constant="10" id="atl-5U-hoF"/>
+                            <constraint firstAttribute="trailing" secondItem="F7M-6H-hIC" secondAttribute="trailing" constant="10" id="eWR-oc-oPP"/>
+                            <constraint firstItem="Rso-OJ-CGj" firstAttribute="top" secondItem="F7M-6H-hIC" secondAttribute="bottom" constant="10" id="gzN-Kp-dG6"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -1021,12 +1033,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyV-pm-z7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="1966"/>
+            <point key="canvasLocation" x="891" y="1945"/>
         </scene>
         <!--FavoritesVC-->
         <scene sceneID="yOi-2G-Zb7">
             <objects>
-                <viewController title="FavoritesVC" id="LPq-Eq-j5a" customClass="FavoritesVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteVC" title="FavoritesVC" id="LPq-Eq-j5a" customClass="FavoritesVC" customModule="AuditionCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BUC-ng-lxP"/>
                         <viewControllerLayoutGuide type="bottom" id="6gI-aP-v1a"/>
@@ -1145,7 +1157,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wud-Rz-MW8"/>
+        <segue reference="oCb-9X-0GO"/>
         <segue reference="AEC-nI-QoO"/>
     </inferredMetricsTieBreakers>
 </document>
