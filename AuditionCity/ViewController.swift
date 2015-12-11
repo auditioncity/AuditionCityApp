@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     func rangeSliderValueChanged(rangeSlider: RangeSlider) {
+        
         print("Range slider value changed: (\(rangeSlider.lowerValue) \(rangeSlider.upperValue))")
     }
 

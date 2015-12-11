@@ -82,8 +82,7 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
                 "iatse": iatseCB.isChecked,
                 "dga": dgaCB.isChecked
         ]
-        
-        
+    
     }
 
     

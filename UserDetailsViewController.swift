@@ -18,7 +18,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var contactButton: Buttons!
     @IBOutlet weak var starmeButton: Buttons!
-    @IBOutlet weak var skillSetView: UIScrollView!
+    @IBOutlet weak var skillSetView: UITextView!
     @IBOutlet weak var measurementsLabel: UILabel!
     @IBOutlet weak var resumeView: UIScrollView!
     @IBOutlet weak var resumeDownload: UIButton!
@@ -62,16 +62,13 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
             
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
+            
             // your destination file url
-            
             let destinationUrl = documentsUrl.URLByAppendingPathComponent(resumeURL.lastPathComponent!)
-            
             
             if let tempDocRef = CGPDFDocumentCreateWithURL(destinationUrl) {
             
                 let pageCount: size_t = CGPDFDocumentGetNumberOfPages(tempDocRef)
-                
-                
                 
                 print(pageCount)
                 
@@ -111,13 +108,17 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.navigationController?.navigationBarHidden = true
+        
+        //creates info and sets it to empty string
         var info = ""
-
-
+        
+        //runs fullNameLabel.text and sets the results -> actor<from API>and endpoint of ["full_name"] and converts the results into a Sting format.
         fullNameLabel.text = actor["full_name"] as? String
         
+        //creates an if loop* for ageYoung and ageOld sets the results to appropriate locations on API and their respective endpoints
         if let ageY = actor["age_young"] as? Int, ageO = actor["age_old"] as? Int {
-            
+            //runs the empty String info and sets it to "Age: \(ageY) - \(ageO)"
             info += "Age: \(ageY) - \(ageO)"
         }
         
@@ -137,6 +138,8 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             info += "\nHair: \(hairColor)"
         }
         
+        
+        skillSetView.text = actor["skills"] as? String
         measurementsLabel.text = info
         
         if let faceShotURL = actor["headshot_mobile"] as? String {
@@ -247,8 +250,6 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     
     
     var resumePreview: QLPreviewController = QLPreviewController()
-    
- 
     
     
     override func didReceiveMemoryWarning() {

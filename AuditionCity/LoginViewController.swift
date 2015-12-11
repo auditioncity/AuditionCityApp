@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
         guard let username = usernameField.text where !username.isEmpty else { return }
         guard let password = passwordField.text where !password.isEmpty else { return }
         
-        
-        
         usernameRequest.loginWithUsername(username, andPassword: password, completion: { loggedIn in
             
             if loggedIn {
@@ -56,8 +54,6 @@ class LoginViewController: UIViewController {
                     self.navigationController?.viewControllers = [LoginVC!]
             
         }
-        
-
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
             UIKeyboardWillShowNotification, object: nil);
