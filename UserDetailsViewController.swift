@@ -13,6 +13,10 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
 
     var actor: [String:AnyObject] = [:]
     
+    @IBAction func swipeBack(sender: UISwipeGestureRecognizer) {
+    
+        navigationController?.popViewControllerAnimated(true)
+    }
     @IBOutlet weak var Bio: UIButton!
     @IBOutlet weak var faceShot: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -27,7 +31,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     @IBOutlet weak var resumePanelTop: NSLayoutConstraint!
     @IBAction func expandResumeTapped(sender: ToggleButton) {
     
-        resumePanelTop.constant = resumePanelTop.constant == 0 ? -235 : 0
+        resumePanelTop.constant = resumePanelTop.constant == 0 ? -230 : 0
         view.setNeedsUpdateConstraints()
         
         let degrees: CGFloat = resumePanelTop.constant != 0 ? 180 : 0
@@ -108,7 +112,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.navigationBarHidden = true
         
         //creates info and sets it to empty string
         var info = ""
@@ -138,7 +142,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             info += "\nHair: \(hairColor)"
         }
         
-        
+        skillSetView.textAlignment = .Natural
         skillSetView.text = actor["skills"] as? String
         measurementsLabel.text = info
         
