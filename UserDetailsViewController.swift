@@ -92,7 +92,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
                         if let newimage = UIGraphicsGetImageFromCurrentImageContext() {
                         
                             UIImageWriteToSavedPhotosAlbum(newimage, self, nil, nil)
-                            
+                            print(newimage)
                             print("images created")
                             
                         }
