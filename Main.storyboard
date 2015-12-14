@@ -121,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by Talent Agency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-IT-L1Q">
-                                <rect key="frame" x="20" y="255" width="280" height="30"/>
+                                <rect key="frame" x="20" y="254" width="280" height="30"/>
                                 <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YaB-J6-AVA"/>
@@ -130,7 +130,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-wb-reQ" customClass="RangeSlider" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="20" y="215" width="280" height="30"/>
+                                <rect key="frame" x="20" y="214" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Pi2-LA-MEG"/>
                                 </constraints>
@@ -162,7 +162,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-Oc-2YX">
-                                <rect key="frame" x="70" y="164" width="60" height="30"/>
+                                <rect key="frame" x="70" y="163" width="60" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BDR-cS-hdq"/>
@@ -173,9 +173,10 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-Bl-d6f" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="240" y="104" width="60" height="31"/>
+                                <rect key="frame" x="240" y="104" width="60" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="APf-R7-gnA"/>
                                     <constraint firstAttribute="width" constant="60" id="nVC-bP-gla"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="11"/>
@@ -222,7 +223,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-nb-68J">
-                                <rect key="frame" x="18" y="164" width="52" height="30"/>
+                                <rect key="frame" x="18" y="163" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EWS-od-2Di"/>
                                 </constraints>
@@ -232,7 +233,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-CO-vNh">
-                                <rect key="frame" x="150" y="164" width="40" height="30"/>
+                                <rect key="frame" x="150" y="163" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rUj-40-cnn"/>
                                 </constraints>
@@ -242,7 +243,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vz-J9-kQT">
-                                <rect key="frame" x="190" y="165" width="60" height="30"/>
+                                <rect key="frame" x="190" y="164" width="60" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qFX-Se-EvQ"/>
@@ -252,17 +253,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-7O-Mme">
-                                <rect key="frame" x="16" y="290" width="288" height="187"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-7O-Mme">
+                                <rect key="frame" x="0.0" y="290" width="320" height="169"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-Cc-sCp">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="187"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="169"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-75-dtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-an-IYb" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13.5" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -271,7 +272,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeFactor">
-                                                                <real key="value" value="0.050000000000000003"/>
+                                                                <real key="value" value="0.052999999999999999"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
                                                                 <real key="value" value="2"/>
@@ -285,7 +286,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-Tr-OGL">
-                                                        <rect key="frame" x="30" y="11.5" width="62.5" height="23.5"/>
+                                                        <rect key="frame" x="30" y="10" width="63" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -293,10 +294,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-tz-eM3">
-                                                <rect key="frame" x="0.0" y="47" width="69.5" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="43" width="70" height="42"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYd-BC-xBk" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -305,7 +306,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeFactor">
-                                                                <real key="value" value="0.050000000000000003"/>
+                                                                <real key="value" value="0.052999999999999999"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
                                                                 <real key="value" value="2"/>
@@ -319,7 +320,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-Vo-dXc">
-                                                        <rect key="frame" x="30" y="11.5" width="39.5" height="23.5"/>
+                                                        <rect key="frame" x="30" y="9" width="40" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -327,10 +328,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3R5-P3-CU4">
-                                                <rect key="frame" x="0.0" y="93.5" width="84" height="47"/>
+                                                <rect key="frame" x="0.0" y="85" width="84" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-XI-vDT" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13.5" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -339,7 +340,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeFactor">
-                                                                <real key="value" value="0.050000000000000003"/>
+                                                                <real key="value" value="0.052999999999999999"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
                                                                 <real key="value" value="2"/>
@@ -353,7 +354,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSDC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3i-Xa-G0S">
-                                                        <rect key="frame" x="30" y="11.5" width="54" height="23.5"/>
+                                                        <rect key="frame" x="30" y="10" width="54" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -361,10 +362,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P9Z-u4-N4Q">
-                                                <rect key="frame" x="0.0" y="140.5" width="91" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="127" width="91" height="42"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moe-Eo-QxS" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -373,7 +374,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeFactor">
-                                                                <real key="value" value="0.050000000000000003"/>
+                                                                <real key="value" value="0.052999999999999999"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
                                                                 <real key="value" value="2"/>
@@ -387,7 +388,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-9a-AH0">
-                                                        <rect key="frame" x="30" y="11.5" width="61" height="23.5"/>
+                                                        <rect key="frame" x="30" y="9" width="61" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -397,13 +398,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ls8-t8-oOH">
-                                        <rect key="frame" x="154" y="0.0" width="134" height="187"/>
+                                        <rect key="frame" x="170" y="0.0" width="150" height="169"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55z-0e-EEY">
-                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-ez-KBO" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13.5" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -423,7 +424,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFTRA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-ef-oWW">
-                                                        <rect key="frame" x="30" y="11.5" width="67.5" height="23.5"/>
+                                                        <rect key="frame" x="30" y="10" width="68" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -431,12 +432,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-DB-A0W">
-                                                <rect key="frame" x="0.0" y="47" width="89" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="43" width="89" height="42"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-zJ-7Vr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="tintColor" white="0.29999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="UkR-al-ev3"/>
                                                             <constraint firstAttribute="height" constant="20" id="aEb-Ew-xli"/>
@@ -457,7 +458,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IATSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-d9-DB4">
-                                                        <rect key="frame" x="30" y="11.5" width="59" height="23.5"/>
+                                                        <rect key="frame" x="30" y="9" width="59" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -465,10 +466,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-3Q-Hrr">
-                                                <rect key="frame" x="0.0" y="93.5" width="75" height="47"/>
+                                                <rect key="frame" x="0.0" y="85" width="75" height="43"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-R0-LMr" customClass="CheckBox" customModule="AuditionCity" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13.5" width="20" height="20"/>
+                                                        <rect key="frame" x="0.0" y="11" width="20" height="20"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -477,7 +478,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="strokeFactor">
-                                                                <real key="value" value="0.050000000000000003"/>
+                                                                <real key="value" value="0.052999999999999999"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="insetFactor">
                                                                 <real key="value" value="2"/>
@@ -491,18 +492,18 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DGA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIC-R3-IVn">
-                                                        <rect key="frame" x="30" y="11.5" width="45" height="23.5"/>
+                                                        <rect key="frame" x="30" y="10" width="45" height="24"/>
                                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-zX-Nw7">
-                                                <rect key="frame" x="0.0" y="140.5" width="0.0" height="46.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-zX-Nw7">
+                                                <rect key="frame" x="0.0" y="127" width="150" height="42"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-mj-EKK">
-                                                        <rect key="frame" x="0.0" y="23" width="0.0" height="0.0"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-mj-EKK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="42"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -512,11 +513,18 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hw6-Cc-sCp" secondAttribute="bottom" id="M3A-nP-wkf"/>
+                                    <constraint firstItem="hw6-Cc-sCp" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="top" id="Tev-AW-8KP"/>
+                                    <constraint firstItem="ls8-t8-oOH" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="top" id="hVI-cW-Pag"/>
+                                    <constraint firstAttribute="bottom" secondItem="ls8-t8-oOH" secondAttribute="bottom" id="t3u-VG-j28"/>
+                                </constraints>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by any Other Unions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-40-XoZ">
-                                <rect key="frame" x="16" y="482" width="288" height="30"/>
+                                <rect key="frame" x="20" y="468" width="280" height="30"/>
                                 <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dij-Ld-eoS"/>
                                     <constraint firstAttribute="height" constant="30" id="jua-gl-EpI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
@@ -581,11 +589,33 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-HO-HZT" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="130" y="520" width="60" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V89-4S-gH2" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="20" y="528" width="60" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="FXJ-mw-5Yy"/>
+                                    <constraint firstAttribute="width" constant="60" id="9Th-Oa-vLf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="ZYp-Gy-Mht" eventType="touchUpInside" id="ysK-tv-BDd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-HO-HZT" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                                <rect key="frame" x="240" y="528" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0vy-Ol-E0f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
                                 <state key="normal" title="OK">
@@ -596,7 +626,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -607,45 +637,59 @@
                         </subviews>
                         <color key="backgroundColor" red="0.59215686274509804" green="0.058823529411764705" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="trailing" secondItem="LTm-i9-u5X" secondAttribute="trailingMargin" id="0QE-ow-qQQ"/>
-                            <constraint firstItem="hNl-HO-HZT" firstAttribute="centerX" secondItem="Jdv-40-XoZ" secondAttribute="centerX" id="1Ao-VH-gyX"/>
-                            <constraint firstItem="get-Bl-d6f" firstAttribute="baseline" secondItem="G3w-Eo-Qun" secondAttribute="firstBaseline" constant="1" id="2yW-z9-9eq"/>
+                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="trailing" secondItem="LTm-i9-u5X" secondAttribute="trailingMargin" constant="20" id="0QE-ow-qQQ"/>
+                            <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="V89-4S-gH2" secondAttribute="bottom" constant="10" id="0ej-Ye-Fpz"/>
+                            <constraint firstItem="get-Bl-d6f" firstAttribute="baseline" secondItem="G3w-Eo-Qun" secondAttribute="firstBaseline" id="2yW-z9-9eq"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="74r-GP-7Ff"/>
-                            <constraint firstItem="hNl-HO-HZT" firstAttribute="trailing" secondItem="SLh-CO-vNh" secondAttribute="trailing" id="7rW-hg-S0I"/>
                             <constraint firstItem="pBX-ID-gf6" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="8Xk-3R-8a1"/>
+                            <constraint firstItem="hNl-HO-HZT" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="30" id="9I8-AB-9hI"/>
                             <constraint firstItem="9Vz-J9-kQT" firstAttribute="leading" secondItem="SLh-CO-vNh" secondAttribute="trailing" id="9Kz-B9-C95"/>
                             <constraint firstItem="fyi-IT-L1Q" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="Ae5-MA-uY5"/>
                             <constraint firstItem="nxB-b1-8aR" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="B2v-FM-Jsj"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="top" secondItem="G3w-Eo-Qun" secondAttribute="top" id="CCO-DV-n6W"/>
-                            <constraint firstItem="hNl-HO-HZT" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Gep-Lb-xbp"/>
                             <constraint firstItem="1S9-nb-68J" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="18" id="HY9-cJ-1zB"/>
                             <constraint firstItem="b8L-7O-Mme" firstAttribute="top" secondItem="fyi-IT-L1Q" secondAttribute="bottom" constant="5" id="OFY-L8-Bck"/>
+                            <constraint firstItem="b8L-7O-Mme" firstAttribute="top" secondItem="fyi-IT-L1Q" secondAttribute="bottom" constant="5" id="OzO-VZ-7ET"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="trailing" secondItem="jga-1e-f8U" secondAttribute="trailing" id="Qtk-rI-0iT"/>
                             <constraint firstItem="fyi-IT-L1Q" firstAttribute="top" secondItem="pAH-wb-reQ" secondAttribute="bottom" constant="10" id="RME-6Z-R5e"/>
+                            <constraint firstAttribute="trailing" secondItem="b8L-7O-Mme" secondAttribute="trailing" id="Rec-qV-oaN"/>
+                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="bottom" constant="10" id="Si5-KV-q4M"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="leading" secondItem="1S9-nb-68J" secondAttribute="trailing" id="U77-wv-go7"/>
+                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="WD3-BM-g18"/>
                             <constraint firstItem="9Vz-J9-kQT" firstAttribute="top" secondItem="get-Bl-d6f" secondAttribute="bottom" constant="30" id="Wq5-QW-lVk"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="70" id="XaB-zn-gi3"/>
-                            <constraint firstItem="b8L-7O-Mme" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" id="Xri-pb-e2I"/>
                             <constraint firstItem="jga-1e-f8U" firstAttribute="top" secondItem="2vr-0G-TKS" secondAttribute="bottom" constant="5" id="YUe-ib-GYh"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="6QM-Oc-2YX" secondAttribute="bottom" constant="21" id="Yj5-tb-2Vs"/>
+                            <constraint firstItem="V89-4S-gH2" firstAttribute="top" secondItem="Jdv-40-XoZ" secondAttribute="bottom" constant="30" id="ZLl-R8-QYv"/>
+                            <constraint firstAttribute="trailing" secondItem="Jdv-40-XoZ" secondAttribute="trailing" constant="20" id="aLa-Gf-QCC"/>
                             <constraint firstAttribute="trailing" secondItem="pAH-wb-reQ" secondAttribute="trailing" constant="20" id="gEI-fG-bSd"/>
                             <constraint firstAttribute="trailing" secondItem="fyi-IT-L1Q" secondAttribute="trailing" constant="20" id="gSi-4F-Ari"/>
-                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" id="iDL-Ke-HSU"/>
+                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leadingMargin" constant="20" id="iDL-Ke-HSU"/>
                             <constraint firstItem="pBX-ID-gf6" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="iM9-TM-2mj"/>
-                            <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="hNl-HO-HZT" secondAttribute="bottom" constant="8" symbolic="YES" id="llf-Vc-y62"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="lrU-du-sa0"/>
-                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="bottom" constant="5" id="mHf-hj-sOe"/>
+                            <constraint firstItem="Jdv-40-XoZ" firstAttribute="top" secondItem="b8L-7O-Mme" secondAttribute="bottom" constant="-100" id="mHf-hj-sOe"/>
                             <constraint firstItem="pAH-wb-reQ" firstAttribute="top" secondItem="9Vz-J9-kQT" secondAttribute="bottom" constant="20" id="mxD-yV-4EH"/>
+                            <constraint firstItem="V89-4S-gH2" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" constant="20" id="ntm-s6-tyo"/>
                             <constraint firstItem="get-Bl-d6f" firstAttribute="leading" secondItem="G3w-Eo-Qun" secondAttribute="trailing" constant="11" id="oq2-XP-ahS"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="top" secondItem="SLh-CO-vNh" secondAttribute="top" id="q8s-vq-Zt8"/>
                             <constraint firstItem="6QM-Oc-2YX" firstAttribute="top" secondItem="1S9-nb-68J" secondAttribute="top" id="s6n-or-fQX"/>
+                            <constraint firstItem="3nJ-wK-Oqb" firstAttribute="top" secondItem="hNl-HO-HZT" secondAttribute="bottom" constant="10" id="tQ6-dT-w4z"/>
                             <constraint firstAttribute="trailing" secondItem="9Vz-J9-kQT" secondAttribute="trailing" constant="70" id="tRd-3y-4GF"/>
+                            <constraint firstItem="b8L-7O-Mme" firstAttribute="leading" secondItem="LTm-i9-u5X" secondAttribute="leading" id="tfr-uc-80O"/>
                             <constraint firstItem="nxB-b1-8aR" firstAttribute="leading" secondItem="pBX-ID-gf6" secondAttribute="trailing" constant="15" id="wNJ-Ok-xcc"/>
                             <constraint firstAttribute="trailing" secondItem="jga-1e-f8U" secondAttribute="trailing" constant="20" id="x5t-Oz-b0P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b8L-7O-Mme" secondAttribute="trailing" id="xyb-6G-CNh"/>
+                            <constraint firstAttribute="trailing" secondItem="hNl-HO-HZT" secondAttribute="trailing" constant="20" id="y5l-oW-6qt"/>
                             <constraint firstItem="SLh-CO-vNh" firstAttribute="leading" secondItem="6QM-Oc-2YX" secondAttribute="trailing" constant="20" id="yo0-Qy-yM1"/>
                             <constraint firstItem="G3w-Eo-Qun" firstAttribute="top" secondItem="jga-1e-f8U" secondAttribute="bottom" constant="5" id="ypj-kS-TSA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OFY-L8-Bck"/>
+                                <exclude reference="0QE-ow-qQQ"/>
+                                <exclude reference="iDL-Ke-HSU"/>
+                                <exclude reference="mHf-hj-sOe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -653,6 +697,7 @@
                         <outlet property="ageRange" destination="pAH-wb-reQ" id="iVv-0Y-duO"/>
                         <outlet property="ageTo" destination="9Vz-J9-kQT" id="QdO-PA-eBa"/>
                         <outlet property="agmaCB" destination="moe-Eo-QxS" id="sfx-AE-CAj"/>
+                        <outlet property="clearButton" destination="V89-4S-gH2" id="MrX-Wd-qZe"/>
                         <outlet property="dgaCB" destination="EJ6-R0-LMr" id="253-ty-fGv"/>
                         <outlet property="eftraCB" destination="UqS-ez-KBO" id="0T3-s8-ZpD"/>
                         <outlet property="equityCB" destination="U5G-an-IYb" id="CAg-mj-Nqc"/>
@@ -866,7 +911,7 @@
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVc-I5-nnk">
                                 <rect key="frame" x="0.0" y="288" width="320" height="220"/>
-                                <color key="backgroundColor" red="0.80987580130000003" green="0.032813808999999999" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80987580130000003" green="0.032813808899999998" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJw-v3-Vud" customClass="ToggleButton" customModule="AuditionCity" customModuleProvider="target">

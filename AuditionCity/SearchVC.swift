@@ -29,6 +29,25 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
    
     @IBOutlet weak var talentAgencyTF: UITextField!
     @IBOutlet weak var unionTF: UITextField!
+    @IBOutlet weak var clearButton: Buttons!
+    @IBAction func clearButtonTapped(sender: Buttons) {
+    
+        nameSearchField.text = ""
+        talentAgencyTF.text = ""
+        unionTF.text = ""
+        
+        ageRange.lowerValue = 20
+        ageRange.upperValue = 20
+        
+        equityCB.isChecked = false
+        sagCB.isChecked = false
+        ssdcCB.isChecked = false
+        agmaCB.isChecked = false
+        eftraCB.isChecked = false
+        iatseCB.isChecked = false
+        dgaCB.isChecked = false
+        
+    }
     @IBOutlet weak var okButton: UIButton!
     @IBAction func okButtonTapped(segue: UIStoryboardSegue) {
     
