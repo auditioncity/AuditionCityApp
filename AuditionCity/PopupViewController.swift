@@ -7,6 +7,10 @@ class PopupViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     var choiceArray: [String] = []
     
+    // add a closure property to be called
+    
+    var madeChoice: ((choice: String) -> ())?
+    
     @IBOutlet weak var picker: UIPickerView!
     
   override var preferredContentSize: CGSize {
@@ -21,6 +25,11 @@ class PopupViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBAction func okButtonTapped(sender: Buttons) {
     
+        // call the closure property
+        
+        let row = picker.selectedRowInComponent(0)
+        madeChoice?(choice: choiceArray[row])
+
         dismissViewControllerAnimated(true, completion: nil)
     
     }
@@ -49,5 +58,11 @@ class PopupViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         return choiceArray[row]
         
     }
+    
+//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        
+//        
+//    }
+    
     
 }

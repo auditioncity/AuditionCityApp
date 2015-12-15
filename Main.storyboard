@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yBS-dg-XEd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -128,6 +128,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZYp-Gy-Mht" id="zZ0-hV-r08"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-wb-reQ" customClass="RangeSlider" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="20" y="214" width="280" height="30"/>
@@ -529,6 +532,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZYp-Gy-Mht" id="Key-PP-qTT"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jga-1e-f8U">
                                 <rect key="frame" x="20" y="69" width="280" height="30"/>
@@ -538,6 +544,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZYp-Gy-Mht" id="XpW-u4-9f6"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-Eo-Qun" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="169" y="104" width="60" height="30"/>
@@ -701,9 +710,13 @@
                         <outlet property="dgaCB" destination="EJ6-R0-LMr" id="253-ty-fGv"/>
                         <outlet property="eftraCB" destination="UqS-ez-KBO" id="0T3-s8-ZpD"/>
                         <outlet property="equityCB" destination="U5G-an-IYb" id="CAg-mj-Nqc"/>
+                        <outlet property="eyeColorButton" destination="nxB-b1-8aR" id="fW6-Gw-heL"/>
+                        <outlet property="genderButton" destination="pBX-ID-gf6" id="b3e-UX-tjd"/>
+                        <outlet property="hairColorButton" destination="G3w-Eo-Qun" id="Hgv-hr-ck3"/>
                         <outlet property="iatseCB" destination="pUI-zJ-7Vr" id="5Hr-q2-vQK"/>
                         <outlet property="nameSearchField" destination="jga-1e-f8U" id="5el-zR-dF2"/>
                         <outlet property="okButton" destination="hNl-HO-HZT" id="Xnd-cX-d0z"/>
+                        <outlet property="raceButton" destination="get-Bl-d6f" id="cMX-fM-dJi"/>
                         <outlet property="sagCB" destination="GYd-BC-xBk" id="qLE-vV-DV2"/>
                         <outlet property="ssdcCB" destination="cTL-XI-vDT" id="8Mo-24-LS9"/>
                         <outlet property="talentAgencyTF" destination="fyi-IT-L1Q" id="4Xr-Gu-4Dy"/>
@@ -845,7 +858,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-1o-Ikf" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Starred" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-1o-Ikf" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
                                 <rect key="frame" x="210" y="518" width="60" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1161,7 +1174,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="qYM-DY-GpB" customClass="FavoriteCell" customModule="AuditionCity" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="100" id="qYM-DY-GpB" customClass="FavoriteCell" customModule="AuditionCity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qYM-DY-GpB" id="cdl-hH-w73">
@@ -1267,7 +1280,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wud-Rz-MW8"/>
         <segue reference="AEC-nI-QoO"/>
+        <segue reference="oCb-9X-0GO"/>
     </inferredMetricsTieBreakers>
 </document>

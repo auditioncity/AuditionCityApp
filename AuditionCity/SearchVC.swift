@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
+class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
    
     @IBOutlet weak var nameSearchField: UITextField!
     @IBOutlet weak var ageFrom: UILabel!
@@ -15,6 +15,11 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var iatseCB: CheckBox!
     @IBOutlet weak var dgaCB: CheckBox!
     
+    @IBOutlet weak var genderButton: Buttons!
+    @IBOutlet weak var eyeColorButton: Buttons!
+    @IBOutlet weak var hairColorButton: Buttons!
+    @IBOutlet weak var raceButton: Buttons!
+    
     
     @IBAction func ageRangePicked(sender: RangeSlider) {
         
@@ -28,7 +33,8 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
    }
    
     @IBOutlet weak var talentAgencyTF: UITextField!
-    @IBOutlet weak var unionTF: UITextField!
+    @IBOutlet weak var unionTF: UITextField! 
+    
     @IBOutlet weak var clearButton: Buttons!
     @IBAction func clearButtonTapped(sender: Buttons) {
     
@@ -37,7 +43,10 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         unionTF.text = ""
         
         ageRange.lowerValue = 20
-        ageRange.upperValue = 20
+        ageRange.upperValue = 80
+        ageFrom.text = "20"
+        ageTo.text = "80"
+        
         
         equityCB.isChecked = false
         sagCB.isChecked = false
@@ -47,49 +56,61 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
         iatseCB.isChecked = false
         dgaCB.isChecked = false
         
+        genderButton.setTitle("Gender", forState: .Normal)
+        raceButton.setTitle("Race", forState: .Normal)
+        eyeColorButton.setTitle("Eye Color", forState: .Normal)
+        hairColorButton.setTitle("Hair Color", forState: .Normal)
+        
     }
+    
     @IBOutlet weak var okButton: UIButton!
+    
     @IBAction func okButtonTapped(segue: UIStoryboardSegue) {
     
         self.navigationController?.popViewControllerAnimated(true)
     
     }
     
-
+//    let picker = UIImageView(image: UIImage(named: "picker"))
     
-    let picker = UIImageView(image: UIImage(named: "picker"))
-    
-    func openPicker()
-    {
-        self.picker.hidden = false
-        
-        UIView.animateWithDuration(0.3,
-            animations: {
-                self.picker.frame = CGRect(x: ((self.view.frame.width / 2) - 143), y: 230, width: 286, height: 291)
-                self.picker.alpha = 1
-        })
-    }
-    
-    func closePicker()
-    {
-        UIView.animateWithDuration(0.3,
-            animations: {
-                self.picker.frame = CGRect(x: ((self.view.frame.width / 2) - 143), y: 200, width: 286, height: 291)
-                self.picker.alpha = 0
-            },
-            completion: { finished in
-                self.picker.hidden = true
-            }
-        )
-    }
+//    func openPicker()
+//    {
+//        self.picker.hidden = false
+//        
+//        UIView.animateWithDuration(0.3,
+//            animations: {
+//                self.picker.frame = CGRect(x: ((self.view.frame.width / 2) - 143), y: 230, width: 286, height: 291)
+//                self.picker.alpha = 1
+//        })
+//    }
+//    
+//    func closePicker()
+//    {
+//        UIView.animateWithDuration(0.3,
+//            animations: {
+//                self.picker.frame = CGRect(x: ((self.view.frame.width / 2) - 143), y: 200, width: 286, height: 291)
+//                self.picker.alpha = 0
+//            },
+//            completion: { finished in
+//                self.picker.hidden = true
+//            }
+//        )
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
+            UIKeyboardWillShowNotification, object: nil);
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
+
+        
     }
     
-
+    
     func runSubmit() {
         
             var unions: [String:AnyObject] = [
@@ -128,6 +149,34 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
             
             popupView.choiceArray = choices
             
+            // set the closure code to be called
+            
+            popupView.madeChoice = { choice in
+                
+                switch segue.identifier! {
+                 
+                case "Gender" :
+                    
+                    self.genderButton.setTitle(choice, forState: .Normal)
+                    
+                case "Race" :
+                    
+                    self.raceButton.setTitle(choice, forState: .Normal)
+                    
+                case "EyeColor" :
+                    
+                    self.eyeColorButton.setTitle(choice, forState: .Normal)
+                    
+                case "HairColor" :
+                    
+                    self.hairColorButton.setTitle(choice, forState: .Normal)
+                    
+                default : ""
+                
+                }
+                
+            }
+            
             if let popup = popupView.popoverPresentationController
             {
                 
@@ -142,5 +191,31 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate {
     {
         return UIModalPresentationStyle.None
     }
-   
+ 
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if nameSearchField.isFirstResponder()  {
+        
+        print(nameSearchField.isFirstResponder()) // test for nameSearchField
+        
+        
+        
+        } else {
+            
+            self.view.frame.origin.y = -150
+        }
+    }
+
+    func keyboardWillHide(sender: NSNotification) {
+        
+        self.view.frame.origin.y = 0
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+
 }

@@ -12,7 +12,6 @@ class UserCell: UITableViewCell {
 
     @IBOutlet weak var faceShot: UIImageView!
     
-    
     @IBOutlet weak var userNameLabel: UILabel!
    
     override func prepareForReuse() {

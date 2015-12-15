@@ -13,6 +13,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
 
     var actor: [String:AnyObject] = [:]
     
+    
     @IBAction func swipeBack(sender: UISwipeGestureRecognizer) {
     
         navigationController?.popViewControllerAnimated(true)
@@ -58,7 +59,39 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
     }
     
     @IBAction func starmeButtonPressed(sender: Buttons) {
-    
+        
+        if starmeButton.tag == 0 {
+            
+            starmeButton.tag = 1
+            starmeButton.backgroundColor = UIColor(red:0.95, green:0.78, blue:0.86, alpha:1)
+        
+        } else {
+            
+            starmeButton.tag = 0
+            starmeButton.backgroundColor = UIColor.lightGrayColor()
+            
+        }
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "decisions/new"
+        
+        info.method = .POST
+        
+        info.parameters = [
+            
+            "actor_id" : actor["id"] as? Int ?? 0,
+            "callback" : true
+            
+        ]
+        
+        RailsRequest.session().requiredWithInfo(info) { (returnedInfo) -> () in
+         
+            
+            print("success")
+            
+        }
+        
     }
     
     @IBAction func downloadResumeTapped(sender: UIButton) {
@@ -78,8 +111,6 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
                 
                 UIGraphicsBeginImageContext(CGSize(width: 850, height: 1100))
                 let context = UIGraphicsGetCurrentContext()
-                
-//                let finalPdfContext = CGPDFContextCreateWithURL(destinationUrl, nil, nil)
                 
                 for var pageNum = 1; pageNum <= pageCount; pageNum++ {
                 
@@ -109,8 +140,23 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         
     }
     
+    var callback = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set image based on decision_callback being true
+        if let decision = actor["decision_callback"] as? Int where decision == 1 {
+            
+            starmeButton.tag = 1
+            starmeButton.backgroundColor = UIColor(red:0.95, green:0.78, blue:0.86, alpha:1)
+            
+        } else {
+            
+            starmeButton.tag = 0
+            starmeButton.backgroundColor = UIColor.lightGrayColor()
+            
+        }
         
         self.navigationController?.navigationBarHidden = true
         
@@ -176,7 +222,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         self.resumeView.addSubview(resumePreview.view)
         
         resumePreview.didMoveToParentViewController(self)
-        //save a reference to the preview controller in an ivar
+        //save a reference to the preview controller
         
         
         if let resumeURL = NSURL(string: actor["resume"] as? String ?? "") {
@@ -187,24 +233,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             
             let destinationUrl = documentsUrl.URLByAppendingPathComponent(resumeURL.lastPathComponent!)
             
-            
-            // check if it exists before downloading it
-            
-//            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
-////                print("The file already exists at path")
-//                
-//                
-//                resumePreview.dataSource = self
-//                
-//                resumePreview.delegate = self
-//                
-//                resumePreview.reloadData()
-//            
-//            } else {
-//                //  if the file doesn't exist
-//                //  just download the data from your url
-            
-                if let myResumeFromUrl = NSData(contentsOfURL: resumeURL){
+            if let myResumeFromUrl = NSData(contentsOfURL: resumeURL){
                     // after downloading your data you need to save it to your destination url
                    
                     if myResumeFromUrl.writeToURL(destinationUrl, atomically: true) {
@@ -222,7 +251,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
                         print("error saving file")
                     }
                 }
-//            }
+
         }
         
     }

@@ -13,6 +13,35 @@ class FavoritesTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        navigationController?.navigationBarHidden = false
+        
+        // run request to rails to pull all actors
+        
+        
+        
+        let rr = RailsRequest.session()
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "actors"
+        info.method = .GET
+        
+        print(info)
+        
+        rr.requiredWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
+            
+            self.users = returnedInfo?["actors"] as? [[String:AnyObject]] ?? []
+            
+            self.tableView.reloadData()
+            
+        }
+
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +49,9 @@ class FavoritesTableVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    var users: [[String:AnyObject]] = []
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,15 +69,55 @@ class FavoritesTableVC: UITableViewController {
         return 0
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+    
+    
+        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            // #warning Incomplete implementation, return the number of rows
+            
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier("favoriteCell", forIndexPath: indexPath) as! FavoriteCell
+            
+            guard let user = users[indexPath.row]["actor"] as? [String:AnyObject] else { return cell }
+            
+            cell.userNameLabel.text = user["full_name"] as? String
+            
+            let dispatch = dispatch_queue_create("tableView", DISPATCH_QUEUE_SERIAL)
+            
+            if let faceShotURL = user["headshot_mobile"] as? String {
+                
+                cell.faceShot.hidden = false
+                
+                dispatch_async(dispatch) { () -> Void in
+                    
+                    if let url = NSURL(string: faceShotURL) {
+                        
+                        if let data = NSData(contentsOfURL: url) {
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                
+                                if let image = UIImage(data:data) {
+                                    
+                                    cell.faceShot.image = image
+                                    
+                                }
+                                
+                            })
+                        }
+                    }
+                    
+                }
+                
+            } else {
+                
+                cell.faceShot.hidden = true
+            }
+            
+            
+            return cell
+            
+        }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +164,5 @@ class FavoritesTableVC: UITableViewController {
     }
     */
 
+    
 }

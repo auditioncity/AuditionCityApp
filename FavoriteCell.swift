@@ -11,11 +11,15 @@ import UIKit
 class FavoriteCell: UITableViewCell {
 
     @IBOutlet weak var faceShot: UIImageView!
-    
-    
     @IBOutlet weak var userNameLabel: UILabel!
     
-    
+    override func prepareForReuse() {
+        
+        userNameLabel.text = ""
+        faceShot.image = nil
+        
+    }
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

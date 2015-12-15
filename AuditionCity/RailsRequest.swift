@@ -75,6 +75,12 @@ class RailsRequest: NSObject {
     
     }
     
+    var actor_id: String? {
+        
+        get { return _d.objectForKey("actor_id") as? String }
+        set { _d.setObject(newValue, forKey: "actor_id") }
+    
+    }
     /**
      Makes a generic request to the API, configured by the info parameter.
      
