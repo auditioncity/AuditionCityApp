@@ -37,7 +37,7 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             
             print(returnedInfo)
             
-            self.users = returnedInfo?["actors"] as? [[String:AnyObject]] ?? []
+            LogData.logSession().users = returnedInfo?["actors"] as? [[String:AnyObject]] ?? []
             
             self.tableView.reloadData()
             
@@ -63,7 +63,7 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return users.count
+        return LogData.logSession().users.count
     }
     
     
@@ -73,7 +73,7 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserCell
         
-        guard let user = users[indexPath.row]["actor"] as? [String:AnyObject] else { return cell }
+        guard let user = LogData.logSession().users[indexPath.row]["actor"] as? [String:AnyObject] else { return cell }
         
         cell.userNameLabel.text = user["full_name"] as? String
         
@@ -167,11 +167,12 @@ class UserTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             
             guard let cell = sender as? UserCell else { return }
             guard let indexPath = tableView.indexPathForCell(cell) else { return }
-            guard let user = users[indexPath.row]["actor"] as? [String:AnyObject] else { return }
+//            guard let user = LogData.logSession().users[indexPath.row]["actor"] as? [String:AnyObject] else { return }
             
             let detailVC = segue.destinationViewController as? UserDetailsViewController
             
-            detailVC?.actor = user
+            detailVC?.index = indexPath.row
+//            detailVC?.actor = user
             
         }
         

@@ -11,7 +11,12 @@ import QuickLook
 
 class UserDetailsViewController: UIViewController, UIPopoverPresentationControllerDelegate,  QLPreviewControllerDelegate, QLPreviewControllerDataSource {
 
-    var actor: [String:AnyObject] = [:]
+    var actor: [String:AnyObject] {
+        
+        return LogData.logSession().users[index]["actor"] as? [String:AnyObject] ?? [:]
+        
+    }
+    var index: Int!
     
     
     @IBAction func swipeBack(sender: UISwipeGestureRecognizer) {
@@ -72,6 +77,11 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             
         }
         
+        var updated = actor
+        updated["decision_callback"] = starmeButton.tag
+        LogData.logSession().users[index]["actor"] = updated
+        
+//        let isTrue: Bool = true
         var info = RequestInfo()
         
         info.endpoint = "decisions/new"
@@ -81,7 +91,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         info.parameters = [
             
             "actor_id" : actor["id"] as? Int ?? 0,
-            "callback" : true
+            "callback" : starmeButton.tag == 1
             
         ]
         
@@ -140,7 +150,8 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         
     }
     
-    var callback = false
+    var callback = true
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -299,6 +310,8 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
         // Pass the selected object to the new view controller.
         
         if let popupView = segue.destinationViewController as? ContactVC {
+            
+            popupView.index = index
             
             if let popup = popupView.popoverPresentationController
             {

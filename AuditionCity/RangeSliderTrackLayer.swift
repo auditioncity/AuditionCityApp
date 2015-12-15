@@ -1,3 +1,4 @@
+//  RangeSliderTrackLayer.swift
 //  Created by Paul Vagner on 11/5/15.
 //  Copyright © 2015 Paul Vagner. All rights reserved.
 

@@ -71,32 +71,6 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     
     }
     
-//    let picker = UIImageView(image: UIImage(named: "picker"))
-    
-//    func openPicker()
-//    {
-//        self.picker.hidden = false
-//        
-//        UIView.animateWithDuration(0.3,
-//            animations: {
-//                self.picker.frame = CGRect(x: ((self.view.frame.width / 2) - 143), y: 230, width: 286, height: 291)
-//                self.picker.alpha = 1
-//        })
-//    }
-//    
-//    func closePicker()
-//    {
-//        UIView.animateWithDuration(0.3,
-//            animations: {
-//                self.picker.frame = CGRect(x: ((self.view.frame.width / 2) - 143), y: 200, width: 286, height: 291)
-//                self.picker.alpha = 0
-//            },
-//            completion: { finished in
-//                self.picker.hidden = true
-//            }
-//        )
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -105,9 +79,7 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
             UIKeyboardWillShowNotification, object: nil);
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        
-
-        
+    
     }
     
     

@@ -10,6 +10,15 @@ import UIKit
 
 class ContactVC: UIViewController {
     
+    
+    var actor: [String:AnyObject] {
+        
+        return LogData.logSession().users[index]["actor"] as? [String:AnyObject] ?? [:]
+        
+    }
+    var index: Int!
+    
+    
     override var preferredContentSize: CGSize {
         get {
             return CGSize(width: 300, height: 140)
@@ -37,6 +46,11 @@ class ContactVC: UIViewController {
     
     @IBAction func callButtonTapped(sender: Buttons) {
     
+        let phoneNumber = actor["phones"]?[0]?["phone"] as? String ?? ""
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://\(phoneNumber)")!)
+
+        print(actor)
     
     }
     

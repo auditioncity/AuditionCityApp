@@ -15,5 +15,6 @@ class LogData: NSObject {
     
     class func logSession() -> LogData { return singleton }
     
+    var users: [[String:AnyObject]] = []
     
 }
