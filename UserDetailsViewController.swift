@@ -199,6 +199,9 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
             info += "\nHair: \(hairColor)"
         }
         
+        skillSetView.userInteractionEnabled = true
+        skillSetView.scrollEnabled = true
+        skillSetView.textColor = UIColor.whiteColor()
         skillSetView.textAlignment = .Natural
         skillSetView.text = actor["skills"] as? String
         measurementsLabel.text = info

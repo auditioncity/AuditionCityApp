@@ -33,6 +33,12 @@ class BiographyVC: UIViewController {
         
         if let bio = actor["bio"] as? String {
             
+            biographyView.userInteractionEnabled = true
+            
+            biographyView.scrollEnabled = true
+            
+            biographyView.textColor = UIColor.whiteColor()
+            
             biographyView.sizeToFit()
             
             biographyView.text = bio
