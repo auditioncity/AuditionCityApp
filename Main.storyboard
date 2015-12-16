@@ -945,7 +945,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59m-m0-iLc" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="277" y="613" width="35" height="35"/>
+                                <rect key="frame" x="277" y="648" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Nww-sg-pAV"/>
                                     <constraint firstAttribute="height" constant="35" id="aM8-py-kXQ"/>
@@ -984,7 +984,7 @@
                             <constraint firstItem="OGB-eM-v07" firstAttribute="top" secondItem="bC7-MJ-vqK" secondAttribute="bottom" id="Shn-cN-hcw"/>
                             <constraint firstItem="IJw-v3-Vud" firstAttribute="top" secondItem="OGB-eM-v07" secondAttribute="bottom" constant="5" id="Ta0-vO-7Rd"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="PT6-1o-Ikf" secondAttribute="bottom" constant="10" id="Wts-Ft-zPV"/>
-                            <constraint firstItem="59m-m0-iLc" firstAttribute="top" secondItem="IJw-v3-Vud" secondAttribute="bottom" constant="280" id="ZaN-Aw-oVB"/>
+                            <constraint firstItem="59m-m0-iLc" firstAttribute="top" secondItem="IJw-v3-Vud" secondAttribute="bottom" constant="315" id="ZaN-Aw-oVB"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="die-Hi-6HT"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="top" secondItem="xjo-5O-XFQ" secondAttribute="bottom" constant="10" id="mtx-k6-B2a"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="81T-Lf-a0z" secondAttribute="bottom" constant="10" id="mwV-Ub-a8f"/>
