@@ -1245,7 +1245,7 @@
                                 <connections>
                                     <outlet property="faceShot" destination="vab-ho-Er2" id="Pm5-0W-9lH"/>
                                     <outlet property="userNameLabel" destination="8f5-Mu-6JB" id="VqG-jX-0fO"/>
-                                    <segue destination="0Se-FB-q6r" kind="show" id="oCb-9X-0GO"/>
+                                    <segue destination="0Se-FB-q6r" kind="show" identifier="Detail" id="oCb-9X-0GO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1270,7 +1270,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AEC-nI-QoO"/>
         <segue reference="oCb-9X-0GO"/>
+        <segue reference="AEC-nI-QoO"/>
     </inferredMetricsTieBreakers>
 </document>

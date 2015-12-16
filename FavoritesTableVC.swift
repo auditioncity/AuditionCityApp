@@ -22,30 +22,7 @@ class FavoritesTableVC: UITableViewController {
         
         navigationController?.navigationBarHidden = false
         
-        // run request to rails to pull all actors
-        
-        
-        
-//        let rr = RailsRequest.session()
-//        
-//        var info = RequestInfo()
-//        
-//        info.endpoint = "actors"
-//        info.method = .GET
-//        
-//        print(info)
-//        
-//        rr.requiredWithInfo(info) { (returnedInfo) -> () in
-//            
-//            print(returnedInfo)
-//            
-//            self.users = returnedInfo?["actors"] as? [[String:AnyObject]] ?? []
-//            
-//            self.tableView.reloadData()
-//            
-//        }
-
-        
+           
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -116,7 +93,25 @@ class FavoritesTableVC: UITableViewController {
             
         }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "Detail" {
+            
+            guard let cell = sender as? FavoriteCell else { return }
+            guard let indexPath = tableView.indexPathForCell(cell) else { return }
+            //            guard let user = LogData.logSession().users[indexPath.row]["actor"] as? [String:AnyObject] else { return }
+            
+            let detailVC = segue.destinationViewController as? UserDetailsViewController
+            
+            detailVC?.index = indexPath.row
+            //            detailVC?.actor = user
+            
+        }
+        
+        
+        
+        
+    }
 
 
     
