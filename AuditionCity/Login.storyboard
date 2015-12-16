@@ -46,7 +46,7 @@
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

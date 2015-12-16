@@ -59,10 +59,5 @@ class PopupViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
     }
     
-//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        
-//        
-//    }
-    
-    
+
 }
