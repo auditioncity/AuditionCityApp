@@ -17,4 +17,14 @@ class LogData: NSObject {
     
     var users: [[String:AnyObject]] = []
     
+    var starred: [[String:AnyObject]] {
+        
+        return users.filter({ (user) -> Bool in
+            
+            return user["actor"]?["decision_callback"] as? Int ?? 0 == 1
+            
+        })
+        
+    }
+    
 }
