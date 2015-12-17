@@ -799,11 +799,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NKN-Kj-nSq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="egy-Sg-1j3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-eM-v07">
-                                <rect key="frame" x="0.0" y="192" width="320" height="96"/>
+                                <rect key="frame" x="0.0" y="214" width="375" height="96"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="bD5-Tm-YdH"/>
@@ -813,10 +813,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bC7-MJ-vqK">
-                                <rect key="frame" x="0.0" y="64" width="320" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nqo-ZI-B0l" customClass="faceShotImageView" customModule="AuditionCity" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Nqo-ZI-B0l" secondAttribute="height" multiplier="1:1" id="Jtt-rt-J2F"/>
                                             <constraint firstAttribute="width" secondItem="Nqo-ZI-B0l" secondAttribute="height" multiplier="1:1" priority="100" id="VmQ-Zr-4HQ"/>
@@ -830,10 +830,10 @@
                                         </variation>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-Sn-flz">
-                                        <rect key="frame" x="128" y="0.0" width="192" height="128"/>
+                                        <rect key="frame" x="150" y="0.0" width="225" height="150"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMj-oV-9iX">
-                                                <rect key="frame" x="0.0" y="0.0" width="192" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="75"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -841,7 +841,7 @@
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALj-PB-B9h">
-                                                <rect key="frame" x="0.0" y="64" width="192" height="64"/>
+                                                <rect key="frame" x="0.0" y="75" width="225" height="75"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -861,7 +861,7 @@
                                 </variation>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Starred" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-1o-Ikf" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="210" y="518" width="60" height="40"/>
+                                <rect key="frame" x="265" y="617" width="60" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="HNC-o3-q0W"/>
@@ -881,7 +881,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81T-Lf-a0z" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="50" y="518" width="60" height="40"/>
+                                <rect key="frame" x="50" y="617" width="60" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="VrD-6K-pgL"/>
@@ -904,7 +904,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjo-5O-XFQ" customClass="Buttons2" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="277" y="243" width="35" height="35"/>
+                                <rect key="frame" x="332" y="265" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Cbw-cg-Jcs"/>
                                     <constraint firstAttribute="width" constant="35" id="VPs-yl-WJI"/>
@@ -925,12 +925,12 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVc-I5-nnk">
-                                <rect key="frame" x="0.0" y="288" width="320" height="220"/>
+                                <rect key="frame" x="0.0" y="310" width="375" height="297"/>
                                 <color key="backgroundColor" red="0.80987580130000003" green="0.032813808899999998" blue="0.1316733269" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJw-v3-Vud" customClass="ToggleButton" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="275" y="293" width="40" height="40"/>
+                                <rect key="frame" x="330" y="315" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="apc-lH-1vK"/>
                                     <constraint firstAttribute="width" constant="40" id="v63-sR-vXq"/>
@@ -945,7 +945,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59m-m0-iLc" customClass="Buttons" customModule="AuditionCity" customModuleProvider="target">
-                                <rect key="frame" x="277" y="648" width="35" height="35"/>
+                                <rect key="frame" x="332" y="830" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Nww-sg-pAV"/>
                                     <constraint firstAttribute="height" constant="35" id="aM8-py-kXQ"/>
@@ -984,7 +984,7 @@
                             <constraint firstItem="OGB-eM-v07" firstAttribute="top" secondItem="bC7-MJ-vqK" secondAttribute="bottom" id="Shn-cN-hcw"/>
                             <constraint firstItem="IJw-v3-Vud" firstAttribute="top" secondItem="OGB-eM-v07" secondAttribute="bottom" constant="5" id="Ta0-vO-7Rd"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="PT6-1o-Ikf" secondAttribute="bottom" constant="10" id="Wts-Ft-zPV"/>
-                            <constraint firstItem="59m-m0-iLc" firstAttribute="top" secondItem="IJw-v3-Vud" secondAttribute="bottom" constant="315" id="ZaN-Aw-oVB"/>
+                            <constraint firstItem="59m-m0-iLc" firstAttribute="top" secondItem="IJw-v3-Vud" secondAttribute="bottom" constant="475" id="ZaN-Aw-oVB"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="leading" secondItem="egy-Sg-1j3" secondAttribute="leading" id="die-Hi-6HT"/>
                             <constraint firstItem="OVc-I5-nnk" firstAttribute="top" secondItem="xjo-5O-XFQ" secondAttribute="bottom" constant="10" id="mtx-k6-B2a"/>
                             <constraint firstItem="NKN-Kj-nSq" firstAttribute="top" secondItem="81T-Lf-a0z" secondAttribute="bottom" constant="10" id="mwV-Ub-a8f"/>
@@ -1003,7 +1003,7 @@
                             <outletCollection property="gestureRecognizers" destination="kJE-6J-sSX" appends="YES" id="JTb-1h-7Ig"/>
                         </connections>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Bio" destination="xjo-5O-XFQ" id="mFh-kC-VAl"/>
                         <outlet property="contactButton" destination="81T-Lf-a0z" id="gPw-yc-Hze"/>
@@ -1052,7 +1052,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1103,7 +1103,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="0.84735991379999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="RA6-Qo-dmL" secondAttribute="trailing" constant="40" id="7ki-kR-nR8"/>
                             <constraint firstItem="BtT-dx-Zyu" firstAttribute="leading" secondItem="V9V-LV-Mna" secondAttribute="leading" constant="40" id="Isb-1D-91F"/>
@@ -1144,7 +1144,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59215686270000001" green="0.058823529409999999" blue="0.0" alpha="0.84735991379999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="F7M-6H-hIC" firstAttribute="top" secondItem="PJC-4u-PUf" secondAttribute="top" constant="10" id="DwI-D8-Mi9"/>
                             <constraint firstItem="F7M-6H-hIC" firstAttribute="leading" secondItem="PJC-4u-PUf" secondAttribute="leading" constant="10" id="atl-5U-hoF"/>
@@ -1159,7 +1159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyV-pm-z7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="1980"/>
+            <point key="canvasLocation" x="891" y="2190"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="00P-eA-gjb">
@@ -1270,7 +1270,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oCb-9X-0GO"/>
+        <segue reference="wud-Rz-MW8"/>
         <segue reference="AEC-nI-QoO"/>
     </inferredMetricsTieBreakers>
 </document>
