@@ -170,8 +170,6 @@ class SearchVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         
         print(nameSearchField.isFirstResponder()) // test for nameSearchField
         
-        
-        
         } else {
             
             self.view.frame.origin.y = -150

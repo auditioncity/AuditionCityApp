@@ -64,7 +64,23 @@ class LoginViewController: UIViewController {
     
     func keyboardWillShow(sender: NSNotification) {
         
-        self.view.frame.origin.y = -150
+        if usernameField.isFirstResponder()  {
+            
+            print(usernameField.isFirstResponder()) // test for nameSearchField
+            
+        } else {
+            
+            self.view.frame.origin.y = -150
+        }
+        
+        if passwordField.isFirstResponder()  {
+            
+            print(passwordField.isFirstResponder()) // test for nameSearchField
+            
+        } else {
+            
+            self.view.frame.origin.y = -150
+        }
         
     }
     
