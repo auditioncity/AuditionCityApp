@@ -16,6 +16,7 @@ class UserCell: UITableViewCell {
    
     override func prepareForReuse() {
         
+        faceShot.contentMode = .ScaleAspectFit
         userNameLabel.text = ""
         faceShot.image = nil
         

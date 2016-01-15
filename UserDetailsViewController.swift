@@ -215,6 +215,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
                     if let image = UIImage(data:data) {
                      
                         faceShot.image = image
+                        faceShot.contentMode = .ScaleAspectFit
                     }
                 }
             }
@@ -309,8 +310,7 @@ class UserDetailsViewController: UIViewController, UIPopoverPresentationControll
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+       
         
         if let popupView = segue.destinationViewController as? ContactVC {
             
